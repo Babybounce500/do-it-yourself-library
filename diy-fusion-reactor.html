@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIY: Fusor (Kernfusion-Demonstration)</title>
+    <meta name="description" content="Deutsche DIY-Anleitung zu Fusor (Kernfusion-Demonstration) mit Materialien, Aufbau, Praxis-Tipps und Troubleshooting.">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="global.css" rel="stylesheet">
+    <style>
+        .chapter-header {color: #f59e0b; border-left: 4px solid #f59e0b; padding-left: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; font-size: 1.5rem;}
+        .code-box {background: rgba(245, 158, 11, 0.1); border: 1px solid #f59e0b; padding: 1rem; border-radius: 5px; margin: 1rem 0; font-family: monospace; font-size: 0.75rem;}
+        .report-gallery {display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 2rem 0;}
+        .gallery-image {width: 100%; height: 250px; object-fit: cover; border-radius: 8px; border: 2px solid #f59e0b;}
+        .warning-box {background: rgba(239, 68, 68, 0.2); border: 2px solid #ef4444; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;}
+    </style>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body class="orbtron-theme">
+    <nav class="navbar navbar-dark bg-dark sticky-top" style="border-bottom: 2px solid #f59e0b;">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1"><i class="fas fa-atom"></i> DIY: Fusor (Kernfusion-Demo)</span>
+            <a href="index.html" class="btn btn-outline-info btn-sm" style="color: #f59e0b; border-color: #f59e0b;" aria-label="Zurück zur CODESTRAL-Projektbibliothek">← Zurück</a>
+        </div>
+    </nav>
+    <div class="container-fluid py-5" role="main">
+        <div style="position: relative; margin-bottom: 2rem; border-radius: 10px; overflow: hidden; border: 2px solid #f59e0b; max-height: 300px;">
+            <img src="assets/images/fusion_hero.png" loading="eager" style="width: 100%; height: 300px; object-fit: cover; display: block;" alt="Fusor Demo" decoding="async" fetchpriority="high">
+            <div class="hero" style="background: rgba(0,0,0,0.7); border: none; border-radius: 0; padding: 2rem 1.5rem; margin-bottom: 0; text-align: center; position: absolute; top: 50%; left: 0; right: 0; transform: translateY(-50%); display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <h1 style="color: #f59e0b; font-size: clamp(1.5rem, 5vw, 2.5rem); text-shadow: 0 0 20px rgba(245, 158, 11, 0.5);">⚛️ Fusor-Projekt</h1>
+                <p class="lead text-white" style="font-size: clamp(0.95rem, 3vw, 1.1rem);">Kernfusion verstehen - Farnsworth-Hirsch Fusor</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="warning-box">
+                    <h4 class="text-danger"><i class="fas fa-radiation"></i> WICHTIGE SICHERHEITSHINWEISE</h4>
+                    <ul class="mb-0">
+                        <li><strong>Hochspannung (30-50 kV):</strong> Lebensgefahr bei unsachgemäßer Handhabung</li>
+                        <li><strong>Neutronenstrahlung:</strong> Strahlenschutz und Genehmigungen erforderlich</li>
+                        <li><strong>Vakuumsysteme:</strong> Implosionsgefahr bei Glasgefäßen</li>
+                        <li><strong>Nur für erfahrene Physiker/Ingenieure</strong> mit entsprechender Ausbildung</li>
+                        <li>Behördliche Genehmigungen vor jedem Experiment einholen!</li>
+                    </ul>
+                </div>
+
+                <h2 class="chapter-header"><i class="fas fa-atom"></i> Kapitel 1: Fusionsphysik Grundlagen</h2>
+                <ul class="text-muted">
+                    <li>Coulomb-Barriere und Quantentunneln</li>
+                    <li>Deuterium-Deuterium Reaktion (einfacher als D-T)</li>
+                    <li>Energiefreisetzung und Neutronenproduktion</li>
+                    <li>Plasma-Temperatur-Anforderungen</li>
+                </ul>
+
+                <h2 class="chapter-header"><i class="fas fa-cube"></i> Kapitel 2: Farnsworth-Hirsch Fusor</h2>
+                <div class="code-box">
+# Fusor Prinzip (Elektrostatischer Einschluss)
+# Inneres Gitter: Negative Hochspannung (-30kV)
+# Deuterium-Ionen werden zum Zentrum beschleunigt
+# Kollision erzeugt Fusion (sehr geringe Ausbeute)
+# Neutronennachweis bestätigt Fusion
+# ACHTUNG: Nur zu Bildungszwecken!
+                </div>
+
+                <h2 class="chapter-header"><i class="fas fa-bolt"></i> Kapitel 3: Vakuum und Hochspannung</h2>
+                <ul class="text-muted">
+                    <li>Vakuumkammer (10^-3 bis 10^-5 mbar)</li>
+                    <li>Hochspannungsversorgung mit Strombegrenzung</li>
+                    <li>Deuterium-Gas-Einlass</li>
+                    <li>Elektrostatisches Gitter-Design</li>
+                </ul>
+
+                <h2 class="chapter-header"><i class="fas fa-shield-alt"></i> Kapitel 4: Sicherheit und Strahlenschutz</h2>
+                <ul class="text-muted">
+                    <li>Neutronendetektor (BF3 oder He-3 Zähler)</li>
+                    <li>Abschirmung: Polyethylen oder Wasser</li>
+                    <li>Elektrische Sicherheit: Entladungswiderstände</li>
+                    <li>Behördliche Meldepflichten beachten</li>
+                </ul>
+
+                <h2 class="chapter-header"><i class="fas fa-chart-bar"></i> Kapitel 5: Messungen und Diagnostik</h2>
+                <ul class="text-muted">
+                    <li>Neutronenspektroskopie</li>
+                    <li>Plasma-Beobachtung (sichtbarer Stern)</li>
+                    <li>Fusionsrate-Berechnung</li>
+                    <li>Reproduzierbarkeit der Ergebnisse</li>
+                </ul>
+
+                <h2 class="chapter-header"><i class="fas fa-rocket"></i> Kapitel 6: Forschung und Zukunft</h2>
+                <ul class="text-muted">
+                    <li>Polywell-Konzept (Bussard)</li>
+                    <li>Stellarator-Forschung (Wendelstein 7-X)</li>
+                    <li>ITER und kommerzielle Fusion</li>
+                    <li>Bildungsprogramme und Citizen Science</li>
+                </ul>
+
+                <h2 class="chapter-header" style="margin-top: 3rem; border-left: 4px solid #10b981;"><i class="fas fa-lightbulb"></i> 💡 PRO-TIPPS</h2>
+                <div style="background: rgba(16, 185, 129, 0.1); border-left: 4px solid #10b981; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-success mb-3">🎯 Tipp: Starte mit Simulation</h5>
+                    <p><strong>Empfehlung:</strong> Bevor du Hardware baust, simuliere mit OpenMC oder ähnlicher Software | <strong>Vorteil:</strong> Gefahrlos die Physik verstehen</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #f59e0b;"><i class="fas fa-piggy-bank"></i> 💰 REALISTISCHE KOSTEN</h2>
+                <div style="background: rgba(245, 158, 11, 0.1); border-left: 4px solid #f59e0b; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-warning mb-3">💰 Kostenrahmen für Fusor-Projekt</h5>
+                    <p><strong>Minimum:</strong> ca. 2.000-5.000€ für Grundaufbau | <strong>Professionell:</strong> 10.000-50.000€ | <strong>Hinweis:</strong> Universitätslabore bieten oft Zugang!</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #ef4444;"><i class="fas fa-exclamation-circle"></i> ⚠️ HÄUFIGE FEHLER</h2>
+                <div style="background: rgba(239, 68, 68, 0.1); border-left: 4px solid #ef4444; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-danger mb-3">❌ Fehler: Unterschätzte Gefahren</h5>
+                    <p><strong>Was passiert:</strong> Elektrischer Schlag, Strahlenschäden, Implosion | <strong>✅ Lösung:</strong> Nur unter professioneller Aufsicht arbeiten!</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #60a5fa;"><i class="fas fa-users"></i> 🌐 COMMUNITY</h2>
+                <div style="background: rgba(96, 165, 250, 0.1); border-left: 4px solid #60a5fa; padding: 1.5rem; border-radius: 8px;">
+                    <p>Fusor.net Forum, Open Source Fusor Projekt, Physik-Fakultäten, Makerspaces mit Laborausstattung</p>
+                </div>
+
+                <h2 class="chapter-header" style="margin-top: 3rem;">📸 Beispiel-Aufbauten</h2>
+                <div class="report-gallery">
+                    <img src="assets/images/fusion_error1.jpg" class="gallery-image" alt="Elektrodenverschleiß" loading="lazy" decoding="async" fetchpriority="low">
+                    <img src="assets/images/fusion_error2.jpg" class="gallery-image" alt="Spannungsdurchbruch" loading="lazy" decoding="async" fetchpriority="low">
+                    <img src="assets/images/fusion_error3.jpg" class="gallery-image" alt="Geringe Ausbeute" loading="lazy" decoding="async" fetchpriority="low">
+                    <img src="assets/images/fusion_error4.jpg" class="gallery-image" alt="Vakuumprobleme" loading="lazy" decoding="async" fetchpriority="low">
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="sidebar-box">
+                    <h5 style="color: #f59e0b;"><i class="fas fa-list-check"></i> Lernpfad</h5>
+                    <div class="checklist">
+                        <label><input type="checkbox"> Fusionsphysik studieren</label>
+                        <label><input type="checkbox"> Simulation durchführen</label>
+                        <label><input type="checkbox"> Sicherheitsschulung</label>
+                        <label><input type="checkbox"> Genehmigungen einholen</label>
+                        <label><input type="checkbox"> Mentoren/Labor finden</label>
+                        <label><input type="checkbox"> Schrittweiser Aufbau</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="diy-enhancements.js"></script>
+</body>
+</html>

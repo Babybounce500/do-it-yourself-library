@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIY: Espresso Hack</title>
+    <meta name="description" content="Deutsche DIY-Anleitung zu Espresso Hack mit Materialien, Aufbau, Praxis-Tipps und Troubleshooting.">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="global.css" rel="stylesheet">
+    <style>
+        .chapter-header {color: #92400e; border-left: 4px solid #92400e; padding-left: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; font-size: 1.5rem;}
+        .code-box {background: rgba(146, 64, 14, 0.1); border: 1px solid #92400e; padding: 1rem; border-radius: 5px; margin: 1rem 0; font-family: monospace; font-size: 0.75rem;}
+        .report-gallery {display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 2rem 0;}
+        .gallery-image {width: 100%; height: 250px; object-fit: cover; border-radius: 8px; border: 2px solid #92400e;}
+    </style>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body class="orbtron-theme">
+    <nav class="navbar navbar-dark bg-dark sticky-top" style="border-bottom: 2px solid #92400e;">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1"><i class="fas fa-mug-hot"></i> DIY: Espresso Hack</span>
+            <a href="index.html" class="btn btn-outline-info btn-sm" style="color: #92400e; border-color: #92400e;" aria-label="Zurück zur CODESTRAL-Projektbibliothek">← Zurück</a>
+        </div>
+    </nav>
+    <div class="container-fluid py-5" role="main">
+        <div style="position: relative; margin-bottom: 2rem; border-radius: 10px; overflow: hidden; border: 2px solid #92400e; max-height: 300px;">
+            <img src="assets/images/espresso-hack_hero.jpg" loading="eager" style="width: 100%; height: 300px; object-fit: cover; display: block;" alt="Espresso Hack Hero" decoding="async" fetchpriority="high">
+            <div class="hero" style="background: rgba(0,0,0,0.7); border: none; border-radius: 0; padding: 2rem 1.5rem; margin-bottom: 0; text-align: center; position: absolute; top: 50%; left: 0; right: 0; transform: translateY(-50%); display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <h1 style="color: #92400e; font-size: clamp(1.5rem, 5vw, 2.5rem); text-shadow: 0 0 20px rgba(146, 64, 14, 0.5);">☕ Espresso Hack</h1>
+                <p class="lead text-white" style="font-size: clamp(0.95rem, 3vw, 1.1rem);">€5 Barista-Qualität statt €1500 Maschine!</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8">
+                <h2 class="chapter-header"><i class="fas fa-droplet"></i> Kapitel 1: Pressure Hacks</h2>
+                <ul class="text-muted">
+                    <li>Syringenpress (9 bar ohne Strom!)</li>
+                    <li>Druckschnellkochtopf als Espresso-Maker</li>
+                    <li>DIY Manometer für Qualität</li>
+                    <li>Richtige Tamping-Kraft (30kg!)</li>
+                </ul>
+
+                <h2 class="chapter-header"><i class="fas fa-bean"></i> Kapitel 2: Mühlen-Hack</h2>
+                <div class="code-box">
+# Espresso Grind Hack
+# Burr Grinder statt Blade
+grinder_cost = €30 (used)
+grind_consistency = key!
+optimal_size = 0.75mm
+tamping_time = 30 seconds
+                </div>
+
+                <h2 class="chapter-header"><i class="fas fa-thermometer"></i> Kapitel 3: Temperatur Control</h2>
+                <ul class="text-muted">
+                    <li>Kettle Method (27-30°C pre-heat)</li>
+                    <li>Thermometer für exakte Temps</li>
+                    <li>Flush-Routine vor jedem Shot</li>
+                    <li>Milk Steaming Hack</li>
+                </ul>
+
+                <h2 class="chapter-header"><i class="fas fa-hourglass-end"></i> Kapitel 4: Timing & Extraction</h2>
+                <ul class="text-muted">
+                    <li>25-30 Sekunden Shot (ideal!)</li>
+                    <li>1:2 oder 1:3 Ratio (In:Out)</li>
+                    <li>Crema-Maximierung</li>
+                    <li>Blooming Technique</li>
+                </ul>
+
+                <h2 class="chapter-header"><i class="fas fa-leaf"></i> Kapitel 5: Bean & Water Quality</h2>
+                <ul class="text-muted">
+                    <li>Fresh Beans (2-3 Wochen Röstung)</li>
+                    <li>Filterwasser statt Leitungswasser</li>
+                    <li>Richtige Mahlung für Mühle</li>
+                    <li>Storage Tips (Vakuum)</li>
+                </ul>
+
+                <h2 class="chapter-header"><i class="fas fa-heart"></i> Kapitel 6: Latte Art & Mikroschaum</h2>
+                <ul class="text-muted">
+                    <li>Steam Wand Positioning (1cm Tiefe)</li>
+                    <li>Milch-Whirlpool für Schaumqualität</li>
+                    <li>DIY Milchaufschäumer (€3!)</li>
+                    <li>Pouring Technique Mastery</li>
+                </ul>
+
+                <h2 class="chapter-header" style="margin-top: 3rem; border-left: 4px solid #10b981;"><i class="fas fa-lightbulb"></i> 💡 PRO-TIPPS</h2>
+                <div style="background: rgba(16, 185, 129, 0.1); border-left: 4px solid #10b981; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-success mb-3">🎯 Tipp: Scalegewicht = MVP!</h5>
+                    <p><strong>Problem:</strong> Inconsistent Shots | <strong>Lösung:</strong> €5 Küchenwaage = ±0.1g</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #f59e0b;"><i class="fas fa-piggy-bank"></i> 💰 BUDGET-HACKS (99% SPAREN!)</h2>
+                <div style="background: rgba(245, 158, 11, 0.1); border-left: 4px solid #f59e0b; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-warning mb-3">💰 Hack: Syringe Press Espresso</h5>
+                    <p><strong>Original:</strong> Espresso Machine: €1500+ | <strong>Hack:</strong> Syringe + Beans + Scale: €8 | <strong>Einsparnis:</strong> 99.5%</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #ef4444;"><i class="fas fa-exclamation-circle"></i> ⚠️ FEHLER</h2>
+                <div style="background: rgba(239, 68, 68, 0.1); border-left: 4px solid #ef4444; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-danger mb-3">❌ Fehler: Zu schnelle Extraktion</h5>
+                    <p><strong>Was passiert:</strong> Wässrig statt creamy | <strong>✅ Lösung:</strong> Feinere Mahlung + fester Tamp</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #60a5fa;"><i class="fas fa-users"></i> 🌐 COMMUNITY</h2>
+                <div style="background: rgba(96, 165, 250, 0.1); border-left: 4px solid #60a5fa; padding: 1.5rem; border-radius: 8px;">
+                    <p>r/espresso, Barista Forum, Specialty Coffee Assoc., DIY Coffee Hacker Groups</p>
+                </div>
+
+                <h2 class="chapter-header" style="margin-top: 3rem;">📸 Fehler-Galerie</h2>
+                <div class="report-gallery">
+                    <img src="assets/images/espresso_error1.jpg" class="gallery-image" alt="Over-extraction" loading="lazy" decoding="async" fetchpriority="low">
+                    <img src="assets/images/espresso_error2.jpg" class="gallery-image" alt="Channeling" loading="lazy" decoding="async" fetchpriority="low">
+                    <img src="assets/images/espresso_error3.jpg" class="gallery-image" alt="Poor Crema" loading="lazy" decoding="async" fetchpriority="low">
+                    <img src="assets/images/espresso_error4.jpg" class="gallery-image" alt="Bad Grind" loading="lazy" decoding="async" fetchpriority="low">
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="sidebar-box">
+                    <h5 style="color: #92400e;"><i class="fas fa-list-check"></i> Espresso Path</h5>
+                    <div class="checklist">
+                        <label><input type="checkbox"> Grinder kaufen</label>
+                        <label><input type="checkbox"> Syringe press bauen</label>
+                        <label><input type="checkbox"> Scale + Thermometer</label>
+                        <label><input type="checkbox"> Frische Beans</label>
+                        <label><input type="checkbox"> Technique Training</label>
+                        <label><input type="checkbox"> Barista Level!</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="diy-enhancements.js"></script>
+</body>
+</html>

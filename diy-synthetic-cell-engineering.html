@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIY: Synthetic Cell Engineering</title>
+    <meta name="description" content="Deutsche DIY-Anleitung zu Synthetic Cell Engineering mit Materialien, Aufbau, Praxis-Tipps und Troubleshooting.">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="global.css" rel="stylesheet">
+    <style>
+        .chapter-header {color: #10b981; border-left: 4px solid #10b981; padding-left: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; font-size: 1.5rem;}
+        .code-box {background: rgba(16, 185, 129, 0.1); border: 1px solid #10b981; padding: 1rem; border-radius: 5px; margin: 1rem 0; font-family: monospace; font-size: 0.75rem;}
+        .report-gallery {display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 2rem 0;}
+        .gallery-image {width: 100%; height: 250px; object-fit: cover; border-radius: 8px; border: 2px solid #10b981;}
+    </style>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body class="orbtron-theme">
+    <nav class="navbar navbar-dark bg-dark sticky-top" style="border-bottom: 2px solid #10b981;">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1"><i class="fas fa-dna"></i> DIY: Synthetic Cell Engineering</span>
+            <a href="index.html" class="btn btn-outline-info btn-sm" style="color: #10b981; border-color: #10b981;" aria-label="Zurück zur CODESTRAL-Projektbibliothek">← Zurück</a>
+        </div>
+    </nav>
+    <div class="container-fluid py-5" role="main">
+        <div style="position: relative; margin-bottom: 2rem; border-radius: 10px; overflow: hidden; border: 2px solid #10b981; max-height: 300px;">
+            <img src="assets/images/synthetic-cell-engineering_hero.jpg" loading="eager" style="width: 100%; height: 300px; object-fit: cover; display: block;" alt="Synthetic Cell Hero" decoding="async" fetchpriority="high">
+            <div class="hero" style="background: rgba(0,0,0,0.7); border: none; border-radius: 0; padding: 2rem 1.5rem; margin-bottom: 0; text-align: center; position: absolute; top: 50%; left: 0; right: 0; transform: translateY(-50%); display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <h1 style="color: #10b981; font-size: clamp(1.5rem, 5vw, 2.5rem); text-shadow: 0 0 20px rgba(16, 185, 129, 0.5);">🦠 Synthetic Cell Engineering</h1>
+                <p class="lead text-white" style="font-size: clamp(0.95rem, 3vw, 1.1rem);">De-novo Genome Synthesis & Cell Redesign</p>
+            </div>
+        </div>
+        <div style="background: rgba(220,38,38,0.15); border-left: 4px solid #dc2626; padding: 1rem 1.25rem; border-radius: 5px; margin: 0 0 2rem;">
+            <strong style="color:#dc2626;">⚠️ Sicherheitshinweis (redaktionell ergänzt):</strong>
+            <span class="text-white">Dieser Artikel ist eine konzeptionelle, edukative Übersicht über De-novo-Genomsynthese auf Forschungsinstitut-Niveau (vergleichbar JCVI-Syn3.0) — keine Anleitung für ein Heimlabor. Reale Genomsynthese und -assembly erfordern eine BSL-gerechte Einrichtung, institutionelle Biosicherheits-/Ethikfreigabe und sind nicht für ~100 € zuhause umsetzbar, unabhängig von den hier zu Illustrationszwecken genannten Kostenvergleichen.</span>
+        </div>
+        <div class="row">
+            <div class="col-lg-8">
+                <h2 class="chapter-header"><i class="fas fa-dna"></i> Kapitel 1: Minimal Genome Design</h2>
+                <ul class="text-muted">
+                    <li>Essential Genes Identification</li>
+                    <li>Synthetic Minimal Bacteria (Mycoplasma)</li>
+                    <li>Chassis Organism Selection</li>
+                    <li>Genome Reduction Strategies</li>
+                </ul>
+
+                <h2 class="chapter-header"><i class="fas fa-flask"></i> Kapitel 2: DNA Synthesis & Assembly</h2>
+                <div class="code-box">
+# Synthetic DNA Assembly
+# Gibson Assembly for de novo genomes
+# DNA synthesis: 1-5 Mbp capacity
+DNA_length = 580_000  # bp
+read_cost = $0.03/bp  # synthetic
+assembly_method = "Gibson"
+                </div>
+
+                <h2 class="chapter-header"><i class="fas fa-microscope"></i> Kapitel 3: Cell Engineering & Iteration</h2>
+                <ul class="text-muted">
+                    <li>CRISPR Gene Editing</li>
+                    <li>Directed Evolution Loops</li>
+                    <li>Phenotypic Screening</li>
+                    <li>High-Throughput Characterization</li>
+                </ul>
+
+                <h2 class="chapter-header"><i class="fas fa-server"></i> Kapitel 4: Metabolic Engineering</h2>
+                <ul class="text-muted">
+                    <li>Pathway Redesign (Carbon Metabolism)</li>
+                    <li>Biosynthetic Production (Chemicals)</li>
+                    <li>Constraint-Based Modeling (FBA)</li>
+                    <li>Heterologous Expression</li>
+                </ul>
+
+                <h2 class="chapter-header"><i class="fas fa-chart-bar"></i> Kapitel 5: Biofabrication & Scale-Up</h2>
+                <ul class="text-muted">
+                    <li>Fermentation Optimization</li>
+                    <li>Bioreactor Design & Control</li>
+                    <li>Product Purification</li>
+                    <li>Economic Viability Analysis</li>
+                </ul>
+
+                <h2 class="chapter-header"><i class="fas fa-gavel"></i> Kapitel 6: Biosafety & Regulations</h2>
+                <ul class="text-muted">
+                    <li>Biological Containment (Kill Switches)</li>
+                    <li>Regulatory Framework (FDA/EMA)</li>
+                    <li>Environmental Risk Assessment</li>
+                    <li>Ethical Review Process</li>
+                </ul>
+
+                <h2 class="chapter-header" style="margin-top: 3rem; border-left: 4px solid #10b981;"><i class="fas fa-lightbulb"></i> 💡 PRO-TIPPS</h2>
+                <div style="background: rgba(16, 185, 129, 0.1); border-left: 4px solid #10b981; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-success mb-3">🎯 Tipp: E. coli vor de novo Synthesis</h5>
+                    <p><strong>Problem:</strong> Minimales Genome = komplex | <strong>Lösung:</strong> E. coli Toolkit = etabliert</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #f59e0b;"><i class="fas fa-piggy-bank"></i> 💰 BUDGET-HACKS (99% KOSTENLOS!)</h2>
+                <div style="background: rgba(245, 158, 11, 0.1); border-left: 4px solid #f59e0b; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-warning mb-3">💰 Hack: BioBricks OpenSource Community</h5>
+                    <p><strong>Original:</strong> Custom Gene Synthesis: €50K+ | <strong>Hack:</strong> iGEM Registry + DIY Assembly: €100 | <strong>Einsparnis:</strong> 99%</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #ef4444;"><i class="fas fa-exclamation-circle"></i> ⚠️ FEHLER</h2>
+                <div style="background: rgba(239, 68, 68, 0.1); border-left: 4px solid #ef4444; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-danger mb-3">❌ Fehler: Keine Kontrollmechanismen</h5>
+                    <p><strong>Was passiert:</strong> Unkontrolliertes Wachstum | <strong>✅ Lösung:</strong> Kill-Switches + Limited auxotrophy</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #60a5fa;"><i class="fas fa-users"></i> 🌐 COMMUNITY</h2>
+                <div style="background: rgba(96, 165, 250, 0.1); border-left: 4px solid #60a5fa; padding: 1.5rem; border-radius: 8px;">
+                    <p>iGEM, BioBricks Foundation, Synthetic Biology Community, International Biosafety Org</p>
+                </div>
+
+                <h2 class="chapter-header" style="margin-top: 3rem;">📸 Fehler-Galerie</h2>
+                <div class="report-gallery">
+                    <img src="assets/images/synth-cell_error1.jpg" class="gallery-image" alt="Assembly Failure" loading="lazy" decoding="async" fetchpriority="low">
+                    <img src="assets/images/synth-cell_error2.jpg" class="gallery-image" alt="Contamination" loading="lazy" decoding="async" fetchpriority="low">
+                    <img src="assets/images/synth-cell_error3.jpg" class="gallery-image" alt="No Viable Cells" loading="lazy" decoding="async" fetchpriority="low">
+                    <img src="assets/images/synth-cell_error4.jpg" class="gallery-image" alt="Metabolic Imbalance" loading="lazy" decoding="async" fetchpriority="low">
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="sidebar-box">
+                    <h5 style="color: #10b981;"><i class="fas fa-list-check"></i> Synth Cell Path</h5>
+                    <div class="checklist">
+                        <label><input type="checkbox"> Genome design</label>
+                        <label><input type="checkbox"> DNA synthesis order</label>
+                        <label><input type="checkbox"> Gibson assembly</label>
+                        <label><input type="checkbox"> Transformation</label>
+                        <label><input type="checkbox"> Validation sequencing</label>
+                        <label><input type="checkbox"> Characterization</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="diy-enhancements.js"></script>
+</body>
+</html>

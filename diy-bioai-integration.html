@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIY: BioAI Integration</title>
+    <meta name="description" content="Deutsche DIY-Anleitung zu BioAI Integration mit Materialien, Aufbau, Praxis-Tipps und Troubleshooting.">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="global.css" rel="stylesheet">
+    <style>
+        .chapter-header {color: #10b981; border-left: 4px solid #10b981; padding-left: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; font-size: 1.5rem;}
+        .code-box {background: rgba(16, 185, 129, 0.1); border: 1px solid #10b981; padding: 1rem; border-radius: 5px; margin: 1rem 0; font-family: monospace; font-size: 0.75rem;}
+        .report-gallery {display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 2rem 0;}
+        .gallery-image {width: 100%; height: 250px; object-fit: cover; border-radius: 8px; border: 2px solid #10b981;}
+    </style>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body class="orbtron-theme">
+    <nav class="navbar navbar-dark bg-dark sticky-top" style="border-bottom: 2px solid #10b981;">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1"><i class="fas fa-dna"></i> DIY: BioAI Integration</span>
+            <a href="index.html" class="btn btn-outline-info btn-sm" style="color: #10b981; border-color: #10b981;" aria-label="Zurück zur CODESTRAL-Projektbibliothek">← Zurück</a>
+        </div>
+    </nav>
+    <div class="container-fluid py-5" role="main">
+        <div style="position: relative; margin-bottom: 2rem; border-radius: 10px; overflow: hidden; border: 2px solid #10b981; max-height: 300px;">
+            <img src="assets/images/bioai_hero.png" loading="eager" style="width: 100%; height: 300px; object-fit: cover; display: block;" alt="BioAI Integration Hero" decoding="async" fetchpriority="high">
+            <div class="hero" style="background: rgba(0,0,0,0.7); border: none; border-radius: 0; padding: 2rem 1.5rem; margin-bottom: 0; text-align: center; position: absolute; top: 50%; left: 0; right: 0; transform: translateY(-50%); display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <h1 style="color: #10b981; font-size: clamp(1.5rem, 5vw, 2.5rem); text-shadow: 0 0 20px rgba(16, 185, 129, 0.5);">🧬 BioAI Integration</h1>
+                <p class="lead text-white" style="font-size: clamp(0.95rem, 3vw, 1.1rem);">Synthetic Biology + Machine Learning</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8">
+                <h2 class="chapter-header"><i class="fas fa-microscope"></i> Kapitel 1: DNA/Protein Sequencing</h2>
+                <ul class="text-muted">
+                    <li>NGS Data Preprocessing</li>
+                    <li>Alignment & Assembly (Bowtie2, SPAdes)</li>
+                    <li>Variant Calling</li>
+                    <li>Quality Control Metrics</li>
+                </ul>
+
+                <h2 class="chapter-header"><i class="fas fa-brain"></i> Kapitel 2: Deep Learning Models</h2>
+                <div class="code-box">
+# AlphaFold2-Style Protein Structure
+from tensorflow import keras
+model = keras.Sequential([
+    keras.layers.LSTM(256, input_shape=(None, 21)),
+    keras.layers.Dense(128, activation='relu'),
+    keras.layers.Dense(3, activation='tanh')  # (x,y,z)
+])
+                </div>
+
+                <h2 class="chapter-header"><i class="fas fa-dna"></i> Kapitel 3: Protein Design & Prediction</h2>
+                <ul class="text-muted">
+                    <li>Structure Prediction (AlphaFold2)</li>
+                    <li>Functional Domain Identification</li>
+                    <li>Design Validation & Scoring</li>
+                    <li>Directed Evolution Simulations</li>
+                </ul>
+
+                <h2 class="chapter-header"><i class="fas fa-flask"></i> Kapitel 4: Wet Lab Automation</h2>
+                <ul class="text-muted">
+                    <li>Robot Design & Control</li>
+                    <li>PCR/Cloning Automation</li>
+                    <li>Synthetic Biology Workflows</li>
+                    <li>Data Integration Pipelines</li>
+                </ul>
+
+                <h2 class="chapter-header"><i class="fas fa-chart-bar"></i> Kapitel 5: High-Throughput Screening</h2>
+                <ul class="text-muted">
+                    <li>Microplate Reader Integration</li>
+                    <li>Image Analysis (OpenCV)</li>
+                    <li>Phenotype Classification</li>
+                    <li>Feedback Loop Design</li>
+                </ul>
+
+                <h2 class="chapter-header"><i class="fas fa-rocket"></i> Kapitel 6: Deployment & Ethics</h2>
+                <ul class="text-muted">
+                    <li>Biosafety & Containment</li>
+                    <li>Regulatory Compliance (GMO)</li>
+                    <li>Data Privacy in Genomics</li>
+                    <li>Responsible AI in Bio</li>
+                </ul>
+
+                <!-- EXPANSION: PRO-TIPPS -->
+                <h2 class="chapter-header" style="margin-top: 3rem; border-left: 4px solid #10b981;"><i class="fas fa-lightbulb"></i> 💡 PRO-TIPPS</h2>
+                <div style="background: rgba(16, 185, 129, 0.1); border-left: 4px solid #10b981; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-success mb-3">🎯 Tipp: AlphaFold2 local statt cloud</h5>
+                    <p><strong>Problem:</strong> Cloud-API = langsam + teuer | <strong>Lösung:</strong> AlphaFold2 lokal für schnelle Iteration</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #f59e0b;"><i class="fas fa-piggy-bank"></i> 💰 BUDGET-HACKS (92% KOSTENLOS!)</h2>
+                <div style="background: rgba(245, 158, 11, 0.1); border-left: 4px solid #f59e0b; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-warning mb-3">💰 Hack: OpenSource Bio Stack</h5>
+                    <p><strong>Original:</strong> Kommerzieller Bio-AI Stack: €50K+ | <strong>Hack:</strong> Biopython + AlphaFold2 + Nextflow: €0 | <strong>Einsparnis:</strong> 100%</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #ef4444;"><i class="fas fa-exclamation-circle"></i> ⚠️ FEHLER</h2>
+                <div style="background: rgba(239, 68, 68, 0.1); border-left: 4px solid #ef4444; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-danger mb-3">❌ Fehler: Overfitting auf kleine Dataset</h5>
+                    <p><strong>Was passiert:</strong> Model falsch | <strong>✅ Lösung:</strong> Cross-validation + Transfer Learning</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #60a5fa;"><i class="fas fa-users"></i> 🌐 COMMUNITY</h2>
+                <div style="background: rgba(96, 165, 250, 0.1); border-left: 4px solid #60a5fa; padding: 1.5rem; border-radius: 8px;">
+                    <p>BioPython, AlphaFold Community, Synthetic Biology Community, OpenBiology Forum</p>
+                </div>
+
+                <!-- FEHLER-GALERIE MIT JPGs -->
+                <h2 class="chapter-header" style="margin-top: 3rem;">📸 Fehler-Galerie</h2>
+                <div class="report-gallery">
+                    <img src="assets/images/bioai_error1.jpg" class="gallery-image" alt="Misfolded Protein" loading="lazy" decoding="async" fetchpriority="low">
+                    <img src="assets/images/bioai_error2.jpg" class="gallery-image" alt="Sequence Bias" loading="lazy" decoding="async" fetchpriority="low">
+                    <img src="assets/images/bioai_error3.jpg" class="gallery-image" alt="Lab Contamination" loading="lazy" decoding="async" fetchpriority="low">
+                    <img src="assets/images/bioai_error4.jpg" class="gallery-image" alt="Model Overfitting" loading="lazy" decoding="async" fetchpriority="low">
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="sidebar-box">
+                    <h5 style="color: #10b981;"><i class="fas fa-list-check"></i> BioAI Path</h5>
+                    <div class="checklist">
+                        <label><input type="checkbox"> Data preprocessing</label>
+                        <label><input type="checkbox"> AlphaFold2 setup</label>
+                        <label><input type="checkbox"> Model training</label>
+                        <label><input type="checkbox"> Validation & testing</label>
+                        <label><input type="checkbox"> Lab automation</label>
+                        <label><input type="checkbox"> Deploy & monitor</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="diy-enhancements.js"></script>
+</body>
+</html>

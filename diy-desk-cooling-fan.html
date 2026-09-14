@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIY: Desk Cooling Fan</title>
+    <meta name="description" content="Deutsche DIY-Anleitung zu Desk Cooling Fan mit Materialien, Aufbau, Praxis-Tipps und Troubleshooting.">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="global.css" rel="stylesheet">
+    <style>
+        .chapter-header {color: #0891b2; border-left: 4px solid #0891b2; padding-left: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; font-size: 1.5rem;}
+        .code-box {background: rgba(8, 145, 178, 0.1); border: 1px solid #0891b2; padding: 1rem; border-radius: 5px; margin: 1rem 0; font-family: monospace; font-size: 0.75rem;}
+        .report-gallery {display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 2rem 0;}
+        .gallery-image {width: 100%; height: 250px; object-fit: cover; border-radius: 8px; border: 2px solid #0891b2;}
+    </style>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body class="orbtron-theme">
+    <nav class="navbar navbar-dark bg-dark sticky-top" style="border-bottom: 2px solid #0891b2;">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1"><i class="fas fa-fan"></i> DIY: Desk Cooling Fan</span>
+            <a href="index.html" class="btn btn-outline-info btn-sm" style="color: #0891b2; border-color: #0891b2;" aria-label="Zurück zur CODESTRAL-Projektbibliothek">← Zurück</a>
+        </div>
+    </nav>
+    <div class="container-fluid py-5" role="main">
+        <div style="position: relative; margin-bottom: 2rem; border-radius: 10px; overflow: hidden; border: 2px solid #0891b2; max-height: 300px;">
+            <img src="assets/images/desk-cooling_hero.jpg" loading="eager" style="width: 100%; height: 300px; object-fit: cover; display: block;" alt="Desk Cooling Hero" decoding="async" fetchpriority="high">
+            <div class="hero" style="background: rgba(0,0,0,0.7); border: none; border-radius: 0; padding: 2rem 1.5rem; margin-bottom: 0; text-align: center; position: absolute; top: 50%; left: 0; right: 0; transform: translateY(-50%); display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <h1 style="color: #0891b2; font-size: clamp(1.5rem, 5vw, 2.5rem); text-shadow: 0 0 20px rgba(8, 145, 178, 0.5);">❄️ Desk Cooling Fan</h1>
+                <p class="lead text-white" style="font-size: clamp(0.95rem, 3vw, 1.1rem);">Premium PC Cooling für €18!</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8">
+                <h2 class="chapter-header"><i class="fas fa-thermometer"></i> Kapitel 1: Thermal Theory</h2>
+                <ul class="text-muted">
+                    <li>CPU vs. Ambient Temps</li>
+                    <li>Thermal Paste Importance</li>
+                    <li>Air Flow Patterns</li>
+                    <li>Optimal Cooling Setup</li>
+                </ul>
+
+                <h2 class="chapter-header"><i class="fas fa-fan"></i> Kapitel 2: Fan Selection</h2>
+                <div class="code-box">
+# DIY CPU Cooler Budget Build
+# Arctic Freezer 34 eSports ~€25
+# Or 120mm Noctua fan €20 (used)
+# Thermal paste: €3 (crucial!)
+# Total: €18-25 for excellent cooling
+                </div>
+
+                <h2 class="chapter-header"><i class="fas fa-wrench"></i> Kapitel 3: Installation Hacks</h2>
+                <ul class="text-muted">
+                    <li>Socket Compatibility Check</li>
+                    <li>Mounting Bracket DIY Fix</li>
+                    <li>Optimal Thermal Paste Amount</li>
+                    <li>Cable Management</li>
+                </ul>
+
+                <h2 class="chapter-header"><i class="fas fa-chart-bar"></i> Kapitel 4: Temperature Monitoring</h2>
+                <ul class="text-muted">
+                    <li>BIOS Temperature Reading</li>
+                    <li>HWiNFO Monitoring</li>
+                    <li>Stress Testing (Prime95)</li>
+                    <li>Thermal Limits</li>
+                </ul>
+
+                <h2 class="chapter-header"><i class="fas fa-fan"></i> Kapitel 5: Airflow Optimization</h2>
+                <ul class="text-muted">
+                    <li>Case Fan Setup (Intake/Exhaust)</li>
+                    <li>CPU Fan Speed Curves</li>
+                    <li>Dust Prevention</li>
+                    <li>Cleaning Schedules</li>
+                </ul>
+
+                <h2 class="chapter-header"><i class="fas fa-zap"></i> Kapitel 6: Advanced Cooling</h2>
+                <ul class="text-muted">
+                    <li>Liquid Cooling DIY (No Risk!)</li>
+                    <li>AIO All-in-One Systems</li>
+                    <li>Custom Loop Building</li>
+                    <li>GPU Cooler Hacks</li>
+                </ul>
+
+                <h2 class="chapter-header" style="margin-top: 3rem; border-left: 4px solid #10b981;"><i class="fas fa-lightbulb"></i> 💡 PRO-TIPPS</h2>
+                <div style="background: rgba(16, 185, 129, 0.1); border-left: 4px solid #10b981; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-success mb-3">🎯 Tipp: Thermal Paste = Game Changer!</h5>
+                    <p><strong>Problem:</strong> Alte Paste eingetrocknet | <strong>Lösung:</strong> Fresh paste €3 = -15°C!</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #f59e0b;"><i class="fas fa-piggy-bank"></i> 💰 BUDGET-HACKS (96% SPAREN!)</h2>
+                <div style="background: rgba(245, 158, 11, 0.1); border-left: 4px solid #f59e0b; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-warning mb-3">💰 Hack: Used Noctua Fan €20</h5>
+                    <p><strong>Original:</strong> New cooling system: €300+ | <strong>Hack:</strong> Used quality fan + paste: €18 | <strong>Einsparnis:</strong> 94%</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #ef4444;"><i class="fas fa-exclamation-circle"></i> ⚠️ FEHLER</h2>
+                <div style="background: rgba(239, 68, 68, 0.1); border-left: 4px solid #ef4444; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-danger mb-3">❌ Fehler: Zu viel Thermal Paste</h5>
+                    <p><strong>Was passiert:</strong> Schlechter Contact | <strong>✅ Lösung:</strong> Pea-size blob nur!</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #60a5fa;"><i class="fas fa-users"></i> 🌐 COMMUNITY</h2>
+                <div style="background: rgba(96, 165, 250, 0.1); border-left: 4px solid #60a5fa; padding: 1.5rem; border-radius: 8px;">
+                    <p>r/overclocking, Tom's Hardware Forum, LTT Community, Cooling Mods Forum</p>
+                </div>
+
+                <h2 class="chapter-header" style="margin-top: 3rem;">📸 Fehler-Galerie</h2>
+                <div class="report-gallery">
+                    <img src="assets/images/cooling_error1.jpg" class="gallery-image" alt="Thermal Paste Overflow" loading="lazy" decoding="async" fetchpriority="low">
+                    <img src="assets/images/cooling_error2.jpg" class="gallery-image" alt="Bad Socket Mount" loading="lazy" decoding="async" fetchpriority="low">
+                    <img src="assets/images/cooling_error3.jpg" class="gallery-image" alt="High Temps" loading="lazy" decoding="async" fetchpriority="low">
+                    <img src="assets/images/cooling_error4.jpg" class="gallery-image" alt="Fan Noise" loading="lazy" decoding="async" fetchpriority="low">
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="sidebar-box">
+                    <h5 style="color: #0891b2;"><i class="fas fa-list-check"></i> Cooling Path</h5>
+                    <div class="checklist">
+                        <label><input type="checkbox"> CPU model check</label>
+                        <label><input type="checkbox"> Fan compatible</label>
+                        <label><input type="checkbox"> Old cooler remove</label>
+                        <label><input type="checkbox"> Paste clean old</label>
+                        <label><input type="checkbox"> Mount new fan</label>
+                        <label><input type="checkbox"> Temp monitor</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="diy-enhancements.js"></script>
+</body>
+</html>

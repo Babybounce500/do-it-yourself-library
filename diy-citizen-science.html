@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIY: Citizen Science - Lichtverschmutzung Messung</title>
+    <meta name="description" content="Deutsche DIY-Anleitung zu Citizen Science - Lichtverschmutzung Messung mit Materialien, Aufbau, Praxis-Tipps und Troubleshooting.">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="global.css" rel="stylesheet">
+    <style>
+        .chapter-header {color: #00ffff; border-left: 4px solid #00ffff; padding-left: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; font-size: 1.5rem;}
+        .experiment-box {background: rgba(0, 255, 255, 0.1); border: 1px solid #00ffff; padding: 1rem; border-radius: 5px; margin: 1rem 0; font-size: 0.95rem;}
+        .data-box {background: rgba(255, 215, 0, 0.1); border-left: 4px solid #ffd700; padding: 1rem; border-radius: 5px; margin: 1rem 0; font-size: 0.95rem;}
+        .community-box {background: rgba(157, 78, 221, 0.15); border-left: 4px solid #9d4edd; padding: 1rem; border-radius: 5px; margin: 1rem 0; font-size: 0.95rem;}
+        .code-block {background: rgba(0, 0, 0, 0.5); border: 1px solid #00ffff; color: #00ff00; padding: 1rem; border-radius: 5px; overflow-x: auto; margin: 1rem 0; font-family: monospace; font-size: 0.85rem; line-height: 1.5;}
+        @media (max-width: 768px) {
+            .chapter-header {font-size: 1.2rem; padding-left: 1rem; margin-top: 1.5rem;}
+            .experiment-box, .data-box, .community-box {font-size: 0.9rem; padding: 0.75rem;}
+            .code-block {font-size: 0.75rem; padding: 0.75rem;}
+            p {font-size: 0.95rem; line-height: 1.5;}
+        }
+    </style>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body class="orbtron-theme">
+    <nav class="navbar navbar-dark bg-dark sticky-top border-bottom border-cyan-glow">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1"><i class="fas fa-star"></i> DIY: Citizen Science - Lichtverschmutzung</span>
+            <a href="index.html" class="btn btn-outline-info btn-sm" aria-label="Zurück zur CODESTRAL-Projektbibliothek">← Zurück zur Library</a>
+        </div>
+    </nav>
+
+    <div class="container-fluid py-5" role="main">
+        <div style="position: relative; margin-bottom: 2rem; border-radius: 10px; overflow: hidden; border: 2px solid #00ffff; max-height: 300px;">
+            <img alt="Citizen Science - Lichtverschmutzung Messung – Hero-Bild" src="assets/images/citizen_science_hero_banner.png" style="width: 100%; height: 300px; object-fit: cover; display: block;" decoding="async" loading="eager" fetchpriority="high">
+            <div class="hero" style="background: rgba(0,0,0,0.7); border: none; border-radius: 0; padding: 2rem 1.5rem; margin-bottom: 0; text-align: center; position: absolute; bottom: 0; left: 0; right: 0;">
+                <h1 class="text-cyan-glow mb-3" style="font-size: clamp(1.5rem, 5vw, 2.5rem); text-shadow: 0 0 20px rgba(0,255,255,0.5);">🌙 Citizen Science</h1>
+                <p class="lead text-white" style="font-size: clamp(0.95rem, 3vw, 1.1rem);">Lichtverschmutzung messen</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-8">
+                <!-- KAPITEL 1 -->
+                <h2 class="chapter-header"><i class="fas fa-lightbulb"></i> Kapitel 1: Was ist Lichtverschmutzung?</h2>
+                <p class="text-white">Lichtverschmutzung ist künstliches Licht, das die Nacht zerstört:</p>
+                <div class="experiment-box">
+                    <strong>Probleme:</strong>
+                    <ul class="mb-0">
+                        <li>🦇 Migrationen von Vögeln/Insekten beeinträchtigt</li>
+                        <li>🐢 Meeresschildkröten verfallen sich (Lichter statt Mond)</li>
+                        <li>😴 Menschliche zirkadale Rhythmen durcheinander (Schlafstörungen)</li>
+                        <li>🔭 Astronomie unmöglich (Sterne unsichtbar)</li>
+                        <li>💡 Energieverschwendung: ~30% der Außenlicht-Energie geht nach oben!</li>
+                    </ul>
+                </div>
+                <div class="data-box">
+                    <strong>📊 Globale Situation:</strong><br>
+                    - 1/3 der Menschheit kann Milchstraße nicht sehen<br>
+                    - Lichtverschmutzung nimmt 2% pro Jahr zu<br>
+                    - Ein Drittel aller Sterne sind bereits unsichtbar
+                </div>
+
+                <!-- KAPITEL 2 -->
+                <h2 class="chapter-header"><i class="fas fa-ruler"></i> Kapitel 2: Messung - Die Technologie</h2>
+                <div class="code-box">
+# DIY Citizen Science Kit
+# Light Meter €25
+# Data Logger €15
+# Sensors €30
+# Arduino Board €10
+# Software Tools €0 (free)
+# Total: €80 per station
+                </div>
+
+                <p class="text-white">Du brauchst nicht viel um Lichtverschmutzung zu messen:</p>
+                <table class="table table-dark table-striped" style="font-size: 0.9rem;">
+                    <tr>
+                        <td><strong>Smartphone-App (kostenlos!)</strong></td>
+                        <td>"Dark Sky Meter" oder "Loss of the Night" App</td>
+                        <td class="text-success">START HIER</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Luxmeter (~€20-50)</strong></td>
+                        <td>Genauere Messungen von Lux-Werten</td>
+                        <td class="text-info">Besser</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Sky Quality Meter (~€200)</strong></td>
+                        <td>Professionelle Messungen in mag/arcsec²</td>
+                        <td class="text-warning">Pro</td>
+                    </tr>
+                </table>
+                <div class="community-box">
+                    <strong>🌍 Globale Projekte:</strong><br>
+                    - <strong>Globe at Night:</strong> Einfaches visuelles Sternenzählen (kostenlos)<br>
+                    - <strong>NOAA Night Lights:</strong> Satellitendaten + Citizen Input<br>
+                    - <strong>International Dark Sky Association:</strong> Koordiniert globale Messungen
+                </div>
+
+                <!-- KAPITEL 3 -->
+                <h2 class="chapter-header"><i class="fas fa-microscope"></i> Kapitel 3: DIY Experiment durchführen</h2>
+                <p class="text-white">Schritt-für-Schritt Lichtverschmutzungs-Messung:</p>
+                <div class="experiment-box">
+                    <strong>Vorbereitung (1 Tag vorher)</strong><br>
+                    1. Dein Messpunkt wählen (Park, Balkon, offene Wiese)<br>
+                    2. Sky Quality Meter App herunterladen<br>
+                    3. Wetter checken: Klare Nacht? Keine Wolken?<br>
+                    4. Nachbarschaft informieren (Lichter könnte ausschalten, optional)
+                </div>
+                <div class="experiment-box">
+                    <strong>Messung (Nachts, min. 1h nach Sonnenuntergang)</strong><br>
+                    1. Zu Messpunkt gehen<br>
+                    2. 30 Minuten an Ort bleiben (Augen an Dunkelheit gewöhnen)<br>
+                    3. App starten, nach Norden schauen, Foto machen<br>
+                    4. 5-10 Messungen im Abstand von 1 Stunde<br>
+                    5. Daten notieren: Uhrzeit, Wetter, Lichter sichtbar
+                </div>
+                <div class="data-box">
+                    <strong>📊 Richtwerte (Sky Brightness):</strong><br>
+                    - >20 mag/arcsec² = Excellent (echte Dunkelheit)<br>
+                    - 18-20 = Very good<br>
+                    - 16-18 = Good<br>
+                    - 14-16 = Compromised (aber Sterne sichtbar)<br>
+                    - <14 = Poor (helle Stadt)
+                </div>
+                <div class="experiment-box">
+                    <strong>Daten hochladen</strong><br>
+                    1. App bietet direkt Upload zu "Loss of the Night"<br>
+                    2. Oder manuell auf NOAA.gov registrieren<br>
+                    3. Deine Messung wird Teil der globalen Karte!<br>
+                    4. Wissenschaftler nutzen die Daten für Forschung
+                </div>
+
+                <!-- KAPITEL 4 -->
+                <h2 class="chapter-header"><i class="fas fa-chart-line"></i> Kapitel 4: Längszeit-Studie (3-6 Monate)</h2>
+                <p class="text-white">Eine einzelne Messung ist interessant, aber nicht genug. Mach eine Serie!</p>
+                <div class="experiment-box">
+                    <strong>N=1 Experiment: "Wie ändert sich Lichtverschmutzung über Zeit?"</strong><br>
+                    <strong>Hypothese:</strong> Lichtverschmutzung ist saisonal (Winter vs Sommer) und jahresabhängig
+                </div>
+                <div class="code-block">
+# Beispiel Daten-Tracking Spreadsheet:
+Datum | Uhrzeit | Location | Sky Brightness | Sterne sichtbar | Wetter | Notizen
+2025-01-15 | 20:00 | Park XY | 16.5 | 30 | Klar | Neue Straßenlampe?
+2025-02-15 | 20:00 | Park XY | 16.2 | 35 | Klar | Etwas besser
+2025-03-15 | 20:00 | Park XY | 15.8 | 50 | Klar | Winter vorbei, mehr Dunkelheit
+                </div>
+                <div class="community-box">
+                    <strong>📈 Auswertung nach 3 Monaten:</strong><br>
+                    - Trends erkennen (wird es dunkler oder heller?)<br>
+                    - Vergleich mit historischen Daten (NASA satellite imagery)<br>
+                    - Publikation? Kontaktier einen Astrophysiker lokaler Uni!
+                </div>
+
+                <!-- KAPITEL 5 -->
+                <h2 class="chapter-header"><i class="fas fa-lightbulb"></i> Kapitel 5: Advocacy - Was du verbessern kannst</h2>
+                <p class="text-white">Messung allein ist nicht genug. Nutze deine Daten für Veränderung:</p>
+                <div class="experiment-box">
+                    <strong>Aktion 1: Lokale Regierung</strong><br>
+                    - Zeige deine Messungen der Stadt-Regierung<br>
+                    - Fordere Dark-Sky Ordinance (Lichtemissionsbeschränkung)<br>
+                    - Vorschlag: Warmweiße Lichter (rot-gelb) statt Blau-Weiß<br>
+                    - Motion Sensors statt 24/7 Beleuchtung
+                </div>
+                <div class="experiment-box">
+                    <strong>Aktion 2: Community Outreach</strong><br>
+                    - Organisiere "Stargazing Night" in deiner Gemeinde<br>
+                    - Lade Leute ein, Messungen zu machen<br>
+                    - Education über Lichtverschmutzung & Lösungen<br>
+                    - Pressemitteilung an lokale Medien
+                </div>
+                <div class="experiment-box">
+                    <strong>Aktion 3: DIY Lösungen</strong><br>
+                    - Kündige bei deinen Nachbarn (Lichter reduzieren?)<br>
+                    - Installiere Red Lights (besser für Nacht-Ökosysteme)<br>
+                    - Motion Sensors an deinen Lichtern<br>
+                    - Inspiriere Familie & Freunde
+                </div>
+
+                <!-- KAPITEL 6 -->
+                <h2 class="chapter-header"><i class="fas fa-earth-americas"></i> Kapitel 6: Jenseits von Lichtverschmutzung - Andere Citizen Science Projekte</h2>
+                <p class="text-white">Du magst das? Hier sind ähnliche Projekte:</p>
+                <div class="data-box">
+                    <strong>🌍 Beliebte Citizen Science Programme:</strong><br>
+                    <ul>
+                        <li><strong>iNaturalist:</strong> Foto-Dokumentation von Tieren/Pflanzen weltweit</li>
+                        <li><strong>Zooniverse:</strong> Klassifizierung von Bildern (Galaxy Zoo, Snapshot Serengeti)</li>
+                        <li><strong>Weather Underground:</strong> Personal Weather Stations (PWS)</li>
+                        <li><strong>BirdCLIP:</strong> Vogel-Sound-Klassifikation</li>
+                        <li><strong>Safecast:</strong> Strahlung messen nach Fukushima</li>
+                        <li><strong>AirBeam:</strong> Luftqualitäts-Monitoring</li>
+                    </ul>
+                </div>
+                <div class="community-box">
+                    <strong>📊 Warum Citizen Science?</strong><br>
+                    - 1.000+ Wissenschaftler allein können nicht alles messen<br>
+                    - Du hast lokales Wissen, das remote-Satelliten nicht haben<br>
+                    - Deine Daten werden in echten Papers veröffentlicht<br>
+                    - Du trägst zu echter Wissenschaft bei!
+                </div>
+
+                <!-- ═══════════════════════════════════════════════════════════════ -->
+                <!-- EXPANSION: PRO-TIPPS & TRICKS -->
+                <!-- ═══════════════════════════════════════════════════════════════ -->
+
+                <h2 class="chapter-header" style="margin-top: 3rem; border-left: 4px solid #10b981;"><i class="fas fa-lightbulb"></i> 💡 PRO-TIPPS & INSIDER-TRICKS</h2>
+
+                <div style="background: rgba(16, 185, 129, 0.1); border-left: 4px solid #10b981; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-success mb-3">🎯 Tipp 1: Mehrere Messungen am gleichen Ort (Trend-Erkennung)</h5>
+                    <p><strong>Problem:</strong> Einzelne Messung sagt wenig aus</p>
+                    <p><strong>Smart Lösung:</strong> Jeden Monat zum gleichen Punkt, gleiche Uhrzeit → Trends sichtbar</p>
+                    <p><strong>Impact:</strong> Kann Lichtverschmutzung-Zunahme nachweisen (gut für Advocacy)</p>
+                </div>
+
+                <div style="background: rgba(16, 185, 129, 0.1); border-left: 4px solid #10b981; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-success mb-3">🎯 Tipp 2: Sky Quality Meter App ist kostenlos</h5>
+                    <p><strong>Problem:</strong> Viele denken teure Geräte sind nötig</p>
+                    <p><strong>Smart Lösung:</strong> "Dark Sky Finder" + "Loss of the Night" App kostenlos</p>
+                    <p><strong>Impact:</strong> Genau gleich wie €200 Hardware für erste Messungen</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #f59e0b;"><i class="fas fa-piggy-bank"></i> 💰 BUDGET-HACKS (100% KOSTENLOS!)</h2>
+
+                <div style="background: rgba(245, 158, 11, 0.1); border-left: 4px solid #f59e0b; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-warning mb-3">💰 Hack 1: Nur Apps nutzen (€0!)</h5>
+                    <p><strong>Original:</strong> Sky Quality Meter: €200</p>
+                    <p><strong>Budget-Hack:</strong> Loss of the Night App: KOSTENLOS</p>
+                    <p><strong>Einsparnis:</strong> 100%</p>
+                </div>
+
+                <div style="background: rgba(245, 158, 11, 0.1); border-left: 4px solid #f59e0b; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-warning mb-3">💰 Hack 2: Bestehende Daten nutzen</h5>
+                    <p><strong>Original:</strong> Eigene Messungen: Zeitaufwand</p>
+                    <p><strong>Budget-Hack:</strong> NASA Satellite Lichtverschmutzung-Daten (NOAA) analysieren</p>
+                    <p><strong>Benefit:</strong> 20 Jahre historische Daten verfügbar</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #ef4444;"><i class="fas fa-exclamation-circle"></i> ⚠️ HÄUFIGE ANFÄNGERFEHLER</h2>
+
+                <div style="background: rgba(239, 68, 68, 0.1); border-left: 4px solid #ef4444; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-danger mb-3">❌ Fehler 1: Bewölkte Nacht messen</h5>
+                    <p><strong>Das passiert:</strong> Wolken verfälschen Messung komplett</p>
+                    <p><strong>✅ Lösung:</strong> Nur bei klarem Himmel messen (Wetter vorher prüfen!)</p>
+                </div>
+
+                <div style="background: rgba(239, 68, 68, 0.1); border-left: 4px solid #ef4444; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-danger mb-3">❌ Fehler 2: Nach Vollmond messen</h5>
+                    <p><strong>Das passiert:</strong> Mondhelligkeit verfälscht Sternenanzahl</p>
+                    <p><strong>✅ Lösung:</strong> Nur bei Neumondphase messen</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #8b5cf6;"><i class="fas fa-code-branch"></i> 🔄 ALTERNATIVE LÖSUNGEN</h2>
+
+                <div style="background: rgba(139, 92, 246, 0.1); border-left: 4px solid #8b5cf6; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-info mb-3">Option A: Nur Apps (€0)</h5>
+                    <p>✅ Kostenlos ✅ Schnell | ❌ Weniger präzise</p>
+                </div>
+
+                <div style="background: rgba(139, 92, 246, 0.1); border-left: 4px solid #8b5cf6; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-info mb-3">Option B: Luxmeter (€20-50)</h5>
+                    <p>✅ Genauer ✅ Billig | ❌ Nicht für Sterne optimal</p>
+                </div>
+
+                <div style="background: rgba(139, 92, 246, 0.1); border-left: 4px solid #8b5cf6; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-info mb-3">Option C: Sky Quality Meter (€200)</h5>
+                    <p>✅ Professionell ✅ Beste Daten | ❌ Teuer</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #06b6d4;"><i class="fas fa-tools"></i> 🔧 TROUBLESHOOTING</h2>
+
+                <div style="background: rgba(6, 182, 212, 0.1); border-left: 4px solid #06b6d4; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-info mb-3">Problem: App zeigt keine Sterne</h5>
+                    <p><strong>Lösung:</strong> Location ist zu hell (Stadt) → zum Park gehen</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #14b8a6;"><i class="fas fa-shield"></i> 🔒 SICHERHEITS-CHECKLIST</h2>
+
+                <div style="background: rgba(20, 184, 166, 0.1); border-left: 4px solid #14b8a6; padding: 1.5rem; border-radius: 8px;">
+                    <ul><li>☐ Location-Daten verschlüsselt</li><li>☐ Keine persönlichen Infos in Fotos</li><li>☐ Copyright beachten bei Uploads</li></ul>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #a78bfa;"><i class="fas fa-calendar"></i> 📅 WARTUNGS-KALENDER</h2>
+
+                <div style="background: rgba(167, 139, 250, 0.1); border-left: 4px solid #a78bfa; padding: 1.5rem; border-radius: 8px;">
+                    <p><strong>Monatlich:</strong> Messung durchführen | <strong>Quartalsweise:</strong> Daten analysieren | <strong>Jährlich:</strong> Mit letztem Jahr vergleichen</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #60a5fa;"><i class="fas fa-users"></i> 🌐 COMMUNITY & RESSOURCEN</h2>
+
+                <div style="background: rgba(96, 165, 250, 0.1); border-left: 4px solid #60a5fa; padding: 1.5rem; border-radius: 8px;">
+                    <p>Globe at Night, Zooniverse, iNaturalist, International Dark Sky Association Discord</p>
+                </div>
+            </div>
+
+            <!-- SIDEBAR -->
+            <div class="col-lg-4">
+                <div class="sidebar-box">
+                    <h5 class="text-cyan-glow"><i class="fas fa-list-check"></i> Citizen Science Path</h5>
+                    <div class="checklist">
+                        <label><input type="checkbox"> Apps installieren (Globe at Night)</label>
+                        <label><input type="checkbox"> Konto auf Zooniverse erstellen</label>
+                        <label><input type="checkbox"> Erste Messung durchführen</label>
+                        <label><input type="checkbox"> Daten zu Projekt hochladen</label>
+                        <label><input type="checkbox"> Community beitreten</label>
+                        <label><input type="checkbox"> Regelmäßige Messungen planen</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="diy-enhancements.js"></script>
+</body>
+</html>

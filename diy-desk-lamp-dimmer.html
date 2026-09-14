@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIY: Lamp Dimmer</title>
+    <meta name="description" content="Deutsche DIY-Anleitung zu Lamp Dimmer mit Materialien, Aufbau, Praxis-Tipps und Troubleshooting.">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="global.css" rel="stylesheet">
+    <style>
+        .chapter-header {color: #fbbf24; border-left: 4px solid #fbbf24; padding-left: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; font-size: 1.5rem;}
+        .code-box {background: rgba(251, 191, 36, 0.1); border: 1px solid #fbbf24; padding: 1rem; border-radius: 5px; margin: 1rem 0; font-family: monospace; font-size: 0.75rem;}
+        .report-gallery {display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 2rem 0;}
+        .gallery-image {width: 100%; height: 250px; object-fit: cover; border-radius: 8px; border: 2px solid #fbbf24;}
+    </style>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body class="orbtron-theme">
+    <nav class="navbar navbar-dark bg-dark sticky-top" style="border-bottom: 2px solid #fbbf24;">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1"><i class="fas fa-lightbulb"></i> DIY: Lamp Dimmer</span>
+            <a href="index.html" class="btn btn-outline-info btn-sm" style="color: #fbbf24; border-color: #fbbf24;" aria-label="Zurück zur CODESTRAL-Projektbibliothek">← Zurück</a>
+        </div>
+    </nav>
+    <div class="container-fluid py-5" role="main">
+        <div style="position: relative; margin-bottom: 2rem; border-radius: 10px; overflow: hidden; border: 2px solid #fbbf24; max-height: 300px;">
+            <img src="assets/images/lamp-dimmer_hero.jpg" loading="eager" style="width: 100%; height: 300px; object-fit: cover; display: block;" alt="Lamp Dimmer Hero" decoding="async" fetchpriority="high">
+            <div class="hero" style="background: rgba(0,0,0,0.7); border: none; border-radius: 0; padding: 2rem 1.5rem; margin-bottom: 0; text-align: center; position: absolute; top: 50%; left: 0; right: 0; transform: translateY(-50%); display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <h1 style="color: #fbbf24; font-size: clamp(1.5rem, 5vw, 2.5rem); text-shadow: 0 0 20px rgba(251, 191, 36, 0.5);">💡 Lamp Dimmer</h1>
+                <p class="lead text-white" style="font-size: clamp(0.95rem, 3vw, 1.1rem);">Smart Brightness für €7!</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8">
+                <h2 class="chapter-header"><i class="fas fa-lightbulb"></i> Kapitel 1: Lighting Mood</h2>
+                <ul class="text-muted">
+                    <li>Task lighting requirement</li>
+                    <li>Ambient mood setting</li>
+                    <li>Energy efficiency</li>
+                    <li>Circadian rhythm support</li>
+                </ul>
+
+                <h2 class="chapter-header"><i class="fas fa-tools"></i> Kapitel 2: DIY Dimmer Build</h2>
+                <div class="code-box">
+# DIY LED Dimmer Control
+# Arduino compatible €3
+# LED dimming module €2
+# Switch + potentiometer €2
+# Connections + casing €0
+# Total: €7 working system
+                </div>
+
+                <h2 class="chapter-header"><i class="fas fa-lightbulb"></i> Kapitel 3: LED vs. Incandescent</h2>
+                <ul class="text-muted">
+                    <li>LED dimming compatible</li>
+                    <li>PWM control method</li>
+                    <li>Flicker frequency</li>
+                    <li>Color temperature</li>
+                </ul>
+
+                <h2 class="chapter-header"><i class="fas fa-sliders-h"></i> Kapitel 4: Control Methods</h2>
+                <ul class="text-muted">
+                    <li>Potentiometer dial</li>
+                    <li>Mobile app control</li>
+                    <li>Voice commands</li>
+                    <li>Scheduling options</li>
+                </ul>
+
+                <h2 class="chapter-header"><i class="fas fa-gauge"></i> Kapitel 5: Brightness Levels</h2>
+                <ul class="text-muted">
+                    <li>0-100% range</li>
+                    <li>Smooth transitions</li>
+                    <li>Memory presets</li>
+                    <li>Fade effects</li>
+                </ul>
+
+                <h2 class="chapter-header"><i class="fas fa-bolt"></i> Kapitel 6: Power Efficiency</h2>
+                <ul class="text-muted">
+                    <li>Energy consumption reduction</li>
+                    <li>Heat dissipation management</li>
+                    <li>Lifespan extension</li>
+                    <li>Cost savings calculation</li>
+                </ul>
+
+                <h2 class="chapter-header" style="margin-top: 3rem; border-left: 4px solid #10b981;"><i class="fas fa-lightbulb"></i> 💡 PRO-TIPPS</h2>
+                <div style="background: rgba(16, 185, 129, 0.1); border-left: 4px solid #10b981; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-success mb-3">🎯 Tipp: PWM Frequency = hoch!</h5>
+                    <p><strong>Problem:</strong> Flicker sichtbar | <strong>Lösung:</strong> >1kHz frequency</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #f59e0b;"><i class="fas fa-piggy-bank"></i> 💰 BUDGET-HACKS (93% SPAREN!)</h2>
+                <div style="background: rgba(245, 158, 11, 0.1); border-left: 4px solid #f59e0b; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-warning mb-3">💰 Hack: DIY Dimmer vs. Smart</h5>
+                    <p><strong>Original:</strong> Smart dimmer system: €100+ | <strong>Hack:</strong> DIY dimmer: €7 | <strong>Einsparnis:</strong> 93%</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #ef4444;"><i class="fas fa-exclamation-circle"></i> ⚠️ FEHLER</h2>
+                <div style="background: rgba(239, 68, 68, 0.1); border-left: 4px solid #ef4444; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-danger mb-3">❌ Fehler: Zu niedriges PWM Frequency</h5>
+                    <p><strong>Was passiert:</strong> Flicker wahrnehmbar | <strong>✅ Lösung:</strong> >1kHz setzen</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #60a5fa;"><i class="fas fa-users"></i> 🌐 COMMUNITY</h2>
+                <div style="background: rgba(96, 165, 250, 0.1); border-left: 4px solid #60a5fa; padding: 1.5rem; border-radius: 8px;">
+                    <p>r/Arduino, Smart Home Forum, DIY Electronics, Lighting Control Groups</p>
+                </div>
+
+                <h2 class="chapter-header" style="margin-top: 3rem;">📸 Fehler-Galerie</h2>
+                <div class="report-gallery">
+                    <img src="assets/images/lamp-dimmer_error1.jpg" class="gallery-image" alt="Flicker Issue" loading="lazy" decoding="async" fetchpriority="low">
+                    <img src="assets/images/lamp-dimmer_error2.jpg" class="gallery-image" alt="Overheating" loading="lazy" decoding="async" fetchpriority="low">
+                    <img src="assets/images/lamp-dimmer_error3.jpg" class="gallery-image" alt="Poor Response" loading="lazy" decoding="async" fetchpriority="low">
+                    <img src="assets/images/lamp-dimmer_error4.jpg" class="gallery-image" alt="Wiring Fault" loading="lazy" decoding="async" fetchpriority="low">
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="sidebar-box">
+                    <h5 style="color: #fbbf24;"><i class="fas fa-list-check"></i> Dimmer Path</h5>
+                    <div class="checklist">
+                        <label><input type="checkbox"> Components gather</label>
+                        <label><input type="checkbox"> Circuit design</label>
+                        <label><input type="checkbox"> Code upload</label>
+                        <label><input type="checkbox"> Potentiometer tune</label>
+                        <label><input type="checkbox"> Test dimming</label>
+                        <label><input type="checkbox"> Flicker check</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="diy-enhancements.js"></script>
+</body>
+</html>

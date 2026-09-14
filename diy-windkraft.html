@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIY: Mini-Windkraftanlage</title>
+    <meta name="description" content="Deutsche DIY-Anleitung zu Mini-Windkraftanlage mit Materialien, Aufbau, Praxis-Tipps und Troubleshooting.">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="global.css" rel="stylesheet">
+    <style>
+        .chapter-header {color: #00ffff; border-left: 4px solid #00ffff; padding-left: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; font-size: 1.5rem;}
+        .wind-box {background: rgba(100, 150, 255, 0.1); border-left: 4px solid #6496ff; padding: 1rem; border-radius: 5px; margin: 1rem 0; font-size: 0.95rem;}
+        .warning-box {background: rgba(255, 0, 0, 0.1); border-left: 4px solid #ff0000; padding: 1rem; border-radius: 5px; margin: 1rem 0; font-size: 0.95rem;}
+        .tip-box {background: rgba(157, 78, 221, 0.15); border-left: 4px solid #9d4edd; padding: 1rem; border-radius: 5px; margin: 1rem 0; font-size: 0.95rem;}
+        @media (max-width: 768px) {
+            .chapter-header {font-size: 1.2rem; padding-left: 1rem; margin-top: 1.5rem;}
+            .wind-box, .warning-box, .tip-box {font-size: 0.9rem; padding: 0.75rem;}
+            p {font-size: 0.95rem; line-height: 1.5;}
+        }
+    </style>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body class="orbtron-theme">
+    <nav class="navbar navbar-dark bg-dark sticky-top border-bottom border-cyan-glow">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1"><i class="fas fa-wind"></i> DIY: Mini-Windkraftanlage</span>
+            <a href="index.html" class="btn btn-outline-info btn-sm" aria-label="Zurück zur CODESTRAL-Projektbibliothek">← Zurück</a>
+        </div>
+    </nav>
+    <div class="container-fluid py-5" role="main">
+        <div style="position: relative; margin-bottom: 2rem; border-radius: 10px; overflow: hidden; border: 2px solid #6496ff; max-height: 300px;">
+            <img alt="Mini-Windkraftanlage – Hero-Bild" src="assets/images/wind_turbine_hero_banner.png" style="width: 100%; height: 300px; object-fit: cover; display: block;" decoding="async" loading="eager" fetchpriority="high">
+            <div class="hero" style="background: rgba(0,0,0,0.7); border: none; border-radius: 0; padding: 2rem 1.5rem; margin-bottom: 0; text-align: center; position: absolute; bottom: 0; left: 0; right: 0;">
+                <h1 class="text-info mb-3" style="font-size: clamp(1.5rem, 5vw, 2.5rem); text-shadow: 0 0 20px rgba(100,150,255,0.5);">💨 Windkraftanlage</h1>
+                <p class="lead text-white" style="font-size: clamp(0.95rem, 3vw, 1.1rem);">Grüne Energie vom Wind</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8">
+                <h2 class="chapter-header"><i class="fas fa-location-dot"></i> Kapitel 1: Standort & Wind-Ressourcen</h2>
+                <p class="text-white">Windenergie ist ultra-standort-abhängig:</p>
+                <div class="wind-box">
+                    <strong>Idealerweise:</strong><br>
+                    - Offene Landschaft (nicht in Stadt)<br>
+                    - Minimale Hindernisse (Bäume, Gebäude)<br>
+                    - Durchschnittswindgeschwindigkeit >5 m/s<br>
+                    - Südwestliche Exposition (beste Winde)
+                </div>
+                <div class="warning-box">
+                    <strong>⚠️ Realität:</strong> Stadt = 2-3 m/s Wind = minimal Ertrag. Land = 5-8 m/s = rentabel
+                </div>
+                <div class="wind-box">
+                    <strong>Tool: Wind Maps</strong><br>
+                    - Globaler Wind Atlas (globalwindatlas.info)<br>
+                    - Kachelmann Wind Karte<br>
+                    - Lokale Wetterdaten nutzen
+                </div>
+                <h2 class="chapter-header"><i class="fas fa-wrench"></i> Kapitel 2: Turbinentypen & Hardware</h2>
+                <div class="code-box">
+# DIY Wind Turbine
+# Generator (1kW) €200-400
+# Blade Set €150
+# Tower Materials €100
+# Controller €50
+# Installation €0 (DIY)
+# Total: €500-700 small turbine
+                </div>
+
+                <p class="text-white">Kleine Windkraftanlagen für Häuser:</p>
+                <table class="table table-dark table-striped">
+                    <tr>
+                        <td><strong>Horizontal (HAWT)</strong></td>
+                        <td>€2.000-5.000, höhere Effizienz, laut</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Vertikal (VAWT)</strong></td>
+                        <td>€1.500-3.000, auch in turbulenter Luft OK</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Mini-Hybrid (Solar+Wind)</strong></td>
+                        <td>€500-2.000, Kombination</td>
+                    </tr>
+                </table>
+                <div class="tip-box">
+                    <strong>💰 Budget Option:</strong> Gebrauchte kleine Turbine (3kW) + Wechselrichter + Batterien = €3.000-5.000
+                </div>
+                <h2 class="chapter-header"><i class="fas fa-tower-broadcast"></i> Kapitel 3: Montage & Installation</h2>
+                <p class="text-white">Mechanik & Befestigung:</p>
+                <div class="wind-box">
+                    <strong>Höhe = alles!</strong><br>
+                    - Wind ist 10x stärker in 30m als 3m Höhe<br>
+                    - Idealerweise 15-30m über Hindernissen<br>
+                    - Turmoptionen: Gittermast, Stahlrohr, Pfeiler
+                </div>
+                <div class="warning-box">
+                    <strong>⚠️ WICHTIG:</strong> Statik berechnen! Wind-Lasten sind ENORM. Einsturz = Katastrophe. Profi-Installation mandatory!
+                </div>
+                <div class="wind-box">
+                    <strong>Andere Komponenten:</strong><br>
+                    - Laderegler (MPPT besser)<br>
+                    - Wechselrichter (Grid-Tie oder Hybrid)<br>
+                    - Batteriespeicher (optional aber sinnvoll)<br>
+                    - Verkabelung (robust, richtig dimensioniert)
+                </div>
+                <h2 class="chapter-header"><i class="fas fa-chart-bar"></i> Kapitel 4: Ertragsberechnung</h2>
+                <p class="text-white">Wie viel Strom?</p>
+                <div class="wind-box">
+                    <strong>Grobe Formel:</strong><br>
+                    - 3 kW Turbine bei 6 m/s Wind = ~4-6 kWh/Tag<br>
+                    - 5 kW Turbine bei 7 m/s Wind = ~8-12 kWh/Tag<br>
+                    - Deutschland durchschnittlich 4-5 m/s = 40-60% der Nennleistung
+                </div>
+                <div class="tip-box">
+                    <strong>📊 Realistisch:</strong> 3 kW Turbine liefert meist 1-2 kW im Durchschnitt. Das ist OK! Kombination Solar+Wind = beste Lösung.
+                </div>
+                <h2 class="chapter-header"><i class="fas fa-volume-high"></i> Kapitel 5: Lärm & Nachbarschaft</h2>
+                <p class="text-white">Windkraftanlagen machen Lärm:</p>
+                <div class="wind-box">
+                    <strong>Lärmpegel (bei 100m Entfernung):</strong><br>
+                    - Kleine VAWTs: 35-45 dB (wie Klimaanlage)<br>
+                    - HAWTs: 45-55 dB (störend in der Nacht)<br>
+                    - Grenzwerte: 45 dB Nacht, 55 dB Tag
+                </div>
+                <div class="warning-box">
+                    <strong>⚠️ Nachbarschaft:</strong> Checkt lokale Verordnungen! Manche Gemeinden verbieten private Windkraftanlagen. Bad Vibes with neighbors = NICHT WERT!
+                </div>
+                <h2 class="chapter-header"><i class="fas fa-lightbulb"></i> Kapitel 6: Netzeinspeisung & Rentabilität</h2>
+                <p class="text-white">Geld zurück von der Anlage:</p>
+                <div class="wind-box">
+                    <strong>Optionen:</strong><br>
+                    1. <strong>Eigenverbrauch:</strong> Direkter Stromverbrauch (kostet ca. €0.35/kWh)<br>
+                    2. <strong>Netzeinspeisung:</strong> Strom an Netz → Vergütung (€0.06-0.12/kWh) - eher niedrig<br>
+                    3. <strong>Hybrid:</strong> Selbst verbrauchen + Batterie speichern
+                </div>
+                <div class="wind-box">
+                    <strong>ROI-Beispiel (3 kW, 5 kWh/Tag durchschnittlich):</strong><br>
+                    - Investition: €4.000<br>
+                    - Jahresertrag: 1.825 kWh<br>
+                    - Ersparnis: €640/Jahr (à €0.35)<br>
+                    - Payback: 6-7 Jahre (dann Gewinn!)
+                </div>
+                <!-- EXPANSION: PRO-TIPPS -->
+                <h2 class="chapter-header" style="margin-top: 3rem; border-left: 4px solid #10b981;"><i class="fas fa-lightbulb"></i> 💡 PRO-TIPPS</h2>
+                <div style="background: rgba(16, 185, 129, 0.1); border-left: 4px solid #10b981; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-success mb-3">🎯 Tipp: Hybrid Solar+Wind ist BEST</h5>
+                    <p><strong>Problem:</strong> Nur Wind = unzuverlässig, Nur Solar = nur tagsüber | <strong>Lösung:</strong> Kombination = 365 Tage stabil</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #f59e0b;"><i class="fas fa-piggy-bank"></i> 💰 BUDGET-HACKS (30% SPAREN!)</h2>
+                <div style="background: rgba(245, 158, 11, 0.1); border-left: 4px solid #f59e0b; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-warning mb-3">💰 Hack: Gebrauchte Turbine statt neu</h5>
+                    <p><strong>Original:</strong> Neue 3kW: €4.000 | <strong>Hack:</strong> eBay refurbished: €2.500-3.000 | <strong>Trade-Off:</strong> Kein Garantie, aber same Performance</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #ef4444;"><i class="fas fa-exclamation-circle"></i> ⚠️ FEHLER</h2>
+                <div style="background: rgba(239, 68, 68, 0.1); border-left: 4px solid #ef4444; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-danger mb-3">❌ Fehler: Höhe unterschätzen</h5>
+                    <p><strong>Was passiert:</strong> 3m Mast statt 20m = 80% weniger Ertrag | <strong>✅ Lösung:</strong> Mindestens 15m über Hindernissen</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #60a5fa;"><i class="fas fa-users"></i> 🌐 COMMUNITY</h2>
+                <div style="background: rgba(96, 165, 250, 0.1); border-left: 4px solid #60a5fa; padding: 1.5rem; border-radius: 8px;">
+                    <p>r/windpower, Wind Forum, DIY Energy Community</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="sidebar-box">
+                    <h5 class="text-info"><i class="fas fa-list-check"></i> Windkraft Setup Path</h5>
+                    <div class="checklist">
+                        <label><input type="checkbox"> Wind-Ressource messen</label>
+                        <label><input type="checkbox"> Lokale Regelung prüfen</label>
+                        <label><input type="checkbox"> Nachbarn informieren</label>
+                        <label><input type="checkbox"> Turbinentyp wählen</label>
+                        <label><input type="checkbox"> Installation & Verkabelung</label>
+                        <label><input type="checkbox"> Netzeinspeisung testen</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="diy-enhancements.js"></script>
+</body>
+</html>

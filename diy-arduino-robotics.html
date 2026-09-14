@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIY: Arduino Robotics</title>
+    <meta name="description" content="Deutsche DIY-Anleitung zu Arduino Robotics mit Materialien, Aufbau, Praxis-Tipps und Troubleshooting.">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="global.css" rel="stylesheet">
+    <style>
+        .chapter-header {color: #ffff00; border-left: 4px solid #ffff00; padding-left: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; font-size: 1.5rem;}
+        .code-box {background: rgba(255, 255, 0, 0.1); border: 1px solid #ffff00; padding: 1rem; border-radius: 5px; margin: 1rem 0; font-family: monospace; font-size: 0.85rem;}
+        .project-box {background: rgba(0, 255, 200, 0.1); border-left: 4px solid #00ffc8; padding: 1rem; border-radius: 5px; margin: 1rem 0; font-size: 0.95rem;}
+        @media (max-width: 768px) {
+            .chapter-header {font-size: 1.2rem; padding-left: 1rem; margin-top: 1.5rem;}
+            .code-box {font-size: 0.75rem; padding: 0.75rem;}
+            p {font-size: 0.95rem; line-height: 1.5;}
+        }
+    </style>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body class="orbtron-theme">
+    <nav class="navbar navbar-dark bg-dark sticky-top border-bottom" style="border-bottom-color: #ffff00 !important;">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1"><i class="fas fa-robot"></i> DIY: Arduino Robotics</span>
+            <a href="index.html" class="btn btn-outline-warning btn-sm" aria-label="Zurück zur CODESTRAL-Projektbibliothek">← Zurück</a>
+        </div>
+    </nav>
+    <div class="container-fluid py-5" role="main">
+        <div style="position: relative; margin-bottom: 2rem; border-radius: 10px; overflow: hidden; border: 2px solid #ffff00; max-height: 300px;">
+            <img alt="Arduino Robotics – Hero-Bild" src="assets/images/arduino_robotics_hero_banner.png" style="width: 100%; height: 300px; object-fit: cover; display: block;" decoding="async" loading="eager" fetchpriority="high">
+            <div class="hero" style="background: rgba(0,0,0,0.7); border: none; border-radius: 0; padding: 2rem 1.5rem; margin-bottom: 0; text-align: center; position: absolute; top: 50%; left: 0; right: 0; transform: translateY(-50%); display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <h1 class="text-warning mb-3" style="font-size: clamp(1.5rem, 5vw, 2.5rem); text-shadow: 0 0 20px rgba(255,255,0,0.5);">🤖 Arduino Robotik</h1>
+                <p class="lead text-white" style="font-size: clamp(0.95rem, 3vw, 1.1rem);">Von der Platine zum funktionierenden Roboter</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8">
+                <h2 class="chapter-header"><i class="fas fa-microchip"></i> Kapitel 1: Arduino Basics</h2>
+                <p class="text-white">Arduino ist ein Open-Source Microcontroller:</p>
+                <ul class="text-muted">
+                    <li><strong>Arduino Uno:</strong> €25-30, perfekt zum Starten</li>
+                    <li><strong>Arduino Nano:</strong> €8-12, kompakt</li>
+                    <li><strong>Arduino Mega:</strong> €35-40, viele I/O Pins</li>
+                </ul>
+                <div class="project-box"><strong>🎯 Anfänger-Projekt:</strong> LED-Blinker mit Arduino Uno</div>
+
+                <h2 class="chapter-header"><i class="fas fa-code"></i> Kapitel 2: Programmierung mit Arduino IDE</h2>
+                <p class="text-white">Einfacher Code:</p>
+                <div class="code-box">
+void setup() {<br>
+&nbsp;&nbsp;pinMode(13, OUTPUT);<br>
+}<br>
+void loop() {<br>
+&nbsp;&nbsp;digitalWrite(13, HIGH);<br>
+&nbsp;&nbsp;delay(1000);<br>
+&nbsp;&nbsp;digitalWrite(13, LOW);<br>
+&nbsp;&nbsp;delay(1000);<br>
+}
+                </div>
+
+                <h2 class="chapter-header"><i class="fas fa-gears"></i> Kapitel 3: Sensoren & Motoren</h2>
+                <p class="text-white">Grundkomponenten:</p>
+                <ul class="text-muted">
+                    <li><strong>Distanz-Sensor:</strong> HC-SR04 (€2-3)</li>
+                    <li><strong>Motor:</strong> DC-Motor + L298N Driver (€5)</li>
+                    <li><strong>Servo:</strong> MG996R für Drehbewegungen (€3-5)</li>
+                    <li><strong>Gyro/Beschleunigung:</strong> MPU6050 (€3-4)</li>
+                </ul>
+
+                <h2 class="chapter-header"><i class="fas fa-car"></i> Kapitel 4: Roboter-Plattform bauen</h2>
+                <p class="text-white">Einfacher 2-Rad Roboter:</p>
+                <div class="project-box">
+                    <strong>Benötigt:</strong> Arduino Nano + 2x DC-Motor + Räder + Batterie + Distanz-Sensor
+                </div>
+                <p class="text-white">Der Roboter kann sich selbst steuern: fährt vorwärts, erkennt Hindernisse, dreht ab.</p>
+
+                <h2 class="chapter-header"><i class="fas fa-brain"></i> Kapitel 5: Autonome Bewegung & Logik</h2>
+                <p class="text-white">Programmiere Bewegungsmuster:</p>
+                <ul class="text-muted">
+                    <li>Sensor-gesteuerte Bewegung</li>
+                    <li>Hindernis-Erkennung</li>
+                    <li>Automatische Pfadverfolgung</li>
+                    <li>Fernsteuerung via Funk (nRF24, Bluetooth)</li>
+                </ul>
+
+                <h2 class="chapter-header"><i class="fas fa-star"></i> Kapitel 6: Erweiterte Projekte</h2>
+                <ul class="text-muted">
+                    <li>Roboter-Arm mit Servo-Steuerung</li>
+                    <li>Linienverfolgung (3-5 IR-Sensoren)</li>
+                    <li>Sumo-Roboter (2 kämpfende Roboter)</li>
+                    <li>Smartphone-Steuerung via Bluetooth</li>
+                </ul>
+
+                <!-- EXPANSION: PRO-TIPPS & TRICKS -->
+                <h2 class="chapter-header" style="margin-top: 3rem; border-left: 4px solid #10b981;"><i class="fas fa-lightbulb"></i> 💡 PRO-TIPPS & TRICKS</h2>
+                <div style="background: rgba(16, 185, 129, 0.1); border-left: 4px solid #10b981; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-success mb-3">🎯 Tipp: Serial Debugging ist dein bester Freund</h5>
+                    <p><strong>Problem:</strong> Roboter verhält sich seltsam, du weißt nicht warum</p>
+                    <p><strong>Lösung:</strong> `Serial.println()` benutzen um Sensor-Werte zu drucken → Debug Mode!</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #f59e0b;"><i class="fas fa-piggy-bank"></i> 💰 BUDGET-HACKS (60% SPAREN!)</h2>
+                <div style="background: rgba(245, 158, 11, 0.1); border-left: 4px solid #f59e0b; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-warning mb-3">💰 Hack: AliExpress statt Official Arduino</h5>
+                    <p><strong>Original:</strong> Arduino Uno €30 | <strong>Hack:</strong> Clone von AliExpress €5 | <strong>Einsparnis:</strong> 83%! (identisch!)</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #ef4444;"><i class="fas fa-exclamation-circle"></i> ⚠️ HÄUFIGE FEHLER</h2>
+                <div style="background: rgba(239, 68, 68, 0.1); border-left: 4px solid #ef4444; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-danger mb-3">❌ Fehler: Motor-Pins ohne Resistor</h5>
+                    <p><strong>Was passiert:</strong> Motor-Spannungs-Spikes zerstören Arduino | <strong>✅ Lösung:</strong> Immer Schottky-Dioden parallel zu Motoren!</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #8b5cf6;"><i class="fas fa-code-branch"></i> 🔄 ALTERNATIVEN</h2>
+                <div style="background: rgba(139, 92, 246, 0.1); border-left: 4px solid #8b5cf6; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <p><strong>Option A:</strong> Arduino (beginner-friendly) | <strong>Option B:</strong> Raspberry Pi (komplexer) | <strong>Option C:</strong> STM32 (schneller, schwächer dokumentiert)</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #06b6d4;"><i class="fas fa-tools"></i> 🔧 TROUBLESHOOTING</h2>
+                <div style="background: rgba(6, 182, 212, 0.1); border-left: 4px solid #06b6d4; padding: 1.5rem; border-radius: 8px;">
+                    <p><strong>Arduino erkennt sich nicht:</strong> USB-Treiber installieren | <strong>Motor dreht nicht:</strong> PWM-Pin prüfen (nur 3,5,6,9,10,11)</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #60a5fa;"><i class="fas fa-users"></i> 🌐 COMMUNITY</h2>
+                <div style="background: rgba(96, 165, 250, 0.1); border-left: 4px solid #60a5fa; padding: 1.5rem; border-radius: 8px;">
+                    <p>Arduino.cc Forum, r/arduino, Robotics Stack Exchange, YouTube: GreatScott!</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="sidebar-box">
+                    <h5 class="text-warning"><i class="fas fa-list-check"></i> Robotik Roadmap</h5>
+                    <div class="checklist">
+                        <label><input type="checkbox"> Arduino kaufen & IDE installieren</label>
+                        <label><input type="checkbox"> Erste LED-Blink programmieren</label>
+                        <label><input type="checkbox"> Sensoren verstehen</label>
+                        <label><input type="checkbox"> Motor-Steuerung testen</label>
+                        <label><input type="checkbox"> Roboter-Chassis bauen</label>
+                        <label><input type="checkbox"> Autonome Logik implementieren</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="diy-enhancements.js"></script>
+</body>
+</html>

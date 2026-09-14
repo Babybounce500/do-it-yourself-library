@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIY: Brain Organoids</title>
+    <meta name="description" content="Deutsche DIY-Anleitung zu Brain Organoids mit Materialien, Aufbau, Praxis-Tipps und Troubleshooting.">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="global.css" rel="stylesheet">
+    <style>
+        .chapter-header {color: #f43f5e; border-left: 4px solid #f43f5e; padding-left: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; font-size: 1.5rem;}
+        .code-box {background: rgba(244, 63, 94, 0.1); border: 1px solid #f43f5e; padding: 1rem; border-radius: 5px; margin: 1rem 0; font-family: monospace; font-size: 0.75rem;}
+        .report-gallery {display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 2rem 0;}
+        .gallery-image {width: 100%; height: 250px; object-fit: cover; border-radius: 8px; border: 2px solid #f43f5e;}
+    </style>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body class="orbtron-theme">
+    <nav class="navbar navbar-dark bg-dark sticky-top" style="border-bottom: 2px solid #f43f5e;">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1"><i class="fas fa-brain"></i> DIY: Brain Organoids</span>
+            <a href="index.html" class="btn btn-outline-info btn-sm" style="color: #f43f5e; border-color: #f43f5e;" aria-label="Zurück zur CODESTRAL-Projektbibliothek">← Zurück</a>
+        </div>
+    </nav>
+    <div class="container-fluid py-5" role="main">
+        <div style="position: relative; margin-bottom: 2rem; border-radius: 10px; overflow: hidden; border: 2px solid #f43f5e; max-height: 300px;">
+            <img src="assets/images/organoids_hero.png" loading="eager" style="width: 100%; height: 300px; object-fit: cover; display: block;" alt="Brain Organoids Hero" decoding="async" fetchpriority="high">
+            <div class="hero" style="background: rgba(0,0,0,0.7); border: none; border-radius: 0; padding: 2rem 1.5rem; margin-bottom: 0; text-align: center; position: absolute; top: 50%; left: 0; right: 0; transform: translateY(-50%); display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <h1 style="color: #f43f5e; font-size: clamp(1.5rem, 5vw, 2.5rem); text-shadow: 0 0 20px rgba(244, 63, 94, 0.5);">🧠 Brain Organoids</h1>
+                <p class="lead text-white" style="font-size: clamp(0.95rem, 3vw, 1.1rem);">3D Neural Tissue Engineering & Development</p>
+            </div>
+        </div>
+        <div style="background: rgba(220,38,38,0.15); border-left: 4px solid #dc2626; padding: 1rem 1.25rem; border-radius: 5px; margin: 0 0 2rem;">
+            <strong style="color:#dc2626;">⚠️ Sicherheitshinweis (redaktionell ergänzt):</strong>
+            <span class="text-white">Dieser Artikel ist eine konzeptionelle, edukative Übersicht über Organoid-Forschung — keine Heimlabor-Anleitung. Arbeit mit humanen Zelllinien erfordert ein lizenziertes Zellkultur-Labor, institutionelle Ethik-/Biosicherheitsprüfung (z. B. IRB) und sterile Fachtechnik.</span>
+        </div>
+        <div class="row">
+            <div class="col-lg-8">
+                <h2 class="chapter-header"><i class="fas fa-microscope"></i> Kapitel 1: iPSC Differentiation</h2>
+                <ul class="text-muted">
+                    <li>Induced Pluripotent Stem Cells (iPSC)</li>
+                    <li>Neural Induction Protocols</li>
+                    <li>Neuroectodermal Commitment</li>
+                    <li>Growth Factor Signaling (BMP, Wnt)</li>
+                </ul>
+
+                <h2 class="chapter-header"><i class="fas fa-cube"></i> Kapitel 2: 3D Culture Systems</h2>
+                <div class="code-box">
+# Brain Organoid Culture
+# Self-organizing 3D systems
+# Bioreactor conditions
+temperature = 37°C
+CO2 = 5%
+medium_refresh = every 3-4 days
+culture_duration = 60+ days
+                </div>
+
+                <h2 class="chapter-header"><i class="fas fa-network-wired"></i> Kapitel 3: Neural Network Formation</h2>
+                <ul class="text-muted">
+                    <li>Neurite Outgrowth</li>
+                    <li>Synaptogenesis & Circuit Formation</li>
+                    <li>Spontaneous Activity Patterns</li>
+                    <li>Calcium Imaging & Electrophysiology</li>
+                </ul>
+
+                <h2 class="chapter-header"><i class="fas fa-sliders-h"></i> Kapitel 4: Regional Specification</h2>
+                <ul class="text-muted">
+                    <li>Cerebral vs. Cerebellar Organoids</li>
+                    <li>Regional Patterning Signals</li>
+                    <li>Developmental Stage Modeling</li>
+                    <li>Cell Type Diversity</li>
+                </ul>
+
+                <h2 class="chapter-header"><i class="fas fa-chart-bar"></i> Kapitel 5: Characterization</h2>
+                <ul class="text-muted">
+                    <li>Single-Cell RNA-Seq (scRNAseq)</li>
+                    <li>Immunofluorescence Staining</li>
+                    <li>Multi-Electrode Arrays (MEA)</li>
+                    <li>Structural Imaging (Confocal)</li>
+                </ul>
+
+                <h2 class="chapter-header"><i class="fas fa-heartbeat"></i> Kapitel 6: Applications & Disease Modeling</h2>
+                <ul class="text-muted">
+                    <li>Developmental Neurobiology Research</li>
+                    <li>Disease Modeling (Autism, Schizophrenia)</li>
+                    <li>Drug Screening & Toxicology</li>
+                    <li>Regenerative Medicine</li>
+                </ul>
+
+                <h2 class="chapter-header" style="margin-top: 3rem; border-left: 4px solid #10b981;"><i class="fas fa-lightbulb"></i> 💡 PRO-TIPPS</h2>
+                <div style="background: rgba(16, 185, 129, 0.1); border-left: 4px solid #10b981; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-success mb-3">🎯 Tipp: kommerziellen iPSC starten</h5>
+                    <p><strong>Problem:</strong> Reprogramming = 6+ Monate | <strong>Lösung:</strong> Kaufen = sofort einsatz</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #f59e0b;"><i class="fas fa-piggy-bank"></i> 💰 BUDGET-HACKS (92% SPAREN!)</h2>
+                <div style="background: rgba(245, 158, 11, 0.1); border-left: 4px solid #f59e0b; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-warning mb-3">💰 Hack: DIY Bioreactor + iPSC</h5>
+                    <p><strong>Original:</strong> Commercial Organoid Service: €50K+ | <strong>Hack:</strong> DIY mit gekauften iPSCs: €4K | <strong>Einsparnis:</strong> 92%</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #ef4444;"><i class="fas fa-exclamation-circle"></i> ⚠️ FEHLER</h2>
+                <div style="background: rgba(239, 68, 68, 0.1); border-left: 4px solid #ef4444; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-danger mb-3">❌ Fehler: Hypoxia Necrosis Center</h5>
+                    <p><strong>Was passiert:</strong> Organoid sterben in der Mitte | <strong>✅ Lösung:</strong> Gute Bioreactor Perfusion</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #60a5fa;"><i class="fas fa-users"></i> 🌐 COMMUNITY</h2>
+                <div style="background: rgba(96, 165, 250, 0.1); border-left: 4px solid #60a5fa; padding: 1.5rem; border-radius: 8px;">
+                    <p>International Society for Stem Cell Research, Organoid Network, Neuroscience Society</p>
+                </div>
+
+                <h2 class="chapter-header" style="margin-top: 3rem;">📸 Fehler-Galerie</h2>
+                <div class="report-gallery">
+                    <img src="assets/images/organoids_error1.jpg" class="gallery-image" alt="Necrotic Core" loading="lazy" decoding="async" fetchpriority="low">
+                    <img src="assets/images/organoids_error2.jpg" class="gallery-image" alt="Contamination" loading="lazy" decoding="async" fetchpriority="low">
+                    <img src="assets/images/organoids_error3.jpg" class="gallery-image" alt="Differentiation Failure" loading="lazy" decoding="async" fetchpriority="low">
+                    <img src="assets/images/organoids_error4.jpg" class="gallery-image" alt="Viability Loss" loading="lazy" decoding="async" fetchpriority="low">
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="sidebar-box">
+                    <h5 style="color: #f43f5e;"><i class="fas fa-list-check"></i> Organoid Path</h5>
+                    <div class="checklist">
+                        <label><input type="checkbox"> iPSC sourcing</label>
+                        <label><input type="checkbox"> Neural induction</label>
+                        <label><input type="checkbox"> 3D aggregation</label>
+                        <label><input type="checkbox"> Culture optimization</label>
+                        <label><input type="checkbox"> Characterization</label>
+                        <label><input type="checkbox"> Publication ready</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="diy-enhancements.js"></script>
+</body>
+</html>

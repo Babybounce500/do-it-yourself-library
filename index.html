@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CODESTRAL - 105 DIY Projekte | Finest Edition</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        /* ORBITRON NEURAL THEME - FINEST EDITION */
+        :root {
+            --cyan-primary: #00ffff;
+            --cyan-dark: #00cccc;
+            --cyan-light: #33ffff;
+            --dark-bg: #0a0e27;
+            --darker-bg: #050812;
+            --text-white: #ffffff;
+            --text-light-gray: #f0f0f0;
+            --neon-purple: #9d4edd;
+            --neon-pink: #ff006e;
+        }
+
+        * {
+            box-sizing: border-box;
+            scrollbar-width: thin;
+            scrollbar-color: var(--cyan-primary) var(--darker-bg);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: linear-gradient(135deg, var(--dark-bg) 0%, var(--darker-bg) 100%);
+            background-attachment: fixed;
+            color: var(--text-white);
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-weight: 400;
+            line-height: 1.6;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            background: linear-gradient(135deg, rgba(10, 14, 39, 0.95), rgba(5, 8, 18, 0.95)) !important;
+            border-bottom: 2px solid var(--cyan-primary);
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.15);
+        }
+
+        .navbar-brand {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.5rem !important;
+            font-weight: 900;
+            color: var(--cyan-primary) !important;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+            letter-spacing: 0.1em;
+        }
+
+        .navbar-brand i {
+            margin-right: 0.5rem;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        /* HERO SECTION */
+        .hero {
+            background: linear-gradient(135deg, rgba(0,255,255,0.1), rgba(157,78,221,0.1));
+            border: 2px solid var(--cyan-primary);
+            border-radius: 10px;
+            padding: 3rem 2rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
+        }
+
+        .hero h1 {
+            font-family: 'Orbitron', monospace;
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--cyan-primary);
+            text-shadow: 0 0 20px rgba(0, 255, 255, 0.5), 0 0 40px rgba(157, 78, 221, 0.3);
+            margin-bottom: 1rem;
+            letter-spacing: 0.05em;
+        }
+
+        .hero .lead {
+            font-size: 1.125rem;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* SEARCH & ACTION BAR */
+        .search-export-bar {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .search-box {
+            flex: 1;
+            min-width: 250px;
+            padding: 0.75rem 1rem;
+            background: rgba(0, 255, 255, 0.05);
+            border: 2px solid rgba(0, 255, 255, 0.3);
+            color: var(--text-white);
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .search-box:focus {
+            outline: none;
+            border-color: var(--cyan-primary);
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+            background: rgba(0, 255, 255, 0.1);
+        }
+
+        .search-box::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .export-btn {
+            padding: 0.75rem 1.5rem;
+            background: rgba(0, 255, 255, 0.1);
+            border: 2px solid var(--cyan-primary);
+            color: var(--cyan-primary);
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.95rem;
+            font-family: 'Orbitron', monospace;
+            letter-spacing: 0.05em;
+        }
+
+        .export-btn:hover {
+            background: rgba(0, 255, 255, 0.2);
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+            transform: translateY(-2px);
+            color: var(--cyan-light);
+            text-decoration: none;
+        }
+
+        /* FILTER CONTAINER */
+        .filter-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-bottom: 2rem;
+            overflow-x: auto;
+        }
+
+        .filter-btn {
+            padding: 0.5rem 1.25rem;
+            border-radius: 50px;
+            border: 2px solid rgba(0, 255, 255, 0.3);
+            background: rgba(0, 0, 0, 0.3);
+            color: rgba(255, 255, 255, 0.7);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+            font-size: 0.9rem;
+            font-weight: 600;
+            font-family: 'Orbitron', monospace;
+        }
+
+        .filter-btn.active {
+            background: rgba(0, 255, 255, 0.2);
+            color: var(--cyan-primary);
+            border-color: var(--cyan-primary);
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+        }
+
+        .filter-btn:hover:not(.active) {
+            border-color: var(--cyan-primary);
+            color: var(--cyan-light);
+        }
+
+        /* PROJECT GRID */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .project-card {
+            background: rgba(26, 31, 58, 0.7);
+            border: 2px solid rgba(0, 255, 255, 0.3);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            backdrop-filter: blur(10px);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--cyan-primary);
+            box-shadow: 0 0 25px rgba(0, 255, 255, 0.3), inset 0 0 20px rgba(0, 255, 255, 0.05);
+            background: rgba(26, 31, 58, 0.9);
+        }
+
+        .project-image {
+            height: 180px;
+            overflow: hidden;
+            background: linear-gradient(135deg, rgba(0, 255, 255, 0.1), rgba(157, 78, 221, 0.1));
+            position: relative;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .project-card:hover .project-image img {
+            transform: scale(1.08);
+        }
+
+        .project-content {
+            padding: 1.25rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .project-category {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: rgba(0, 255, 255, 0.15);
+            color: var(--cyan-light);
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            text-transform: uppercase;
+            font-family: 'Orbitron', monospace;
+            letter-spacing: 0.05em;
+            border: 1px solid rgba(0, 255, 255, 0.2);
+        }
+
+        .project-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            color: var(--cyan-light);
+            font-family: 'Orbitron', monospace;
+            letter-spacing: 0.02em;
+            flex-grow: 1;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--cyan-primary);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .project-link:hover {
+            color: var(--cyan-light);
+            text-decoration: underline;
+            transform: translateX(5px);
+        }
+
+        /* SECTION HEADERS */
+        .category-title {
+            font-family: 'Orbitron', monospace;
+            color: var(--cyan-primary);
+            font-size: 1.75rem;
+            font-weight: 900;
+            border-bottom: 2px solid var(--cyan-primary);
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+            letter-spacing: 0.05em;
+        }
+
+        .category-title i {
+            margin-right: 0.75rem;
+        }
+
+        /* NO RESULTS */
+        .no-results {
+            grid-column: 1/-1;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.5);
+            padding: 3rem 1rem;
+            font-size: 1.1rem;
+        }
+
+        /* BACK TO TOP */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 50px;
+            height: 50px;
+            background: rgba(0, 255, 255, 0.1);
+            border: 2px solid var(--cyan-primary);
+            color: var(--cyan-primary);
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            font-size: 1.5rem;
+            font-weight: bold;
+            z-index: 100;
+            font-family: 'Orbitron', monospace;
+        }
+
+        .back-to-top.show {
+            display: flex;
+        }
+
+        .back-to-top:hover {
+            background: rgba(0, 255, 255, 0.2);
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+            transform: translateY(-5px);
+        }
+
+        /* FOOTER */
+        footer {
+            background: linear-gradient(135deg, rgba(10, 14, 39, 0.95), rgba(5, 8, 18, 0.95));
+            border-top: 2px solid var(--cyan-primary);
+            color: rgba(255, 255, 255, 0.7);
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+            font-size: 0.95rem;
+        }
+
+        footer a {
+            color: var(--cyan-light);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .projects-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+
+            .search-export-bar {
+                flex-direction: column;
+            }
+
+            .search-box {
+                width: 100%;
+            }
+
+            .export-btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .filter-container {
+                justify-content: center;
+            }
+
+            .back-to-top {
+                width: 45px;
+                height: 45px;
+                bottom: 1rem;
+                right: 1rem;
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+    <link href="global.css" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body class="orbtron-theme">
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-dark sticky-top">
+        <div class="container-fluid">
+            <span class="navbar-brand"><i class="fas fa-microchip"></i> CODESTRAL</span>
+            <span class="text-muted d-none d-md-inline" style="color: var(--cyan-light) !important; font-family: 'Orbitron', monospace;">105 Projekte | Deutsch</span>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTAINER -->
+    <div class="container-fluid" style="padding: 2rem 1rem;">
+        <!-- HERO -->
+        <div class="hero">
+            <h1><i class="fas fa-rocket"></i> CODESTRAL - 105 Projekte</h1>
+            <p class="lead">Vollständige deutsche Anleitung mit Code, Tools, Fehler-Galerie & vollständigem BOM</p>
+        </div>
+
+        <!-- SEARCH & EXPORT -->
+        <div class="search-export-bar">
+            <input type="search" id="search-input" class="search-box" aria-label="Projekte durchsuchen" placeholder="🔍 Projekt suchen... (z.B. 'AI', 'Roboter', 'Solar')">
+            <a href="CODESTRAL.txt" download class="export-btn" title="Komplette Library als TXT exportieren">
+                <i class="fas fa-download"></i> TXT Export
+            </a>
+            <a href="bom.html" class="export-btn" title="Bill of Materials anzeigen" style="margin-left: 10px;">
+                <i class="fas fa-list"></i> BOM
+            </a>
+        </div>
+
+        <!-- FILTER BUTTONS -->
+        <div class="filter-container" id="filter-container"></div>
+
+        <!-- PROJECTS GRID -->
+        <h2 class="category-title" style="margin-top: 2rem;"><i class="fas fa-grip"></i> Projektübersicht</h2>
+        <div class="projects-grid" id="projects-grid"></div>
+
+        <!-- NO RESULTS MESSAGE -->
+        <div id="no-results" class="no-results" style="display: none;">
+            <i class="fas fa-search" style="font-size: 2rem; margin-bottom: 1rem; opacity: 0.5;"></i><br>
+            Keine Projekte gefunden ❌<br>
+            <span style="font-size: 0.9rem;">Versuche eine andere Suche...</span>
+        </div>
+    </div>
+
+    <!-- BACK TO TOP -->
+    <button class="back-to-top" id="back-to-top" type="button" aria-label="Nach oben scrollen">↑</button>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>CODESTRAL - DIY Library | 105 Projekte | <a href="index.html">Alle Inhalte auf Deutsch</a></p>
+        <p style="font-size: 0.85rem; margin-top: 1rem;">Produktion Ready | Orbitron Neural Style | 2025</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="diy-enhancements.js"></script>
+    <script>
+        // PROJECT DATA WITH REAL IMAGES
+        const projects = [
+            {"id": 1, "title": "3D Drucker Setup & Printing", "image": "assets/images/3d_printing_hero_banner.png", "link": "diy-3d-drucker.html", "category": "3d-drucker"},
+            {"id": 2, "title": "3D Hologram Display", "image": "assets/images/3d_hologram_display.png", "link": "diy-3d-hologram-display.html", "category": "3d-drucker"},
+            {"id": 3, "title": "AI-Chip Design", "image": "assets/images/ai-chip_hero.png", "link": "diy-ai-chip-design.html", "category": "ai"},
+            {"id": 4, "title": "Ambient Computing", "image": "assets/images/ambient-computing_hero.jpg", "link": "diy-ambient-computing.html", "category": "computing"},
+            {"id": 5, "title": "Anti-Glare Screen Filter", "image": "assets/images/antiglare-filter_hero.jpg", "link": "diy-anti-glare-screen-filter.html", "category": "hardware"},
+            {"id": 6, "title": "Aquaponics System", "image": "assets/images/aquaponics_system_hero.png", "link": "diy-aquaponics.html", "category": "iot"},
+            {"id": 7, "title": "Arduino Robotics", "image": "assets/images/arduino_robotics_hero_banner.png", "link": "diy-arduino-robotics.html", "category": "robotics"},
+            {"id": 8, "title": "Augmented Reality", "image": "assets/images/ar_hero.png", "link": "diy-augmented-reality.html", "category": "computing"},
+            {"id": 9, "title": "Autonomous Vehicle Stack", "image": "assets/images/autonomous-vehicle_hero.jpg", "link": "diy-autonomous-vehicle-stack.html", "category": "robotics"},
+            {"id": 10, "title": "BioAI Integration", "image": "assets/images/bioai_hero.png", "link": "diy-bioai-integration.html", "category": "ai"},
+            {"id": 11, "title": "Biohacking & Personal Health Tracking", "image": "assets/images/biohacking_health_hero_banner.png", "link": "diy-biohacking-gesundheit.html", "category": "biotech"},
+            {"id": 12, "title": "Biometric Privacy", "image": "assets/images/biometric-privacy_hero.png", "link": "diy-biometric-privacy.html", "category": "hardware"},
+            {"id": 13, "title": "Biometric Security", "image": "assets/images/biometric_security_hero.png", "link": "diy-biometric-security.html", "category": "hardware"},
+            {"id": 14, "title": "Biomimetic Robotics", "image": "assets/images/biomimetic_hero.png", "link": "diy-biomimetic-robotics.html", "category": "robotics"},
+            {"id": 15, "title": "Blockchain Explorer", "image": "assets/images/blockchain_explorer_hero.png", "link": "diy-blockchain-explorer.html", "category": "blockchain"},
+            {"id": 16, "title": "Blockchain Smart Contracts", "image": "assets/images/blockchain_smart_contracts_hero.png", "link": "diy-blockchain-smartcontracts.html", "category": "blockchain"},
+            {"id": 17, "title": "Brain-Computer Interface", "image": "assets/images/bci_hero.png", "link": "diy-brain-computer-interface.html", "category": "ai"},
+            {"id": 18, "title": "Brain Organoids", "image": "assets/images/organoids_hero.png", "link": "diy-brain-organoids.html", "category": "biotech"},
+            {"id": 19, "title": "Bunker Automation", "image": "assets/images/bunker_automation_hero.png", "link": "diy-bunker-automation.html", "category": "iot"},
+            {"id": 20, "title": "Eigenen KI-Chatbot Bauen", "image": "assets/images/ai_chatbot_hero_banner_image.png", "link": "diy-chatbot-ai-projekt.html", "category": "ai"},
+            {"id": 21, "title": "Citizen Science - Lichtverschmutzung", "image": "assets/images/citizen_science_hero_banner.png", "link": "diy-citizen-science.html", "category": "iot"},
+            {"id": 22, "title": "Crypto Mining", "image": "assets/images/crypto_mining_hero_banner.png", "link": "diy-crypto-mining.html", "category": "blockchain"},
+            {"id": 23, "title": "Custom OS Kernel", "image": "assets/images/custom_os_kernel_hero.png", "link": "diy-custom-os-kernel.html", "category": "computing"},
+            {"id": 24, "title": "Cybersecurity Lab", "image": "assets/images/cybersecurity_lab_hero.png", "link": "diy-cybersecurity-lab.html", "category": "computing"},
+            {"id": 25, "title": "Kryptowallet & DeFi Sicherheit", "image": "assets/images/crypto_security_hero_banner.png", "link": "diy-defi-security.html", "category": "blockchain"},
+            {"id": 26, "title": "Kabel-Organizer", "image": "assets/images/cable-organizer_hero.jpg", "link": "diy-desk-cable-organizer.html", "category": "hardware"},
+            {"id": 27, "title": "Desk Cooling Fan", "image": "assets/images/desk-cooling_hero.jpg", "link": "diy-desk-cooling-fan.html", "category": "hardware"},
+            {"id": 28, "title": "Lamp Dimmer", "image": "assets/images/lamp-dimmer_hero.jpg", "link": "diy-desk-lamp-dimmer.html", "category": "hardware"},
+            {"id": 29, "title": "Desk Mouse Pad", "image": "assets/images/desk-pad_hero.jpg", "link": "diy-desk-mouse-pad.html", "category": "hardware"},
+            {"id": 30, "title": "Desk Organizer", "image": "assets/images/desk-organizer_hero.jpg", "link": "diy-desk-organizer-drawer.html", "category": "hardware"},
+            {"id": 31, "title": "Pen Holder", "image": "assets/images/pen-holder_hero.jpg", "link": "diy-desk-pen-holder.html", "category": "hardware"},
+            {"id": 32, "title": "Distributed Storage System", "image": "assets/images/distributed-storage_hero.png", "link": "diy-distributed-storage.html", "category": "computing"},
+            {"id": 33, "title": "Espresso Hack", "image": "assets/images/espresso-hack_hero.jpg", "link": "diy-diy-espresso-hack.html", "category": "iot"},
+            {"id": 34, "title": "DNA Data Storage", "image": "assets/images/dna-storage_hero.png", "link": "diy-dna-data-storage.html", "category": "biotech"},
+            {"id": 35, "title": "DNA Sequencing & CRISPR", "image": "assets/images/dna_crispr_hero.png", "link": "diy-dna-sequencing.html", "category": "biotech"},
+            {"id": 36, "title": "Drohnen-Programmierung & Autonomous Flight", "image": "assets/images/drone_programming_hero_banner.png", "link": "diy-drohnen-programmierung.html", "category": "drohnen"},
+            {"id": 37, "title": "Autonomous Drone Swarm", "image": "assets/images/drone_swarm_hero.png", "link": "diy-drone-swarm.html", "category": "drohnen"},
+            {"id": 38, "title": "Drone Tracking System", "image": "assets/images/drone_tracking_hero.png", "link": "diy-drone-tracking.html", "category": "drohnen"},
+            {"id": 39, "title": "E-Commerce Shop Aufbau", "image": "assets/images/e-commerce_shop_hero.png", "link": "diy-ecommerce-shop.html", "category": "computing"},
+            {"id": 40, "title": "Edge Computing Cluster", "image": "assets/images/edge-computing_hero.png", "link": "diy-edge-computing-cluster.html", "category": "computing"},
+            {"id": 41, "title": "Fusor - Kernfusion-Demonstration", "image": "assets/images/fusion_hero.png", "link": "diy-fusion-reactor.html", "category": "quantum"},
+            {"id": 42, "title": "Gesture Recognition", "image": "assets/images/gesture_hero.png", "link": "diy-gesture-recognition.html", "category": "ai"},
+            {"id": 43, "title": "GPU Computing Cluster", "image": "assets/images/gpu_cluster_hero.png", "link": "diy-gpu-cluster.html", "category": "computing"},
+            {"id": 44, "title": "GraphQL Federation", "image": "assets/images/graphql-federation_hero.png", "link": "diy-graphql-federation.html", "category": "computing"},
+            {"id": 45, "title": "Haptic Feedback Suit", "image": "assets/images/haptic_suit_hero.png", "link": "diy-haptic-feedback.html", "category": "hardware"},
+            {"id": 46, "title": "Hardware Wallet", "image": "assets/images/hardware_wallet_hero.png", "link": "diy-hardware-wallet.html", "category": "blockchain"},
+            {"id": 47, "title": "Headphone Cable", "image": "assets/images/headphone-cable_hero.jpg", "link": "diy-headphone-cable-upgrade.html", "category": "hardware"},
+            {"id": 48, "title": "Holographic Display", "image": "assets/images/holographic_display_hero.png", "link": "diy-holographic-display.html", "category": "3d-drucker"},
+            {"id": 49, "title": "Homelab & Self-Hosting", "image": "assets/images/homelab_server_hero_banner.png", "link": "diy-homelab-server.html", "category": "computing"},
+            {"id": 50, "title": "Hydroponics & Urban Farming", "image": "assets/images/hydroponics_farm_hero_banner.png", "link": "diy-hydroponics.html", "category": "iot"},
+            {"id": 51, "title": "IoT Smart Home", "image": "assets/images/smart_home_iot_hero_banner.png", "link": "diy-iot-smarthome.html", "category": "iot"},
+            {"id": 52, "title": "Keycap Puller", "image": "assets/images/keycap-puller_hero.png", "link": "diy-keyboard-keycap-puller.html", "category": "hardware"},
+            {"id": 53, "title": "Keyboard Wrist Rest", "image": "assets/images/wrist-rest_hero.jpg", "link": "diy-keyboard-wrist-rest.html", "category": "hardware"},
+            {"id": 54, "title": "Lab-on-Chip", "image": "assets/images/lab-on-chip_hero.png", "link": "diy-lab-on-chip.html", "category": "biotech"},
+            {"id": 55, "title": "Laptop Cooling Pad", "image": "assets/images/laptop-cooling_hero.jpg", "link": "diy-laptop-cooling-pad.html", "category": "hardware"},
+            {"id": 56, "title": "Laptop Stand", "image": "assets/images/laptop-stand_hero.jpg", "link": "diy-laptop-stand-simple.html", "category": "hardware"},
+            {"id": 57, "title": "Laser Engraver", "image": "assets/images/laser_engraver_hero.png", "link": "diy-laser-engraver.html", "category": "3d-drucker"},
+            {"id": 58, "title": "LiDAR 3D Scanner", "image": "assets/images/lidar_hero.png", "link": "diy-lidar-scanner.html", "category": "3d-drucker"},
+            {"id": 59, "title": "Machine Vision", "image": "assets/images/machine_vision_hero.png", "link": "diy-machine-vision.html", "category": "ai"},
+            {"id": 60, "title": "Mechanical Keyboard", "image": "assets/images/keyboard_hero.jpg", "link": "diy-mechanical-keyboard.html", "category": "hardware"},
+            {"id": 61, "title": "Metamaterials", "image": "assets/images/metamaterial_hero.png", "link": "diy-metamaterials.html", "category": "quantum"},
+            {"id": 62, "title": "Modular Synthesizer", "image": "assets/images/modular_synth_hero.png", "link": "diy-modular-synth.html", "category": "hardware"},
+            {"id": 63, "title": "Monitor Arm", "image": "assets/images/monitor-arm_hero.jpg", "link": "diy-monitor-arm-hack.html", "category": "hardware"},
+            {"id": 64, "title": "Monitor Light Bar", "image": "assets/images/light-bar_hero.jpg", "link": "diy-monitor-light-bar.html", "category": "hardware"},
+            {"id": 65, "title": "Monitor Storage Stand", "image": "assets/images/monitor-stand_hero.png", "link": "diy-monitor-storage-stand.html", "category": "hardware"},
+            {"id": 66, "title": "MQTT Home Automation", "image": "assets/images/mqtt_automation_hero.png", "link": "diy-mqtt-automation.html", "category": "iot"},
+            {"id": 67, "title": "Music Production Studio", "image": "assets/images/music_studio_hero.png", "link": "diy-music-production-studio.html", "category": "hardware"},
+            {"id": 68, "title": "Neural Interface (BCI)", "image": "assets/images/neural-interface-bci_hero.jpg", "link": "diy-neural-interface-bci.html", "category": "ai"},
+            {"id": 69, "title": "Neural Networks & AI", "image": "assets/images/neural_networks_ai_hero_banner.png", "link": "diy-neural-networks-ai.html", "category": "ai"},
+            {"id": 70, "title": "Neuromorphic Hardware", "image": "assets/images/neuromorphic-hardware_hero.jpg", "link": "diy-neuromorphic-hardware.html", "category": "ai"},
+            {"id": 71, "title": "Phone Charging Station", "image": "assets/images/charging-station_hero.jpg", "link": "diy-phone-charging-station.html", "category": "hardware"},
+            {"id": 72, "title": "Phone Gimbal Stabilizer", "image": "assets/images/phone-gimbal_hero.jpg", "link": "diy-phone-gimbal-stabilizer.html", "category": "hardware"},
+            {"id": 73, "title": "Phone Screen Protector", "image": "assets/images/screen-protector_hero.jpg", "link": "diy-phone-screen-protector.html", "category": "hardware"},
+            {"id": 74, "title": "Phone Stand", "image": "assets/images/phone-stand_hero.jpg", "link": "diy-phone-stand-hack.html", "category": "hardware"},
+            {"id": 75, "title": "Privacy Screen", "image": "assets/images/privacy-screen_hero.jpg", "link": "diy-privacy-screen-laptop.html", "category": "hardware"},
+            {"id": 76, "title": "Programmable Matter", "image": "assets/images/programmable-matter_hero.png", "link": "diy-programmable-matter.html", "category": "quantum"},
+            {"id": 77, "title": "Quantum Computing Simulator", "image": "assets/images/quantum_computing_hero.png", "link": "diy-quantum-computing.html", "category": "quantum"},
+            {"id": 78, "title": "Quantum Error Correction", "image": "assets/images/quantum-error_hero.png", "link": "diy-quantum-error-correction.html", "category": "quantum"},
+            {"id": 79, "title": "Quantum Gates", "image": "assets/images/quantum-gates_hero.png", "link": "diy-quantum-gates.html", "category": "quantum"},
+            {"id": 80, "title": "Quantum Key Distribution", "image": "assets/images/quantum-key-distribution_hero.jpg", "link": "diy-quantum-key-distribution.html", "category": "quantum"},
+            {"id": 81, "title": "Radiation Detector", "image": "assets/images/radiation_hero.png", "link": "diy-radiation-detector.html", "category": "iot"},
+            {"id": 82, "title": "Raspberry Pi Cluster", "image": "assets/images/raspberry_pi_cluster_hero.png", "link": "diy-raspberry-pi-cluster.html", "category": "computing"},
+            {"id": 83, "title": "Retro Gaming Setup", "image": "assets/images/retro_gaming_hero.png", "link": "diy-retro-gaming.html", "category": "hardware"},
+            {"id": 84, "title": "6-DOF Robotic Arm", "image": "assets/images/robotic_arm_hero.png", "link": "diy-robotic-arm.html", "category": "robotics"},
+            {"id": 85, "title": "Satellite Tracking", "image": "assets/images/satellite_tracking_hero.png", "link": "diy-satellite-tracking.html", "category": "iot"},
+            {"id": 86, "title": "Screen Cleaning Kit", "image": "assets/images/screen-cleaning_hero.jpg", "link": "diy-screen-cleaning-kit.html", "category": "hardware"},
+            {"id": 87, "title": "Smart Home Budget", "image": "assets/images/smart-home-budget_hero.jpg", "link": "diy-smart-home-budget.html", "category": "iot"},
+            {"id": 88, "title": "Software Defined Radio", "image": "assets/images/sdr_hero.png", "link": "diy-software-defined-radio.html", "category": "computing"},
+            {"id": 89, "title": "Solar Panels für Zuhause", "image": "assets/images/solar_panels_hero_banner.png", "link": "diy-solar-home.html", "category": "iot"},
+            {"id": 90, "title": "Space Debris Tracking", "image": "assets/images/space-debris_hero.png", "link": "diy-space-debris-tracking.html", "category": "iot"},
+            {"id": 91, "title": "Standing Desk Converter", "image": "assets/images/standing-desk_hero.jpg", "link": "diy-standing-desk-converter.html", "category": "hardware"},
+            {"id": 92, "title": "Swarm Robotics Fleet", "image": "assets/images/swarm-robotics-fleet_hero.jpg", "link": "diy-swarm-robotics-fleet.html", "category": "robotics"},
+            {"id": 93, "title": "Synthetic Cell Engineering", "image": "assets/images/synthetic-cell-engineering_hero.jpg", "link": "diy-synthetic-cell-engineering.html", "category": "biotech"},
+            {"id": 94, "title": "Time Crystals", "image": "assets/images/time-crystal_hero.png", "link": "diy-time-crystals.html", "category": "quantum"},
+            {"id": 95, "title": "Time-Series Database", "image": "assets/images/time-series_hero.png", "link": "diy-timeseries-database.html", "category": "computing"},
+            {"id": 96, "title": "USB-C Hub", "image": "assets/images/usb-hub_hero.jpg", "link": "diy-usb-c-hub-hack.html", "category": "hardware"},
+            {"id": 97, "title": "USB Cable Storage", "image": "assets/images/usb-storage_hero.jpg", "link": "diy-usb-cable-storage.html", "category": "hardware"},
+            {"id": 98, "title": "USB Power Bank Hack", "image": "assets/images/power-bank_hero.jpg", "link": "diy-usb-power-bank-hack.html", "category": "hardware"},
+            {"id": 99, "title": "Vertical Farming", "image": "assets/images/vertical_farm_hero.png", "link": "diy-vertical-farming.html", "category": "iot"},
+            {"id": 100, "title": "Voice Assistant", "image": "assets/images/voice_assistant_hero.png", "link": "diy-voice-assistant.html", "category": "ai"},
+            {"id": 101, "title": "Web Scraping Bot", "image": "assets/images/web_scraping_hero.png", "link": "diy-web-scraping-bot.html", "category": "computing"},
+            {"id": 102, "title": "Mini-Windkraftanlage", "image": "assets/images/wind_turbine_hero_banner.png", "link": "diy-windkraft.html", "category": "iot"},
+            {"id": 103, "title": "Wireless Charging Hack", "image": "assets/images/wireless-charging_hero.jpg", "link": "diy-wireless-charging-hack.html", "category": "hardware"},
+            {"id": 104, "title": "Wireless Mouse Battery Hack", "image": "assets/images/mouse-battery_hero.jpg", "link": "diy-wireless-mouse-battery.html", "category": "hardware"},
+            {"id": 105, "title": "Wireless Sensor Network", "image": "assets/images/wireless_sensor_hero.png", "link": "diy-wireless-sensor-network.html", "category": "iot"}
+        ];
+
+        const categories = ['3d-drucker', 'ai', 'biotech', 'blockchain', 'computing', 'drohnen', 'hardware', 'iot', 'quantum', 'robotics'];
+        const categoryNames = {
+            'all': '📌 Alle Projekte',
+            '3d-drucker': '🖨️ 3D & Drucken',
+            'ai': '🤖 AI & KI',
+            'biotech': '🧬 Biotech',
+            'blockchain': '⛓️ Blockchain',
+            'computing': '💻 Computing',
+            'drohnen': '🚁 Drohnen',
+            'hardware': '⚙️ Hardware',
+            'iot': '🌐 IoT',
+            'quantum': '⚛️ Quantum',
+            'robotics': '🦾 Robotics'
+        };
+
+        let currentFilter = 'all';
+
+        function initializeFilters() {
+            const container = document.getElementById('filter-container');
+            const filters = ['all', ...categories];
+
+            filters.forEach((filter, idx) => {
+                const btn = document.createElement('button');
+                btn.className = `filter-btn ${filter === 'all' ? 'active' : ''}`;
+                btn.textContent = categoryNames[filter];
+                btn.onclick = () => filterProjects(filter, idx);
+                container.appendChild(btn);
+            });
+        }
+
+        function filterProjects(category, idx) {
+            currentFilter = category;
+            const filtered = category === 'all' ? projects : projects.filter(p => p.category === category);
+            renderProjects(filtered);
+
+            document.querySelectorAll('.filter-btn').forEach((btn, i) => {
+                btn.classList.toggle('active', i === idx);
+            });
+        }
+
+        function searchProjects(query) {
+            if (!query.trim()) {
+                filterProjects(currentFilter, currentFilter === 'all' ? 0 : categories.indexOf(currentFilter) + 1);
+                return;
+            }
+
+            const filtered = projects.filter(p =>
+                p.title.toLowerCase().includes(query.toLowerCase())
+            );
+            renderProjects(filtered.length > 0 ? filtered : []);
+        }
+
+        function renderProjects(data) {
+            const grid = document.getElementById('projects-grid');
+            const noResults = document.getElementById('no-results');
+            grid.innerHTML = '';
+
+            if (data.length === 0) {
+                noResults.style.display = 'block';
+                return;
+            }
+
+            noResults.style.display = 'none';
+
+            data.forEach(project => {
+                const card = document.createElement('article');
+                card.className = 'project-card';
+                card.innerHTML = `
+                    <div class="project-image">
+                        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="${project.image}" alt="${project.title}" loading="lazy" decoding="async" width="640" height="400" onerror="this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22280%22 height=%22180%22%3E%3Crect fill=%22%23334155%22 width=%22280%22 height=%22180%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23999%22 font-size=%2214%22%3E${project.title}%3C/text%3E%3C/svg%3E'">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">${project.category}</div>
+                        <h3 class="project-title">${project.title}</h3>
+                        <a href="${project.link}" class="project-link" target="_blank" rel="noopener noreferrer">→ Projekt öffnen</a>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // EVENT LISTENERS
+        document.getElementById('search-input').addEventListener('input', (e) => {
+            searchProjects(e.target.value);
+        });
+
+        document.getElementById('back-to-top').addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        window.addEventListener('scroll', () => {
+            const btn = document.getElementById('back-to-top');
+            btn.classList.toggle('show', window.scrollY > 500);
+        });
+
+        // INITIALIZE
+        initializeFilters();
+        renderProjects(projects);
+    </script>
+</body>
+</html>

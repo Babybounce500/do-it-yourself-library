@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIY: Machine Vision</title>
+    <meta name="description" content="Deutsche DIY-Anleitung zu Machine Vision mit Materialien, Aufbau, Praxis-Tipps und Troubleshooting.">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="global.css" rel="stylesheet">
+    <style>
+        .chapter-header {color: #00dd00; border-left: 4px solid #00dd00; padding-left: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; font-size: 1.5rem;}
+        .code-box {background: rgba(0, 221, 0, 0.1); border: 1px solid #00dd00; padding: 1rem; border-radius: 5px; margin: 1rem 0; font-family: monospace; font-size: 0.75rem;}
+        .vision-box {background: rgba(0, 221, 0, 0.15); border-left: 4px solid #00dd00; padding: 1rem; border-radius: 5px; margin: 1rem 0; font-size: 0.95rem;}
+    </style>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body class="orbtron-theme">
+    <nav class="navbar navbar-dark bg-dark sticky-top" style="border-bottom: 2px solid #00dd00;">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1"><i class="fas fa-eye"></i> DIY: Machine Vision</span>
+            <a href="index.html" class="btn btn-outline-success btn-sm" aria-label="Zurück zur CODESTRAL-Projektbibliothek">← Zurück</a>
+        </div>
+    </nav>
+    <div class="container-fluid py-5" role="main">
+        <div style="position: relative; margin-bottom: 2rem; border-radius: 10px; overflow: hidden; border: 2px solid #00dd00; max-height: 300px;">
+            <img alt="Machine Vision – Hero-Bild" src="assets/images/machine_vision_hero.png" style="width: 100%; height: 300px; object-fit: cover; display: block;" decoding="async" loading="eager" fetchpriority="high">
+            <div class="hero" style="background: rgba(0,0,0,0.7); border: none; border-radius: 0; padding: 2rem 1.5rem; margin-bottom: 0; text-align: center; position: absolute; top: 50%; left: 0; right: 0; transform: translateY(-50%); display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <h1 style="color: #00dd00; font-size: clamp(1.5rem, 5vw, 2.5rem); text-shadow: 0 0 20px rgba(0, 221, 0, 0.5);">👁️ Machine Vision System</h1>
+                <p class="lead text-white" style="font-size: clamp(0.95rem, 3vw, 1.1rem);">Computer Vision mit Deep Learning & Real-time Detection</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8">
+                <h2 class="chapter-header"><i class="fas fa-camera"></i> Kapitel 1: OpenCV Basics</h2>
+                <p class="text-white">Standard Computer Vision Library:</p>
+                <div class="code-box">
+pip install opencv-python numpy
+import cv2
+cap = cv2.VideoCapture(0)
+                </div>
+                <ul class="text-muted">
+                    <li>Bild laden & Videostream</li>
+                    <li>Color Space Conversions (RGB→HSV)</li>
+                    <li>Image Filtering & Morphing</li>
+                </ul>
+
+                <h2 class="chapter-header"><i class="fas fa-shapes"></i> Kapitel 2: Feature Detection & Matching</h2>
+                <ul class="text-muted">
+                    <li>SIFT/SURF: Keypoint Detection</li>
+                    <li>Edge Detection (Canny)</li>
+                    <li>Contour Analysis</li>
+                </ul>
+
+                <h2 class="chapter-header"><i class="fas fa-brain"></i> Kapitel 3: Deep Learning (YOLO/TensorFlow)</h2>
+                <div class="code-box">
+# Object Detection mit YOLO
+pip install ultralytics
+from ultralytics import YOLO
+model = YOLO('yolov8n.pt')
+                </div>
+
+                <h2 class="chapter-header"><i class="fas fa-square"></i> Kapitel 4: Real-time Object Detection</h2>
+                <ul class="text-muted">
+                    <li>Bounding Box Drawing</li>
+                    <li>Confidence Thresholding</li>
+                    <li>Multi-object Tracking</li>
+                    <li>30+ FPS auf RPi</li>
+                </ul>
+
+                <h2 class="chapter-header"><i class="fas fa-face-smile"></i> Kapitel 5: Face Detection & Recognition</h2>
+                <ul class="text-muted">
+                    <li>Cascade Classifiers</li>
+                    <li>Deep Face Recognition</li>
+                    <li>Facial Landmarks</li>
+                    <li>Age/Gender Prediction</li>
+                </ul>
+
+                <h2 class="chapter-header"><i class="fas fa-industry"></i> Kapitel 6: Production Deployment</h2>
+                <ul class="text-muted">
+                    <li>ONNX für Cross-Platform Inference</li>
+                    <li>Jetson Nano für Edge AI</li>
+                    <li>REST API mit FastAPI</li>
+                    <li>Streaming mit MJPEG</li>
+                </ul>
+
+                <!-- EXPANSION: PRO-TIPPS -->
+                <h2 class="chapter-header" style="margin-top: 3rem; border-left: 4px solid #10b981;"><i class="fas fa-lightbulb"></i> 💡 PRO-TIPPS</h2>
+                <div style="background: rgba(16, 185, 129, 0.1); border-left: 4px solid #10b981; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-success mb-3">🎯 Tipp: YOLO ist schneller als TensorFlow</h5>
+                    <p><strong>Problem:</strong> TensorFlow = langsam auf RPi | <strong>Lösung:</strong> YOLOv8 = optimiert für Edge</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #f59e0b;"><i class="fas fa-piggy-bank"></i> 💰 BUDGET-HACKS (85% SPAREN!)</h2>
+                <div style="background: rgba(245, 158, 11, 0.1); border-left: 4px solid #f59e0b; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-warning mb-3">💰 Hack: Jetson Nano statt RTX 3090</h5>
+                    <p><strong>Original:</strong> RTX 3090: €1500+ | <strong>Hack:</strong> Jetson Nano + RPi: €150 | <strong>Einsparnis:</strong> 90%</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #ef4444;"><i class="fas fa-exclamation-circle"></i> ⚠️ FEHLER</h2>
+                <div style="background: rgba(239, 68, 68, 0.1); border-left: 4px solid #ef4444; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-danger mb-3">❌ Fehler: RGB statt BGR in OpenCV</h5>
+                    <p><strong>Was passiert:</strong> Farben invertiert = falsche Erkennung | <strong>✅ Lösung:</strong> cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #60a5fa;"><i class="fas fa-users"></i> 🌐 COMMUNITY</h2>
+                <div style="background: rgba(96, 165, 250, 0.1); border-left: 4px solid #60a5fa; padding: 1.5rem; border-radius: 8px;">
+                    <p>OpenCV Forum, YOLO Community, Jetson Nano Forum, Computer Vision Stack Exchange</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="sidebar-box">
+                    <h5 style="color: #00dd00;"><i class="fas fa-list-check"></i> Vision Path</h5>
+                    <div class="checklist">
+                        <label><input type="checkbox"> OpenCV installieren</label>
+                        <label><input type="checkbox"> Webcam testen</label>
+                        <label><input type="checkbox"> Feature Detection üben</label>
+                        <label><input type="checkbox"> YOLO Setup</label>
+                        <label><input type="checkbox"> Face Detection integrieren</label>
+                        <label><input type="checkbox"> API deployen</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="diy-enhancements.js"></script>
+</body>
+</html>

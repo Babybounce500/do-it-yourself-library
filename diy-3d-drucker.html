@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIY: 3D Drucker Setup & Printing</title>
+    <meta name="description" content="Deutsche DIY-Anleitung zu 3D Drucker Setup & Printing mit Materialien, Aufbau, Praxis-Tipps und Troubleshooting.">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="global.css" rel="stylesheet">
+    <style>
+        .chapter-header {color: #00ffff; border-left: 4px solid #00ffff; padding-left: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; font-size: 1.5rem;}
+        .hardware-box {background: rgba(255, 215, 0, 0.1); border-left: 4px solid #ffd700; padding: 1rem; border-radius: 5px; margin: 1rem 0; font-size: 0.95rem;}
+        .process-box {background: rgba(0, 255, 255, 0.1); border: 1px solid #00ffff; padding: 1rem; border-radius: 5px; margin: 1rem 0; font-size: 0.95rem;}
+        .tip-box {background: rgba(157, 78, 221, 0.15); border-left: 4px solid #9d4edd; padding: 1rem; border-radius: 5px; margin: 1rem 0; font-size: 0.95rem;}
+        table {font-size: 0.9rem;}
+        @media (max-width: 768px) {
+            .chapter-header {font-size: 1.2rem; padding-left: 1rem; margin-top: 1.5rem;}
+            .hardware-box, .process-box, .tip-box {font-size: 0.9rem; padding: 0.75rem;}
+            p {font-size: 0.95rem; line-height: 1.5;}
+        }
+    </style>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body class="orbtron-theme">
+    <nav class="navbar navbar-dark bg-dark sticky-top border-bottom border-cyan-glow">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1"><i class="fas fa-cube"></i> DIY: 3D Drucker Setup</span>
+            <a href="index.html" class="btn btn-outline-info btn-sm" aria-label="Zurück zur CODESTRAL-Projektbibliothek">← Zurück</a>
+        </div>
+    </nav>
+    <div class="container-fluid py-5" role="main">
+        <div style="position: relative; margin-bottom: 2rem; border-radius: 10px; overflow: hidden; border: 2px solid #ffd700; max-height: 300px;">
+            <img alt="3D Drucker Setup & Printing – Hero-Bild" src="assets/images/3d_printing_hero_banner.png" style="width: 100%; height: 300px; object-fit: cover; display: block;" decoding="async" loading="eager" fetchpriority="high">
+            <div class="hero" style="background: rgba(0,0,0,0.7); border: none; border-radius: 0; padding: 2rem 1.5rem; margin-bottom: 0; text-align: center; position: absolute; bottom: 0; left: 0; right: 0;">
+                <h1 class="text-warning mb-3" style="font-size: clamp(1.5rem, 5vw, 2.5rem); text-shadow: 0 0 20px rgba(255,215,0,0.5);">🖨️ 3D Printing</h1>
+                <p class="lead text-white" style="font-size: clamp(0.95rem, 3vw, 1.1rem);">CAD Design bis Druck</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8">
+                <h2 class="chapter-header"><i class="fas fa-shopping-cart"></i> Kapitel 1: Hardware wählen</h2>
+                <p class="text-white">Es gibt 2 Haupttypen:</p>
+                <table class="table table-dark table-striped">
+                    <tr>
+                        <td><strong>FDM (Filament)</strong></td>
+                        <td>PLA/PETG Kunststoff, 200-250°C, €200-2000, einsteigerfreundlich</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Resin (SLA/DLP)</strong></td>
+                        <td>UV-Harz, höhere Auflösung, teuer (€300-3000), giftig</td>
+                    </tr>
+                </table>
+                <div class="hardware-box">
+                    <strong>💰 Budget FDM Setup (€300-500):</strong><br>
+                    - Creality Ender 3 V3: €200<br>
+                    - Filament (5kg): €50<br>
+                    - Nozzles, Bed Tape: €50<br>
+                    - PC für Slicing: vorhanden
+                </div>
+                <h2 class="chapter-header"><i class="fas fa-pencil"></i> Kapitel 2: CAD Design Basics</h2>
+                <div class="code-box">
+# DIY 3D Drucker Setup
+# Prusa i3 Clone €150-200
+# Hotend + Nozzle €20
+# Buildplate €15
+# Stepper Motors (5x) €30
+# Total: €215-265 base system
+                </div>
+
+                <p class="text-white">Deine Idee wird 3D Model:</p>
+                <div class="process-box">
+                    <strong>Software-Optionen:</strong><br>
+                    - <strong>Fusion 360</strong> (kostenlos für Studenten): Professionell, lernt man einmal<br>
+                    - <strong>Tinkercad</strong> (kostenlos): Anfänger-freundlich, im Browser<br>
+                    - <strong>Blender</strong> (kostenlos): Mächtig, steile Lernkurve<br>
+                    - <strong>FreeCAD</strong> (kostenlos): Open-Source, parametrisch
+                </div>
+                <div class="tip-box">
+                    <strong>🎯 Erste Projekte:</strong> Handyständer, kleine Boxen, Lagerbehälter, Adapter, Spielzeug
+                </div>
+                <h2 class="chapter-header"><i class="fas fa-sliders"></i> Kapitel 3: Slicing & Print Settings</h2>
+                <p class="text-white">Wie wird 3D Model zu Druckbefehlen:</p>
+                <div class="process-box">
+                    <strong>Slicing-Software:</strong> Cura (kostenlos), PrusaSlicer (kostenlos), Simplify3D (€150)<br>
+                    <strong>Wichtigste Settings:</strong><br>
+                    - Layer Height: 0.2mm (Standard), 0.1mm (Qualität), 0.3mm (Schnell)<br>
+                    - Infill: 15% (Standard), 0% (Hohl), 100% (Solide)<br>
+                    - Support: Auto-Generate wenn nötig<br>
+                    - Print Speed: 50mm/s (Qualität), 100mm/s (Standard)
+                </div>
+                <h2 class="chapter-header"><i class="fas fa-fire"></i> Kapitel 4: Drucker Kalibrierung</h2>
+                <p class="text-white">Dein Drucker muss korrekt eingestellt sein:</p>
+                <div class="process-box">
+                    <strong>Essenzielle Kalibrierungen:</strong><br>
+                    1. <strong>Bed Leveling:</strong> Abstand Nozzle-Bed = Papierdicke (0.1mm)<br>
+                    2. <strong>Nozzle Temperature:</strong> Für Filament-Type (PLA 200-210°C)<br>
+                    3. <strong>Bed Temperature:</strong> PLA 50-60°C, PETG 70-80°C<br>
+                    4. <strong>Print Speed:</strong> Zu schnell = Qualitätsverlust
+                </div>
+                <div class="tip-box">
+                    <strong>⚠️ Häufige Fehler:</strong> Bed zu nah → kein Filament, zu fern → schlechte Haftung. Nozzle verstopft → nur Nozzle wechseln!
+                </div>
+                <h2 class="chapter-header"><i class="fas fa-cube"></i> Kapitel 5: Print Process & Troubleshooting</h2>
+                <p class="text-white">Von Datei zu fertigem Objekt:</p>
+                <div class="process-box">
+                    <strong>Standard Workflow:</strong><br>
+                    1. CAD-Datei (.stl) exportieren<br>
+                    2. In Slicer laden → Einstellungen prüfen<br>
+                    3. G-Code generieren → auf SD-Karte speichern<br>
+                    4. SD-Karte in Drucker → Start drücken<br>
+                    5. First Layer Watch: Ist Haftung OK?<br>
+                    6. Nach dem Druck: Warten bis cool, dann abnehmen
+                </div>
+                <div class="tip-box">
+                    <strong>Häufige Probleme & Lösungen:</strong><br>
+                    - Warping (Ecken heben): Höhere Bed-Temp, Brim hinzufügen<br>
+                    - Stringing (Fäden): Lower Retraction<br>
+                    - Layer Shift (verschiebte Schichten): Riemen spannen<br>
+                    - Clogged Nozzle: Atomic Pull oder Nozzle clean
+                </div>
+                <h2 class="chapter-header"><i class="fas fa-star"></i> Kapitel 6: Advanced & Business</h2>
+                <p class="text-white">Mach mehr aus deinem 3D Drucker:</p>
+                <div class="process-box">
+                    <strong>Quality Improvements:</strong><br>
+                    - Multi-Material Printing (verschiedene Farben)<br>
+                    - Support Structures optimieren (weniger Abfall)<br>
+                    - Post-Processing: Schleifen, Lackieren, Dampfglätten<br>
+                    - Modell-Optimierung: Wall Thickness, Drainage Holes
+                </div>
+                <div class="process-box">
+                    <strong>Monetarisierung:</strong><br>
+                    - Etsy Shop: Custom Designs verkaufen<br>
+                    - Local 3D Printing Service: €5-20 pro Stunde Druck<br>
+                    - Product Design: Für Startups prototypen<br>
+                    - Education: Workshops in deiner Stadt
+                </div>
+                <!-- ═══════════════════════════════════════════════════════════════ -->
+                <!-- EXPANSION: PRO-TIPPS & TRICKS -->
+                <!-- ═══════════════════════════════════════════════════════════════ -->
+
+                <h2 class="chapter-header" style="margin-top: 3rem; border-left: 4px solid #10b981;"><i class="fas fa-lightbulb"></i> 💡 PRO-TIPPS & INSIDER-TRICKS</h2>
+
+                <div style="background: rgba(16, 185, 129, 0.1); border-left: 4px solid #10b981; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-success mb-3">🎯 Tipp 1: Bed Leveling ist 80% aller Probleme</h5>
+                    <p><strong>Problem:</strong> Schlechte Drucke meist nicht an Drucker, sondern schlechtem Leveling</p>
+                    <p><strong>Smart Lösung:</strong> Investiere 30 Min in perfektes Leveling → 90% Fehler weg</p>
+                    <p><strong>Impact:</strong> +80% erfolgreiche Drucke</p>
+                </div>
+
+                <div style="background: rgba(16, 185, 129, 0.1); border-left: 4px solid #10b981; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-success mb-3">🎯 Tipp 2: Prusaslicer ist besser als Cura</h5>
+                    <p><strong>Problem:</strong> Anfänger nutzen Standard-Cura, welche ist aber oft besser</p>
+                    <p><strong>Smart Lösung:</strong> PrusaSlicer kostenlos → bessere Supports, schneller</p>
+                    <p><strong>Impact:</strong> 30-40% weniger Failed Prints</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #f59e0b;"><i class="fas fa-piggy-bank"></i> 💰 BUDGET-HACKS (40-60% EINSPARUNG!)</h2>
+
+                <div style="background: rgba(245, 158, 11, 0.1); border-left: 4px solid #f59e0b; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-warning mb-3">💰 Hack 1: Refurbished Drucker (€100-150 statt €300)</h5>
+                    <p><strong>Original:</strong> Neue Ender 3 V3: €300+</p>
+                    <p><strong>Budget-Hack:</strong> eBay refurbished: €100-200</p>
+                    <p><strong>Einsparnis:</strong> 50-70%, Garantie oft vorhanden</p>
+                </div>
+
+                <div style="background: rgba(245, 158, 11, 0.1); border-left: 4px solid #f59e0b; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-warning mb-3">💰 Hack 2: Billigfilament testen (€2-3/kg statt €10)</h5>
+                    <p><strong>Original:</strong> Premium Filament: €10-20/kg</p>
+                    <p><strong>Budget-Hack:</strong> AliExpress PLA: €2-4/kg</p>
+                    <p><strong>Trade-Off:</strong> Variable Qualität, aber oft OK</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #ef4444;"><i class="fas fa-exclamation-circle"></i> ⚠️ HÄUFIGE ANFÄNGERFEHLER</h2>
+
+                <div style="background: rgba(239, 68, 68, 0.1); border-left: 4px solid #ef4444; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-danger mb-3">❌ Fehler 1: Supports nicht generieren</h5>
+                    <p><strong>Das passiert:</strong> Überhänge fallen ab → kaputtes Teil</p>
+                    <p><strong>✅ Lösung:</strong> Immer "Generate Supports" in Slicer</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #8b5cf6;"><i class="fas fa-code-branch"></i> 🔄 ALTERNATIVE LÖSUNGEN</h2>
+
+                <div style="background: rgba(139, 92, 246, 0.1); border-left: 4px solid #8b5cf6; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-info mb-3">Option A: Budget-FDM (€100-200)</h5>
+                    <p>Gebrauchter Drucker + billiges Filament | Warte-Zeit ~3h/Druck</p>
+                </div>
+
+                <div style="background: rgba(139, 92, 246, 0.1); border-left: 4px solid #8b5cf6; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-info mb-3">Option B: Resin (€400-800)</h5>
+                    <p>Höhere Auflösung, aber giftig und komplex | Nicht anfänger-freundlich</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #06b6d4;"><i class="fas fa-tools"></i> 🔧 TROUBLESHOOTING</h2>
+
+                <div style="background: rgba(6, 182, 212, 0.1); border-left: 4px solid #06b6d4; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-info mb-3">Problem: Warping (Ecken heben)</h5>
+                    <p><strong>Lösung:</strong> Bed Temp erhöhen (PLA: 60°C), Brim hinzufügen</p>
+                </div>
+
+                <div style="background: rgba(6, 182, 212, 0.1); border-left: 4px solid #06b6d4; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-info mb-3">Problem: Stringing (Fäden zwischen Teilen)</h5>
+                    <p><strong>Lösung:</strong> Retraction erhöhen oder Nozzle Temp -5°C reduzieren</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #a78bfa;"><i class="fas fa-calendar"></i> 📅 WARTUNGS-KALENDER</h2>
+
+                <div style="background: rgba(167, 139, 250, 0.1); border-left: 4px solid #a78bfa; padding: 1.5rem; border-radius: 8px;">
+                    <p><strong>Nach jedem Druck:</strong> Bett putzen | <strong>Monatlich:</strong> Nozzle prüfen | <strong>Quartalsweise:</strong> Riemen spannen</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #60a5fa;"><i class="fas fa-users"></i> 🌐 COMMUNITY & RESSOURCEN</h2>
+
+                <div style="background: rgba(96, 165, 250, 0.1); border-left: 4px solid #60a5fa; padding: 1.5rem; border-radius: 8px;">
+                    <p>Thingiverse.com (Modelle), Prusaprinters.org (Designs), Reddit r/3Dprinting, YouTube: Thomas Sanladerer</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="sidebar-box">
+                    <h5 class="text-warning"><i class="fas fa-list-check"></i> 3D Drucker Roadmap</h5>
+                    <div class="checklist">
+                        <label><input type="checkbox"> Drucker aufbauen & kalibrieren</label>
+                        <label><input type="checkbox"> Test-Druck durchführen</label>
+                        <label><input type="checkbox"> CAD Software lernen</label>
+                        <label><input type="checkbox"> Erstes eigenes Modell designen</label>
+                        <label><input type="checkbox"> Slicing & Support-Strukturen</label>
+                        <label><input type="checkbox"> Multi-Material oder Advanced</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="diy-enhancements.js"></script>
+</body>
+</html>

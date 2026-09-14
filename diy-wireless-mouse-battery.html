@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIY: Wireless Mouse Battery Hack</title>
+    <meta name="description" content="Deutsche DIY-Anleitung zu Wireless Mouse Battery Hack mit Materialien, Aufbau, Praxis-Tipps und Troubleshooting.">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="global.css" rel="stylesheet">
+    <style>
+        .chapter-header {color: #0284c7; border-left: 4px solid #0284c7; padding-left: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; font-size: 1.5rem;}
+        .code-box {background: rgba(2, 132, 199, 0.1); border: 1px solid #0284c7; padding: 1rem; border-radius: 5px; margin: 1rem 0; font-family: monospace; font-size: 0.75rem;}
+        .report-gallery {display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 2rem 0;}
+        .gallery-image {width: 100%; height: 250px; object-fit: cover; border-radius: 8px; border: 2px solid #0284c7;}
+    </style>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body class="orbtron-theme">
+    <nav class="navbar navbar-dark bg-dark sticky-top" style="border-bottom: 2px solid #0284c7;">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1"><i class="fas fa-mouse"></i> DIY: Wireless Mouse Battery</span>
+            <a href="index.html" class="btn btn-outline-info btn-sm" style="color: #0284c7; border-color: #0284c7;" aria-label="Zurück zur CODESTRAL-Projektbibliothek">← Zurück</a>
+        </div>
+    </nav>
+    <div class="container-fluid py-5" role="main">
+        <div style="position: relative; margin-bottom: 2rem; border-radius: 10px; overflow: hidden; border: 2px solid #0284c7; max-height: 300px;">
+            <img src="assets/images/mouse-battery_hero.jpg" loading="eager" style="width: 100%; height: 300px; object-fit: cover; display: block;" alt="Mouse Battery Hero" decoding="async" fetchpriority="high">
+            <div class="hero" style="background: rgba(0,0,0,0.7); border: none; border-radius: 0; padding: 2rem 1.5rem; margin-bottom: 0; text-align: center; position: absolute; top: 50%; left: 0; right: 0; transform: translateY(-50%); display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <h1 style="color: #0284c7; font-size: clamp(1.5rem, 5vw, 2.5rem); text-shadow: 0 0 20px rgba(2, 132, 199, 0.5);">🔋 Mouse Battery Hack</h1>
+                <p class="lead text-white" style="font-size: clamp(0.95rem, 3vw, 1.1rem);">10x längere Laufzeit für €5!</p>
+            </div>
+        </div>
+        <div style="background: rgba(220,38,38,0.15); border-left: 4px solid #dc2626; padding: 1rem 1.25rem; border-radius: 5px; margin: 0 0 2rem;">
+            <strong style="color:#dc2626;">⚠️ Sicherheitshinweis (redaktionell ergänzt):</strong>
+            <span class="text-white">Achtung Chemie-Verwechslung: Ein TP4056-Modul ist ein Einzelzellen-Lithium-Ionen-Lader (Ladeschlussspannung 4,2 V) und darf NIEMALS zum "Wiederaufladen" gewöhnlicher 1,5-V-Alkaline- oder NiMH-AA-Batterien verwendet werden. Nur explizit für diesen Lader freigegebene Li-Ion-Zellen im AA-Format (z. B. Typ 14500) verwenden — Zellchemien nicht mischen.</span>
+        </div>
+        <div class="row">
+            <div class="col-lg-8">
+                <h2 class="chapter-header"><i class="fas fa-battery-half"></i> Kapitel 1: Battery Basics</h2>
+                <ul class="text-muted">
+                    <li>Alkaline vs. Rechargeable</li>
+                    <li>Capacity ratings (mAh)</li>
+                    <li>Voltage requirements (1.5V)</li>
+                    <li>Battery lifespan calculation</li>
+                </ul>
+
+                <h2 class="chapter-header"><i class="fas fa-tools"></i> Kapitel 2: DIY Battery Upgrade</h2>
+                <div class="code-box">
+# Mouse Battery Hack
+# High-capacity AA batteries €3
+# USB recharging mod €2
+# Battery case mod €0 (existing)
+# Total upgrade: €5
+# Battery life: 10x longer!
+                </div>
+
+                <h2 class="chapter-header"><i class="fas fa-zap"></i> Kapitel 3: Recharging Mod</h2>
+                <ul class="text-muted">
+                    <li>DIY recharger circuit</li>
+                    <li>Micro-USB charging port mod</li>
+                    <li>TP4056 charging module</li>
+                    <li>Internal battery swap</li>
+                </ul>
+
+                <h2 class="chapter-header"><i class="fas fa-weight"></i> Kapitel 4: Mouse Weight Considerations</h2>
+                <ul class="text-muted">
+                    <li>Lighter = faster control</li>
+                    <li>Heavier = stability</li>
+                    <li>Balance point important</li>
+                    <li>Gaming mouse optimization</li>
+                </ul>
+
+                <h2 class="chapter-header"><i class="fas fa-chart-bar"></i> Kapitel 5: Battery Monitoring</h2>
+                <ul class="text-muted">
+                    <li>Low battery LED indicator</li>
+                    <li>Software battery display</li>
+                    <li>Capacity testing (digital)</li>
+                    <li>Aging curve tracking</li>
+                </ul>
+
+                <h2 class="chapter-header"><i class="fas fa-leaf"></i> Kapitel 6: Eco-Friendly Tips</h2>
+                <ul class="text-muted">
+                    <li>Rechargeable = less waste</li>
+                    <li>Battery recycling programs</li>
+                    <li>Lifespan extension techniques</li>
+                    <li>Sustainable gaming</li>
+                </ul>
+
+                <h2 class="chapter-header" style="margin-top: 3rem; border-left: 4px solid #10b981;"><i class="fas fa-lightbulb"></i> 💡 PRO-TIPPS</h2>
+                <div style="background: rgba(16, 185, 129, 0.1); border-left: 4px solid #10b981; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-success mb-3">🎯 Tipp: High-Capacity AA!</h5>
+                    <p><strong>Problem:</strong> Ständig Batterien wechseln | <strong>Lösung:</strong> 3000mAh statt 2000mAh AA</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #f59e0b;"><i class="fas fa-piggy-bank"></i> 💰 BUDGET-HACKS (90% SPAREN!)</h2>
+                <div style="background: rgba(245, 158, 11, 0.1); border-left: 4px solid #f59e0b; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-warning mb-3">💰 Hack: Recharging vs. Replacements</h5>
+                    <p><strong>Original:</strong> Buying batteries for 5 years: €100+ | <strong>Hack:</strong> Rechargeable setup: €5 | <strong>Einsparnis:</strong> 95%</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #ef4444;"><i class="fas fa-exclamation-circle"></i> ⚠️ FEHLER</h2>
+                <div style="background: rgba(239, 68, 68, 0.1); border-left: 4px solid #ef4444; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-danger mb-3">❌ Fehler: Falsche Batterie-Größe</h5>
+                    <p><strong>Was passiert:</strong> Mouse geht nicht an | <strong>✅ Lösung:</strong> Check specs: AAA oder AA?</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #60a5fa;"><i class="fas fa-users"></i> 🌐 COMMUNITY</h2>
+                <div style="background: rgba(96, 165, 250, 0.1); border-left: 4px solid #60a5fa; padding: 1.5rem; border-radius: 8px;">
+                    <p>r/pcgaming, Battery Hacking Forum, Eco Gaming Community, Hardware Mods Subreddit</p>
+                </div>
+
+                <h2 class="chapter-header" style="margin-top: 3rem;">📸 Fehler-Galerie</h2>
+                <div class="report-gallery">
+                    <img src="assets/images/mouse-battery_error1.jpg" class="gallery-image" alt="Battery Drain" loading="lazy" decoding="async" fetchpriority="low">
+                    <img src="assets/images/mouse-battery_error2.jpg" class="gallery-image" alt="Charge Failure" loading="lazy" decoding="async" fetchpriority="low">
+                    <img src="assets/images/mouse-battery_error3.jpg" class="gallery-image" alt="Wrong Size" loading="lazy" decoding="async" fetchpriority="low">
+                    <img src="assets/images/mouse-battery_error4.jpg" class="gallery-image" alt="Connection Loose" loading="lazy" decoding="async" fetchpriority="low">
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="sidebar-box">
+                    <h5 style="color: #0284c7;"><i class="fas fa-list-check"></i> Battery Hack Path</h5>
+                    <div class="checklist">
+                        <label><input type="checkbox"> Mouse disassemble</label>
+                        <label><input type="checkbox"> Battery check</label>
+                        <label><input type="checkbox"> High-cap batteries</label>
+                        <label><input type="checkbox"> Charger circuit</label>
+                        <label><input type="checkbox"> Testing</label>
+                        <label><input type="checkbox"> Long play time!</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="diy-enhancements.js"></script>
+</body>
+</html>

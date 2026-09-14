@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIY: Eigenen KI-Chatbot Bauen</title>
+    <meta name="description" content="Deutsche DIY-Anleitung zu Eigenen KI-Chatbot Bauen mit Materialien, Aufbau, Praxis-Tipps und Troubleshooting.">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="global.css" rel="stylesheet">
+    <style>
+        .chapter-header {color: #00ffff; border-left: 4px solid #00ffff; padding-left: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; font-size: 1.5rem;}
+        .code-block {background: rgba(0, 0, 0, 0.5); border: 1px solid #00ffff; color: #00ff00; padding: 1rem; border-radius: 5px; overflow-x: auto; position: relative; margin: 1rem 0; font-size: 0.85rem; line-height: 1.5;}
+        .tip-box {background: rgba(157, 78, 221, 0.15); border-left: 4px solid #9d4edd; padding: 1rem; border-radius: 5px; margin: 1rem 0; font-size: 0.95rem;}
+        table {font-size: 0.9rem;}
+        table td, table th {padding: 0.75rem 0.5rem;}
+        .back-btn {margin-bottom: 2rem;}
+        @media (max-width: 768px) {
+            .chapter-header {font-size: 1.2rem; padding-left: 1rem; margin-top: 1.5rem;}
+            .code-block {font-size: 0.75rem; padding: 0.75rem; font-family: 'Courier New', monospace;}
+            table {font-size: 0.8rem;}
+            table td, table th {padding: 0.5rem 0.25rem;}
+            .container-fluid {padding-left: 0.5rem; padding-right: 0.5rem;}
+            p {font-size: 0.95rem; line-height: 1.5;}
+        }
+    </style>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body class="orbtron-theme">
+    <nav class="navbar navbar-dark bg-dark sticky-top border-bottom border-cyan-glow">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1"><i class="fas fa-robot"></i> DIY: Eigenen KI-Chatbot Bauen</span>
+            <a href="index.html" class="btn btn-outline-info btn-sm" aria-label="Zurück zur CODESTRAL-Projektbibliothek">← Zurück zur Library</a>
+        </div>
+    </nav>
+
+    <div class="container-fluid py-5" role="main">
+        <div style="position: relative; margin-bottom: 2rem; border-radius: 10px; overflow: hidden; border: 2px solid #00ffff; max-height: 300px;">
+            <img alt="Eigenen KI-Chatbot Bauen – Hero-Bild" src="assets/images/ai_chatbot_hero_banner_image.png" style="width: 100%; height: 300px; object-fit: cover; display: block;" decoding="async" loading="eager" fetchpriority="high">
+            <div class="hero" style="background: rgba(0,0,0,0.7); border: none; border-radius: 0; padding: 2rem 1.5rem; margin-bottom: 0; text-align: center; position: absolute; bottom: 0; left: 0; right: 0;">
+                <h1 class="text-cyan-glow mb-3" style="font-size: clamp(1.5rem, 5vw, 2.5rem); text-shadow: 0 0 20px rgba(0,255,255,0.5);">🤖 KI-Chatbot bauen</h1>
+                <p class="lead text-white" style="font-size: clamp(0.95rem, 3vw, 1.1rem);">OpenAI, Memory, RAG & Deployment!</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-8">
+                <!-- KAPITEL 1 -->
+                <h2 class="chapter-header"><i class="fas fa-tools"></i> Kapitel 1: Setup & Tools</h2>
+                <p class="text-white">Bevor du startest, brauchst du:</p>
+                <ul class="text-muted">
+                    <li><strong>Python 3.10+</strong> - Download von python.org</li>
+                    <li><strong>API-Keys</strong> - OpenAI, Anthropic oder HuggingFace</li>
+                    <li><strong>Code-Editor</strong> - VS Code, PyCharm oder Replit</li>
+                    <li><strong>Git</strong> - für Versionskontrolle</li>
+                </ul>
+                <div class="code-block">
+# Installiere die Basics
+pip install openai langchain python-dotenv
+                </div>
+                <div class="tip-box">
+                    <strong>💡 Pro-Tipp:</strong> Nutze Replit - keine lokale Installation nötig! Dein Chatbot läuft sofort in der Cloud.
+                </div>
+
+                <!-- KAPITEL 2 -->
+                <h2 class="chapter-header"><i class="fas fa-brain"></i> Kapitel 2: Wähle dein KI-Modell</h2>
+                <div class="code-box">
+# DIY AI Chatbot
+# Laptop/Server €0 (existing)
+# OpenAI API €0 (pay per use)
+# Python Libraries €0 (free)
+# Development Time €0 (your time)
+# Total: €0 + usage costs
+                </div>
+
+                <p class="text-white">Du hast drei Optionen:</p>
+                <table class="table table-dark table-striped">
+                    <tr>
+                        <td><strong>OpenAI GPT-4</strong></td>
+                        <td>Mächtig, Kosten: ~$0.03/1K tokens</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Claude (Anthropic)</strong></td>
+                        <td>Intelligent, lange Kontexte, Kosten: ~$0.01/1K tokens</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Open-Source (Llama 2)</strong></td>
+                        <td>Kostenlos, läuft lokal, weniger Leistung</td>
+                    </tr>
+                </table>
+                <div class="code-block">
+# Beispiel: OpenAI verwenden
+import os
+from openai import OpenAI
+
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+                </div>
+
+                <!-- KAPITEL 3 -->
+                <h2 class="chapter-header"><i class="fas fa-cogs"></i> Kapitel 3: Basis-Chatbot mit Memory</h2>
+                <p class="text-white">Ein einfacher Chatbot, der sich Konversationen merkt:</p>
+                <div class="code-block">
+from langchain.chat_models import ChatOpenAI
+from langchain.memory import ConversationBufferMemory
+from langchain.chains import ConversationChain
+
+llm = ChatOpenAI(model="gpt-4", temperature=0.7)
+memory = ConversationBufferMemory()
+conversation = ConversationChain(llm=llm, memory=memory)
+
+# Starte deine Konversation
+response = conversation.run("Hallo, wer bist du?")
+print(response)
+                </div>
+                <div class="tip-box">
+                    <strong>🎯 Memory-Typen:</strong> Buffer (einfach), Summary (intelligente Zusammenfassung), Entity (merkt sich wichtige Daten)
+                </div>
+
+                <!-- KAPITEL 4 -->
+                <h2 class="chapter-header"><i class="fas fa-database"></i> Kapitel 4: Custom Knowledge Base (RAG)</h2>
+                <p class="text-white">Gib deinem Bot Zugang zu eigenen Dokumenten:</p>
+                <div class="code-block">
+from langchain.document_loaders import PDFLoader
+from langchain.vectorstores import FAISS
+from langchain.embeddings.openai import OpenAIEmbeddings
+
+# Lade deine PDFs
+loader = PDFLoader("deine_datei.pdf")
+docs = loader.load()
+
+# Erstelle Vector-Datenbank
+embeddings = OpenAIEmbeddings()
+vectorstore = FAISS.from_documents(docs, embeddings)
+
+# Suche nach relevanten Dokumenten
+results = vectorstore.similarity_search("Frage hier")
+                </div>
+                <div class="tip-box">
+                    <strong>🚀 Real-World Use Case:</strong> Lade Kundendoku, FAQ oder Research-Papers hoch → Dein Bot wird zum Experten!
+                </div>
+
+                <!-- KAPITEL 5 -->
+                <h2 class="chapter-header"><i class="fas fa-globe"></i> Kapitel 5: Deploye deinen Chatbot</h2>
+                <p class="text-white">Optionen zum Live-Gehen:</p>
+                <ul class="text-muted">
+                    <li><strong>Streamlit</strong> - Schnellste Weg zu Web-App (5 Min!)</li>
+                    <li><strong>FastAPI</strong> - Professionelle API für Production</li>
+                    <li><strong>Slack Bot</strong> - Integriert in dein Team-Chat</li>
+                    <li><strong>Replit</strong> - Sofort online, kein Deployment nötig</li>
+                </ul>
+                <div class="code-block">
+# Streamlit App
+import streamlit as st
+
+st.title("Mein KI-Chatbot")
+user_input = st.text_input("Deine Frage:")
+if user_input:
+    response = conversation.run(user_input)
+    st.write(response)
+
+# Run: streamlit run app.py
+                </div>
+
+                <!-- KAPITEL 6 -->
+                <h2 class="chapter-header"><i class="fas fa-chart-line"></i> Kapitel 6: Optimierung & Monitoring</h2>
+                <p class="text-white">Mache deinen Bot besser:</p>
+                <div class="tip-box">
+                    <strong>⚡ Optimization-Tricks:</strong>
+                    <ul>
+                        <li>Nutze <code>temperature=0.5</code> für faktische Antworten</li>
+                        <li>Nutze <code>temperature=0.9</code> für kreative Responses</li>
+                        <li>Begrenzt Context-Window für schnellere Antworten</li>
+                        <li>Cachen Sie häufige Fragen (sparen Kosten!)</li>
+                    </ul>
+                </div>
+                <div class="code-block">
+# Tracking & Kosten-Monitoring
+import logging
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+def track_usage(prompt_tokens, completion_tokens):
+    cost = (prompt_tokens * 0.0005 + completion_tokens * 0.0015) / 1000
+    logger.info(f"API Call Cost: ${cost:.4f}")
+                </div>
+
+                <!-- ═══════════════════════════════════════════════════════════════ -->
+                <!-- EXPANSION: PRO-TIPPS & TRICKS -->
+                <!-- ═══════════════════════════════════════════════════════════════ -->
+
+                <h2 class="chapter-header" style="margin-top: 3rem; border-left: 4px solid #10b981;"><i class="fas fa-lightbulb"></i> 💡 PRO-TIPPS & INSIDER-TRICKS</h2>
+                
+                <div style="background: rgba(16, 185, 129, 0.1); border-left: 4px solid #10b981; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-success mb-3">🎯 Tipp 1: GPT-4 vs GPT-3.5 Trade-Off</h5>
+                    <p><strong>Problem:</strong> GPT-4 ist 10x teurer (€0.03/1K vs €0.001/1K tokens)</p>
+                    <p><strong>Smart Lösung:</strong> Nutze GPT-3.5 für Prototyp & Testing, GPT-4 nur für Critical Features</p>
+                    <p><strong>Impact:</strong> 90% Kostenersparnis ohne Qualitätsverlust</p>
+                </div>
+
+                <div style="background: rgba(16, 185, 129, 0.1); border-left: 4px solid #10b981; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-success mb-3">🎯 Tipp 2: Request Caching für häufige Anfragen</h5>
+                    <p><strong>Problem:</strong> Gleiche Fragen verschwenden API-Budget</p>
+                    <p><strong>Smart Lösung:</strong> Implementiere Redis-Cache oder In-Memory Caching</p>
+                    <div class="code-block">
+import functools
+import time
+
+@functools.lru_cache(maxsize=128)
+def get_cached_response(question: str):
+    return client.chat.completions.create(
+        model="gpt-3.5-turbo",
+        messages=[{"role": "user", "content": question}]
+    )
+
+# Gleichzeitige Frage = 0 API-Kosten!
+                    </div>
+                    <p><strong>Impact:</strong> 50-70% Kostenersparnis + 10x schneller</p>
+                </div>
+
+                <div style="background: rgba(16, 185, 129, 0.1); border-left: 4px solid #10b981; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-success mb-3">🎯 Tipp 3: Context-Window Optimierung</h5>
+                    <p><strong>Problem:</strong> Große Context = höhere Kosten & längere Latenz</p>
+                    <p><strong>Smart Lösung:</strong> Begrenzen Sie Konversationshistorie auf letzten 5-10 Messages</p>
+                    <p><strong>Impact:</strong> 30-40% schneller, 25% billiger</p>
+                </div>
+
+                <!-- BUDGET-HACKS -->
+                <h2 class="chapter-header" style="border-left: 4px solid #f59e0b;"><i class="fas fa-piggy-bank"></i> 💰 BUDGET-HACKS (30-50% EINSPARUNG!)</h2>
+
+                <div style="background: rgba(245, 158, 11, 0.1); border-left: 4px solid #f59e0b; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-warning mb-3">💰 Hack 1: Open-Source Alternative (€0 statt €50/Mo)</h5>
+                    <p><strong>Original:</strong> OpenAI GPT-4 API (~€50/Monat)</p>
+                    <p><strong>Budget-Hack:</strong> Ollama + Llama 2 (lokal, völlig kostenlos)</p>
+                    <div class="code-block">
+# Ollama starten: ollama run llama2
+curl http://localhost:11434/api/generate -d '{
+  "model": "llama2",
+  "prompt": "Deine Frage hier"
+}'
+                    </div>
+                    <p><strong>Trade-Off:</strong> Weniger Intelligenz, aber 100% kostenlos & privat</p>
+                </div>
+
+                <div style="background: rgba(245, 158, 11, 0.1); border-left: 4px solid #f59e0b; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-warning mb-3">💰 Hack 2: Claude vs OpenAI (40% billiger)</h5>
+                    <p><strong>Original Budget:</strong> OpenAI GPT-4: €0.03/1K tokens</p>
+                    <p><strong>Sparlösung:</strong> Anthropic Claude 3: €0.015/1K tokens (50% günstiger!)</p>
+                    <p><strong>Bonus:</strong> Claude hat 100K Context Window (vs OpenAI 8K)</p>
+                </div>
+
+                <div style="background: rgba(245, 158, 11, 0.1); border-left: 4px solid #f59e0b; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-warning mb-3">💰 Hack 3: Free Trial Credits nutzen</h5>
+                    <p>OpenAI gibt €5 kostenlos, Anthropic €10, Google AI Studio kostenlos</p>
+                    <p><strong>Strategie:</strong> Entwickel 3 Monate kostenlos, dann choose beste Option</p>
+                    <p><strong>Gesamtersparnis:</strong> €0 für erste 3 Monate</p>
+                </div>
+
+                <!-- HÄUFIGE FEHLER -->
+                <h2 class="chapter-header" style="border-left: 4px solid #ef4444;"><i class="fas fa-exclamation-circle"></i> ⚠️ HÄUFIGE ANFÄNGERFEHLER</h2>
+
+                <div style="background: rgba(239, 68, 68, 0.1); border-left: 4px solid #ef4444; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-danger mb-3">❌ Fehler 1: API Keys in Source Code</h5>
+                    <p><strong>Das passiert:</strong> Keys werden public auf GitHub, jeder kann APIs missbrauchen</p>
+                    <p><strong>✅ Lösung:</strong> Immer .env files nutzen + .gitignore</p>
+                    <div class="code-block">
+# .env
+OPENAI_API_KEY=sk-xxxxx
+
+# .gitignore
+.env
+
+# Code
+import os
+key = os.getenv("OPENAI_API_KEY")  # ✅ Sicher!
+                    </div>
+                </div>
+
+                <div style="background: rgba(239, 68, 68, 0.1); border-left: 4px solid #ef4444; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-danger mb-3">❌ Fehler 2: Keine Rate-Limits setzen</h5>
+                    <p><strong>Das passiert:</strong> Ein Bug → API-Calls in Schleife → €500 Rechnung in 1 Std</p>
+                    <p><strong>✅ Lösung:</strong> Immer Rate-Limiting + Spending Limits setzen</p>
+                    <p>OpenAI Dashboard → Usage Limits → Setze €10/Tag max!</p>
+                </div>
+
+                <div style="background: rgba(239, 68, 68, 0.1); border-left: 4px solid #ef4444; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-danger mb-3">❌ Fehler 3: Zu große Context-Windows</h5>
+                    <p><strong>Das passiert:</strong> Konversation läuft 1000 Messages → Token explodieren</p>
+                    <p><strong>✅ Lösung:</strong> Limit auf letzte 20 Messages, ältere archivieren</p>
+                </div>
+
+                <!-- ALTERNATIVE LÖSUNGEN -->
+                <h2 class="chapter-header" style="border-left: 4px solid #8b5cf6;"><i class="fas fa-code-branch"></i> 🔄 ALTERNATIVE LÖSUNGEN</h2>
+
+                <div style="background: rgba(139, 92, 246, 0.1); border-left: 4px solid #8b5cf6; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-info mb-3">Option A: Budget-Version (€0-20/Mo)</h5>
+                    <p><strong>Tech-Stack:</strong> Ollama + Llama 2 (Open-Source lokal)</p>
+                    <p><strong>Pros:</strong> ✅ Kostenlos ✅ 100% Privat ✅ Keine Internet nötig</p>
+                    <p><strong>Cons:</strong> ❌ Weniger intelligent ❌ Needs 16GB RAM minimum</p>
+                    <p><strong>Best für:</strong> Hobby-Projekte, Learning</p>
+                </div>
+
+                <div style="background: rgba(139, 92, 246, 0.1); border-left: 4px solid #8b5cf6; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-info mb-3">Option B: Mid-Range (€20-50/Mo)</h5>
+                    <p><strong>Tech-Stack:</strong> Anthropic Claude 3 oder Mistral API</p>
+                    <p><strong>Pros:</strong> ✅ Sehr günstig ✅ Gute Qualität ✅ Long context</p>
+                    <p><strong>Cons:</strong> ❌ Braucht Internet ❌ Begrenzte Customization</p>
+                    <p><strong>Best für:</strong> Startups, MVP Launch</p>
+                </div>
+
+                <div style="background: rgba(139, 92, 246, 0.1); border-left: 4px solid #8b5cf6; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-info mb-3">Option C: Premium (€50-500/Mo)</h5>
+                    <p><strong>Tech-Stack:</strong> OpenAI GPT-4 Turbo oder Azure OpenAI</p>
+                    <p><strong>Pros:</strong> ✅ State-of-the-art ✅ Enterprise Support ✅ Best Performance</p>
+                    <p><strong>Cons:</strong> ❌ Teuer ❌ API Limits</p>
+                    <p><strong>Best für:</strong> Production Apps, Revenue-generating</p>
+                </div>
+
+                <!-- TROUBLESHOOTING GUIDE -->
+                <h2 class="chapter-header" style="border-left: 4px solid #06b6d4;"><i class="fas fa-tools"></i> 🔧 TROUBLESHOOTING GUIDE</h2>
+
+                <div style="background: rgba(6, 182, 212, 0.1); border-left: 4px solid #06b6d4; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-info mb-3">Problem 1: "401 Unauthorized" Error</h5>
+                    <p><strong>Symptom:</strong> OpenAI API gibt 401 zurück</p>
+                    <p><strong>Ursache:</strong> API-Key ist falsch, abgelaufen oder in Headers vergessen</p>
+                    <p><strong>Lösung 1 (Quick):</strong> API Key auf openai.com neu generieren</p>
+                    <p><strong>Lösung 2 (Tief):</strong> Prüfe ob .env richtig geladen wird</p>
+                    <div class="code-block">
+# Debug: API Key prüfen
+import os
+print(os.getenv("OPENAI_API_KEY"))  # Sollte nicht None sein!
+                    </div>
+                </div>
+
+                <div style="background: rgba(6, 182, 212, 0.1); border-left: 4px solid #06b6d4; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-info mb-3">Problem 2: Response Timeout (Requests hängen)</h5>
+                    <p><strong>Symptom:</strong> API antwortet nach 30+ Sekunden</p>
+                    <p><strong>Ursache:</strong> Große Context, Model Overload, Network Issues</p>
+                    <p><strong>Lösung:</strong> Timeout erhöhen + Streaming aktivieren</p>
+                    <div class="code-block">
+# Mit Timeout + Streaming
+response = client.chat.completions.create(
+    model="gpt-3.5-turbo",
+    messages=messages,
+    timeout=60,  # Erhöht von default 30
+    stream=True  # Streaming = schnellere erste Tokens
+)
+                    </div>
+                </div>
+
+                <!-- PERFORMANCE OPTIMIERUNGEN -->
+                <h2 class="chapter-header" style="border-left: 4px solid #06b6d4;"><i class="fas fa-rocket"></i> 🚀 PERFORMANCE-OPTIMIERUNGEN</h2>
+
+                <ul style="background: rgba(6, 182, 212, 0.1); border-left: 4px solid #06b6d4; padding: 1.5rem; border-radius: 8px;">
+                    <li><strong>Optimization 1: Streaming Responses</strong> → +50% schneller für Benutzer</li>
+                    <li><strong>Optimization 2: Request Caching (Redis)</strong> → +70% Kostenersparnis</li>
+                    <li><strong>Optimization 3: Batch Processing</strong> → Handle mehrere Requests parallel</li>
+                    <li><strong>Optimization 4: Context Summarization</strong> → Reduziert Tokens um 40%</li>
+                </ul>
+
+                <!-- SECURITY CHECKLIST -->
+                <h2 class="chapter-header" style="border-left: 4px solid #14b8a6;"><i class="fas fa-shield"></i> 🔒 SICHERHEITS-HARDENING</h2>
+
+                <div style="background: rgba(20, 184, 166, 0.1); border-left: 4px solid #14b8a6; padding: 1.5rem; border-radius: 8px;">
+                    <h5 class="text-success mb-3">Security Checklist</h5>
+                    <ul>
+                        <li>☐ API Keys in .env (nicht hardcoded)</li>
+                        <li>☐ .gitignore configured</li>
+                        <li>☐ Input Validation (prompt injection protection)</li>
+                        <li>☐ Rate limiting aktiviert</li>
+                        <li>☐ Spending Limits auf API Dashboard</li>
+                        <li>☐ HTTPS nur (wenn hosted)</li>
+                        <li>☐ Audit Logging aktiviert</li>
+                        <li>☐ Toxic Output Filtering</li>
+                    </ul>
+                </div>
+
+                <!-- MAINTENANCE CALENDAR -->
+                <h2 class="chapter-header" style="border-left: 4px solid #a78bfa;"><i class="fas fa-calendar"></i> 📅 WARTUNGS-KALENDER</h2>
+
+                <div style="background: rgba(167, 139, 250, 0.1); border-left: 4px solid #a78bfa; padding: 1.5rem; border-radius: 8px;">
+                    <p><strong>📆 Täglich:</strong> Check API Health Dashboard</p>
+                    <p><strong>📆 Wöchentlich:</strong> Review Cost Trends & Error Logs</p>
+                    <p><strong>📆 Monatlich:</strong> Update LangChain & Dependencies, Audit Spending</p>
+                    <p><strong>📆 Quartalsweise:</strong> Fine-tune Model Parameters, Update Prompts</p>
+                    <p><strong>📆 Jährlich:</strong> Full Security Audit, Model Comparison Review</p>
+                </div>
+
+                <!-- COMMUNITY & RESSOURCEN -->
+                <h2 class="chapter-header" style="border-left: 4px solid #60a5fa;"><i class="fas fa-users"></i> 🌐 COMMUNITY & RESSOURCEN</h2>
+
+                <div style="background: rgba(96, 165, 250, 0.1); border-left: 4px solid #60a5fa; padding: 1.5rem; border-radius: 8px;">
+                    <p><strong>💬 OpenAI Community:</strong> community.openai.com - Q&A, Best Practices</p>
+                    <p><strong>💬 LangChain Discord:</strong> discord.gg/langchain - Active Community</p>
+                    <p><strong>💬 GitHub Discussions:</strong> openai/openai-python - Issues & Solutions</p>
+                    <p><strong>📚 Useful Libraries:</strong></p>
+                    <ul>
+                        <li>LangChain - Chainable LLM workflows</li>
+                        <li>LiteLLM - Multi-provider abstraction</li>
+                        <li>OpenAI Gym - Testing & Benchmarking</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- SIDEBAR -->
+            <div class="col-lg-4">
+                <div class="sidebar-box">
+                    <h5 class="text-cyan-glow"><i class="fas fa-list-check"></i> Learning Path</h5>
+                    <div class="checklist">
+                        <label><input type="checkbox"> Python & LangChain setup</label>
+                        <label><input type="checkbox"> OpenAI API konfigurieren</label>
+                        <label><input type="checkbox"> Basis-Chatbot bauen</label>
+                        <label><input type="checkbox"> Memory & Context hinzufügen</label>
+                        <label><input type="checkbox"> Streamlit UI erstellen</label>
+                        <label><input type="checkbox"> Production deployment</label>
+                    </div>
+                </div>
+                <div class="card bg-dark border-warning mt-3">
+                    <div class="card-header bg-transparent border-warning">
+                        <h5 class="text-warning"><i class="fas fa-exclamation-triangle"></i> Wichtig!</h5>
+                    </div>
+                    <div class="card-body text-muted" style="font-size: 0.9rem;">
+                        <p><strong>API Keys sicher:</strong> Nutze .env files, nicht hardcoden!</p>
+                        <p><strong>Costs kontrollieren:</strong> Setze Limits auf OpenAI Dashboard</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="diy-enhancements.js"></script>
+</body>
+</html>

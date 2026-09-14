@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIY: USB Power Bank Hack</title>
+    <meta name="description" content="Deutsche DIY-Anleitung zu USB Power Bank Hack mit Materialien, Aufbau, Praxis-Tipps und Troubleshooting.">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="global.css" rel="stylesheet">
+    <style>
+        .chapter-header {color: #f97316; border-left: 4px solid #f97316; padding-left: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; font-size: 1.5rem;}
+        .code-box {background: rgba(249, 115, 22, 0.1); border: 1px solid #f97316; padding: 1rem; border-radius: 5px; margin: 1rem 0; font-family: monospace; font-size: 0.75rem;}
+        .report-gallery {display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 2rem 0;}
+        .gallery-image {width: 100%; height: 250px; object-fit: cover; border-radius: 8px; border: 2px solid #f97316;}
+    </style>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body class="orbtron-theme">
+    <nav class="navbar navbar-dark bg-dark sticky-top" style="border-bottom: 2px solid #f97316;">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1"><i class="fas fa-battery-full"></i> DIY: USB Power Bank Hack</span>
+            <a href="index.html" class="btn btn-outline-info btn-sm" style="color: #f97316; border-color: #f97316;" aria-label="Zurück zur CODESTRAL-Projektbibliothek">← Zurück</a>
+        </div>
+    </nav>
+    <div class="container-fluid py-5" role="main">
+        <div style="position: relative; margin-bottom: 2rem; border-radius: 10px; overflow: hidden; border: 2px solid #f97316; max-height: 300px;">
+            <img src="assets/images/power-bank_hero.jpg" loading="eager" style="width: 100%; height: 300px; object-fit: cover; display: block;" alt="Power Bank Hero" decoding="async" fetchpriority="high">
+            <div class="hero" style="background: rgba(0,0,0,0.7); border: none; border-radius: 0; padding: 2rem 1.5rem; margin-bottom: 0; text-align: center; position: absolute; top: 50%; left: 0; right: 0; transform: translateY(-50%); display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <h1 style="color: #f97316; font-size: clamp(1.5rem, 5vw, 2.5rem); text-shadow: 0 0 20px rgba(249, 115, 22, 0.5);">🔋 USB Power Bank Hack</h1>
+                <p class="lead text-white" style="font-size: clamp(0.95rem, 3vw, 1.1rem);">100W Multi-Device Charging für €25!</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8">
+                <h2 class="chapter-header"><i class="fas fa-battery-half"></i> Kapitel 1: Battery Cell Selection</h2>
+                <ul class="text-muted">
+                    <li>Sanyo/Panasonic 18650 Cells (€2 each)</li>
+                    <li>Capacity: 3000-3500mAh pro Cell</li>
+                    <li>Parallel vs. Series Arrangement</li>
+                    <li>10000mAh = 3x18650 Parallel</li>
+                </ul>
+
+                <h2 class="chapter-header"><i class="fas fa-microchip"></i> Kapitel 2: Charging Controller</h2>
+                <div class="code-box">
+# DIY Power Bank BMS
+# TP4056 + DW01A für 1x18650
+# Parallel 18650s für capacity
+voltage_output = 5V USB
+amperage = 2-3A max
+protection = overcharge + short
+cost = €3 per BMS board
+                </div>
+
+                <h2 class="chapter-header"><i class="fas fa-plug"></i> Kapitel 3: USB Output Hacks</h2>
+                <ul class="text-muted">
+                    <li>USB-A: Standard 5V (1A)</li>
+                    <li>USB-C: Fast Charging (3A+)</li>
+                    <li>Dual Output Module (€8)</li>
+                    <li>QC3.0 Support (€12 upgrade)</li>
+                </ul>
+
+                <h2 class="chapter-header"><i class="fas fa-fire"></i> Kapitel 4: Safety & Protection</h2>
+                <ul class="text-muted">
+                    <li>BMS Circuit (Must-Have!)</li>
+                    <li>Fuse für Short-Circuit</li>
+                    <li>Thermal Monitoring</li>
+                    <li>Cell Balancing</li>
+                </ul>
+
+                <h2 class="chapter-header"><i class="fas fa-wrench"></i> Kapitel 5: Assembly & Enclosure</h2>
+                <ul class="text-muted">
+                    <li>3D Printed Case</li>
+                    <li>Heat Shrink Tubing</li>
+                    <li>Spot Welding vs. Soldering</li>
+                    <li>Cable Management</li>
+                </ul>
+
+                <h2 class="chapter-header"><i class="fas fa-zap"></i> Kapitel 6: Advanced Mods</h2>
+                <ul class="text-muted">
+                    <li>Solar Panel Charging</li>
+                    <li>Wireless Charging Output</li>
+                    <li>LED Status Display</li>
+                    <li>Fast Charging (PD 65W)</li>
+                </ul>
+
+                <h2 class="chapter-header" style="margin-top: 3rem; border-left: 4px solid #10b981;"><i class="fas fa-lightbulb"></i> 💡 PRO-TIPPS</h2>
+                <div style="background: rgba(16, 185, 129, 0.1); border-left: 4px solid #10b981; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-success mb-3">🎯 Tipp: BMS ist nicht optional!</h5>
+                    <p><strong>Problem:</strong> Lithium = Brandgefahr! | <strong>Lösung:</strong> BMS = €3 Sicherheit</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #f59e0b;"><i class="fas fa-piggy-bank"></i> 💰 BUDGET-HACKS (96% SPAREN!)</h2>
+                <div style="background: rgba(245, 158, 11, 0.1); border-left: 4px solid #f59e0b; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-warning mb-3">💰 Hack: DIY 30000mAh Power Bank</h5>
+                    <p><strong>Original:</strong> Quality Power Bank: €80+ | <strong>Hack:</strong> DIY Cells + BMS: €25 | <strong>Einsparnis:</strong> 69%</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #ef4444;"><i class="fas fa-exclamation-circle"></i> ⚠️ FEHLER</h2>
+                <div style="background: rgba(239, 68, 68, 0.1); border-left: 4px solid #ef4444; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-danger mb-3">❌ Fehler: Zu hohe Discharge Rate</h5>
+                    <p><strong>Was passiert:</strong> Zelle überhitzt + Feuer! | <strong>✅ Lösung:</strong> Max 3A pro 18650</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #60a5fa;"><i class="fas fa-users"></i> 🌐 COMMUNITY</h2>
+                <div style="background: rgba(96, 165, 250, 0.1); border-left: 4px solid #60a5fa; padding: 1.5rem; border-radius: 8px;">
+                    <p>r/18650, Battery Forum, Powertool Modding Groups, DIY Electronics Discord</p>
+                </div>
+
+                <h2 class="chapter-header" style="margin-top: 3rem;">📸 Fehler-Galerie</h2>
+                <div class="report-gallery">
+                    <img src="assets/images/power-bank_error1.jpg" class="gallery-image" alt="Cell Overheat" loading="lazy" decoding="async" fetchpriority="low">
+                    <img src="assets/images/power-bank_error2.jpg" class="gallery-image" alt="BMS Failure" loading="lazy" decoding="async" fetchpriority="low">
+                    <img src="assets/images/power-bank_error3.jpg" class="gallery-image" alt="Output Low" loading="lazy" decoding="async" fetchpriority="low">
+                    <img src="assets/images/power-bank_error4.jpg" class="gallery-image" alt="Charge Slow" loading="lazy" decoding="async" fetchpriority="low">
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="sidebar-box">
+                    <h5 style="color: #f97316;"><i class="fas fa-list-check"></i> Power Bank Path</h5>
+                    <div class="checklist">
+                        <label><input type="checkbox"> Cells sourcing</label>
+                        <label><input type="checkbox"> BMS selection</label>
+                        <label><input type="checkbox"> Assembly prep</label>
+                        <label><input type="checkbox"> Spot welding</label>
+                        <label><input type="checkbox"> Case 3D print</label>
+                        <label><input type="checkbox"> Testing & verify</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="diy-enhancements.js"></script>
+</body>
+</html>

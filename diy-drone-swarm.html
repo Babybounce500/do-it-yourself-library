@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIY: Autonomous Drone Swarm</title>
+    <meta name="description" content="Deutsche DIY-Anleitung zu Autonomous Drone Swarm mit Materialien, Aufbau, Praxis-Tipps und Troubleshooting.">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="global.css" rel="stylesheet">
+    <style>
+        .chapter-header {color: #0891b2; border-left: 4px solid #0891b2; padding-left: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; font-size: 1.5rem;}
+        .code-box {background: rgba(8, 145, 178, 0.1); border: 1px solid #0891b2; padding: 1rem; border-radius: 5px; margin: 1rem 0; font-family: monospace; font-size: 0.75rem;}
+        .swarm-box {background: rgba(8, 145, 178, 0.15); border-left: 4px solid #0891b2; padding: 1rem; border-radius: 5px; margin: 1rem 0; font-size: 0.95rem;}
+    </style>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body class="orbtron-theme">
+    <nav class="navbar navbar-dark bg-dark sticky-top" style="border-bottom: 2px solid #0891b2;">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1"><i class="fas fa-drones"></i> DIY: Drone Swarm</span>
+            <a href="index.html" class="btn btn-outline-info btn-sm" aria-label="Zurück zur CODESTRAL-Projektbibliothek">← Zurück</a>
+        </div>
+    </nav>
+    <div class="container-fluid py-5" role="main">
+        <div style="position: relative; margin-bottom: 2rem; border-radius: 10px; overflow: hidden; border: 2px solid #0891b2; max-height: 300px;">
+            <img alt="Autonomous Drone Swarm – Hero-Bild" src="assets/images/drone_swarm_hero.png" style="width: 100%; height: 300px; object-fit: cover; display: block;" decoding="async" loading="eager" fetchpriority="high">
+            <div class="hero" style="background: rgba(0,0,0,0.7); border: none; border-radius: 0; padding: 2rem 1.5rem; margin-bottom: 0; text-align: center; position: absolute; top: 50%; left: 0; right: 0; transform: translateY(-50%); display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <h1 style="color: #0891b2; font-size: clamp(1.5rem, 5vw, 2.5rem); text-shadow: 0 0 20px rgba(8, 145, 178, 0.5);">🚁 Drone Swarm</h1>
+                <p class="lead text-white" style="font-size: clamp(0.95rem, 3vw, 1.1rem);">Autonome Multi-Drohnen-Koordination</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8">
+                <h2 class="chapter-header"><i class="fas fa-microchip"></i> Kapitel 1: Hardware Setup (€500-2000)</h2>
+                <ul class="text-muted">
+                    <li>DJI M300 RTK oder äquivalent</li>
+                    <li>Ground Station Setup</li>
+                    <li>GPS/RTK Integration</li>
+                    <li>Communication Protocol</li>
+                </ul>
+
+                <h2 class="chapter-header"><i class="fas fa-code"></i> Kapitel 2: Swarm Communication</h2>
+                <div class="code-box">
+import dronekit
+from swarmlib import SwarmCoordinator
+swarm = SwarmCoordinator(num_drones=5)
+swarm.connect_all()
+swarm.coordinate_formation('diamond')
+                </div>
+
+                <h2 class="chapter-header"><i class="fas fa-route"></i> Kapitel 3: Path Planning & Collision Avoidance</h2>
+                <ul class="text-muted">
+                    <li>Multi-agent Planning</li>
+                    <li>Potential Field Methods</li>
+                    <li>RRT* Algorithm</li>
+                    <li>Real-time Collision Detection</li>
+                </ul>
+
+                <h2 class="chapter-header"><i class="fas fa-sitemap"></i> Kapitel 4: Formation Control</h2>
+                <ul class="text-muted">
+                    <li>Formation Geometries</li>
+                    <li>Leader-Follower Model</li>
+                    <li>Consensus Algorithms</li>
+                    <li>Dynamic Reconfiguration</li>
+                </ul>
+
+                <h2 class="chapter-header"><i class="fas fa-broadcast-tower"></i> Kapitel 5: Distributed Control</h2>
+                <ul class="text-muted">
+                    <li>Decentralized Decision Making</li>
+                    <li>Network Topology</li>
+                    <li>Latency Tolerance</li>
+                    <li>Fault Tolerance</li>
+                </ul>
+
+                <h2 class="chapter-header"><i class="fas fa-chart-line"></i> Kapitel 6: Applications & Optimization</h2>
+                <ul class="text-muted">
+                    <li>Search & Rescue</li>
+                    <li>Environmental Monitoring</li>
+                    <li>Delivery Networks</li>
+                    <li>Performance Metrics</li>
+                </ul>
+
+                <!-- EXPANSION: PRO-TIPPS -->
+                <h2 class="chapter-header" style="margin-top: 3rem; border-left: 4px solid #10b981;"><i class="fas fa-lightbulb"></i> 💡 PRO-TIPPS</h2>
+                <div style="background: rgba(16, 185, 129, 0.1); border-left: 4px solid #10b981; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-success mb-3">🎯 Tipp: Start mit 2 Drohnen, nicht 5</h5>
+                    <p><strong>Problem:</strong> Swarm-Koordination mit 5 Drohnen = exponentieller Komplexität | <strong>Lösung:</strong> 2er Formation meistern, dann skalieren</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #f59e0b;"><i class="fas fa-piggy-bank"></i> 💰 BUDGET-HACKS (50% SPAREN!)</h2>
+                <div style="background: rgba(245, 158, 11, 0.1); border-left: 4px solid #f59e0b; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-warning mb-3">💰 Hack: Kleine Drohnen statt M300</h5>
+                    <p><strong>Original:</strong> DJI M300 RTK: €5000+ | <strong>Hack:</strong> 5x Tello Edu: €400 (Perfect für Swarm lernen!) | <strong>Einsparnis:</strong> 92%</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #ef4444;"><i class="fas fa-exclamation-circle"></i> ⚠️ FEHLER</h2>
+                <div style="background: rgba(239, 68, 68, 0.1); border-left: 4px solid #ef4444; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-danger mb-3">❌ Fehler: Keine Backup-Komunikation</h5>
+                    <p><strong>Was passiert:</strong> Eine Drohne verliert Signal → alle fallen | <strong>✅ Lösung:</strong> Failsafe-Mode implementieren</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #60a5fa;"><i class="fas fa-users"></i> 🌐 COMMUNITY</h2>
+                <div style="background: rgba(96, 165, 250, 0.1); border-left: 4px solid #60a5fa; padding: 1.5rem; border-radius: 8px;">
+                    <p>ArduPilot Forum, Tello Discord, DJI Developer Community</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="sidebar-box">
+                    <h5 style="color: #0891b2;"><i class="fas fa-list-check"></i> Swarm Path</h5>
+                    <div class="checklist">
+                        <label><input type="checkbox"> Hardware kaufen</label>
+                        <label><input type="checkbox"> Kommunikation setup</label>
+                        <label><input type="checkbox"> Path planning</label>
+                        <label><input type="checkbox"> Formation control</label>
+                        <label><input type="checkbox"> Distributed system</label>
+                        <label><input type="checkbox"> Live swarm test</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="diy-enhancements.js"></script>
+</body>
+</html>

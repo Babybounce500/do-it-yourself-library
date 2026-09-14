@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIY: Retro Gaming Setup</title>
+    <meta name="description" content="Deutsche DIY-Anleitung zu Retro Gaming Setup mit Materialien, Aufbau, Praxis-Tipps und Troubleshooting.">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="global.css" rel="stylesheet">
+    <style>
+        .chapter-header {color: #9d4edd; border-left: 4px solid #9d4edd; padding-left: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; font-size: 1.5rem;}
+        .retro-box {background: rgba(157, 78, 221, 0.15); border-left: 4px solid #9d4edd; padding: 1rem; border-radius: 5px; margin: 1rem 0; font-size: 0.95rem;}
+        .game-box {background: rgba(255, 100, 200, 0.15); border-left: 4px solid #ff64c8; padding: 1rem; border-radius: 5px; margin: 1rem 0; font-size: 0.95rem;}
+        @media (max-width: 768px) {
+            .chapter-header {font-size: 1.2rem; padding-left: 1rem; margin-top: 1.5rem;}
+            p {font-size: 0.95rem; line-height: 1.5;}
+        }
+    </style>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body class="orbtron-theme">
+    <nav class="navbar navbar-dark bg-dark sticky-top" style="border-bottom: 2px solid #9d4edd;">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1"><i class="fas fa-gamepad"></i> DIY: Retro Gaming Setup</span>
+            <a href="index.html" class="btn btn-outline-info btn-sm" aria-label="Zurück zur CODESTRAL-Projektbibliothek">← Zurück</a>
+        </div>
+    </nav>
+    <div class="container-fluid py-5" role="main">
+        <div style="position: relative; margin-bottom: 2rem; border-radius: 10px; overflow: hidden; border: 2px solid #9d4edd; max-height: 300px;">
+            <img alt="Retro Gaming Setup – Hero-Bild" src="assets/images/retro_gaming_hero.png" style="width: 100%; height: 300px; object-fit: cover; display: block;" decoding="async" loading="eager" fetchpriority="high">
+            <div class="hero" style="background: rgba(0,0,0,0.7); border: none; border-radius: 0; padding: 2rem 1.5rem; margin-bottom: 0; text-align: center; position: absolute; top: 50%; left: 0; right: 0; transform: translateY(-50%); display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <h1 style="color: #9d4edd; font-size: clamp(1.5rem, 5vw, 2.5rem); text-shadow: 0 0 20px rgba(157, 78, 221, 0.5);">👾 Retro Gaming Setup</h1>
+                <p class="lead text-white" style="font-size: clamp(0.95rem, 3vw, 1.1rem);">Klassische Konsolen & Emulation</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8">
+                <h2 class="chapter-header"><i class="fas fa-keyboard"></i> Kapitel 1: Hardware-Optionen</h2>
+                <p class="text-white">3 Wege zum Retro-Gaming:</p>
+                <ul class="text-muted">
+                    <li><strong>Original Hardware:</strong> NES, SNES, Genesis (€50-300 je gebraucht)</li>
+                    <li><strong>Mini-Konsolen:</strong> NES/SNES Classic (€60-80, 30+ Spiele vorinstalliert)</li>
+                    <li><strong>PC Emulation:</strong> RetroPie auf Raspberry Pi (€50-100, 1000+ Spiele)</li>
+                </ul>
+                <div class="retro-box"><strong>💡 Best Value:</strong> Raspberry Pi + RetroPie - Budget-freundlich & konfigurierbar</div>
+
+                <h2 class="chapter-header"><i class="fas fa-microchip"></i> Kapitel 2: Emulation Plattformen</h2>
+                <div class="code-box">
+# DIY Retro Gaming Rig
+# Raspberry Pi 4 €90
+# Emulators €0 (free)
+# USB Controller €15
+# HDMI Cable €5
+# ROM Collection €0 (own)
+# Total: €110 emulator setup
+                </div>
+
+                <ul class="text-muted">
+                    <li><strong>RetroPie:</strong> All-in-One Emulator Suite (Raspberry Pi/PC)</li>
+                    <li><strong>RetroArch:</strong> Konsolen-übergreifend (NES, SNES, N64, PSX)</li>
+                    <li><strong>Dolphin:</strong> Für GameCube & Wii</li>
+                    <li><strong>PCSX2:</strong> PlayStation 2 Emulation</li>
+                </ul>
+
+                <h2 class="chapter-header"><i class="fas fa-puzzle-piece"></i> Kapitel 3: ROM-Collections</h2>
+                <p class="text-white">Legale ROM-Quellen:</p>
+                <ul class="text-muted">
+                    <li>NES/SNES Online Subscription (Nintendo Switch)</li>
+                    <li>Archive.org - Klassische freie Spiele</li>
+                    <li>Homebrew Games - kostenlos & legal</li>
+                    <li><strong>WICHTIG:</strong> Nur Spiele emulieren, die du besitzt!</li>
+                </ul>
+
+                <h2 class="chapter-header"><i class="fas fa-gamepad"></i> Kapitel 4: Controller & Input</h2>
+                <p class="text-white">Setup-Optionen:</p>
+                <ul class="text-muted">
+                    <li>Original-Controller (mit Adapter)</li>
+                    <li>8BitDo Wireless (beste modern Option, €40-60)</li>
+                    <li>USB Arcade Stick (für Fighter-Games)</li>
+                    <li>Tastatur fallback</li>
+                </ul>
+
+                <h2 class="chapter-header"><i class="fas fa-tv"></i> Kapitel 5: Display & Audio</h2>
+                <ul class="text-muted">
+                    <li>CRT TV (authentisch aber schwer zu finden)</li>
+                    <li>Moderner 4K TV (Scaling-Filter für Authentizität)</li>
+                    <li>Composite/HDMI Converter für Original-Hardware</li>
+                    <li>Audio: Headphones oder Stereo-Anlage</li>
+                </ul>
+
+                <h2 class="chapter-header"><i class="fas fa-cog"></i> Kapitel 6: Optimierung & Modding</h2>
+                <ul class="text-muted">
+                    <li>Shader-Filter (CRT, Scanlines für Authentizität)</li>
+                    <li>Save-States & Rewind-Funktion</li>
+                    <li>ROM-Hacks & Mods (schwieriger, aber möglich)</li>
+                    <li>Multiplayer Netplay (Online-Gaming klassischer Spiele)</li>
+                </ul>
+
+                <!-- EXPANSION: PRO-TIPPS -->
+                <h2 class="chapter-header" style="margin-top: 3rem; border-left: 4px solid #10b981;"><i class="fas fa-lightbulb"></i> 💡 PRO-TIPPS</h2>
+                <div style="background: rgba(16, 185, 129, 0.1); border-left: 4px solid #10b981; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-success mb-3">🎯 Tipp: RetroPie > RetroArch</h5>
+                    <p><strong>Problem:</strong> RetroArch = komplex für Anfänger | <strong>Lösung:</strong> RetroPie = einsteigerfreundlich</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #f59e0b;"><i class="fas fa-piggy-bank"></i> 💰 BUDGET-HACKS (99% KOSTENLOS!)</h2>
+                <div style="background: rgba(245, 158, 11, 0.1); border-left: 4px solid #f59e0b; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-warning mb-3">💰 Hack: RetroPie + RPi + Homebrew</h5>
+                    <p><strong>Original:</strong> Original Konsolen: €300-500 | <strong>Hack:</strong> RPi + RetroPie + legale ROMs: €80 | <strong>Einsparnis:</strong> 84%</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #ef4444;"><i class="fas fa-exclamation-circle"></i> ⚠️ FEHLER</h2>
+                <div style="background: rgba(239, 68, 68, 0.1); border-left: 4px solid #ef4444; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-danger mb-3">❌ Fehler: Raubkopierte ROMs nutzen</h5>
+                    <p><strong>Was passiert:</strong> Copyright-Verletzung = Probleme | <strong>✅ Lösung:</strong> Nur ROMs du besitzt + Nintendo Switch Online</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #60a5fa;"><i class="fas fa-users"></i> 🌐 COMMUNITY</h2>
+                <div style="background: rgba(96, 165, 250, 0.1); border-left: 4px solid #60a5fa; padding: 1.5rem; border-radius: 8px;">
+                    <p>RetroPie Forum, RetroArch Community, r/retrogaming, Emuparadise Forum</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="sidebar-box">
+                    <h5 style="color: #9d4edd;"><i class="fas fa-list-check"></i> Gaming Setup Path</h5>
+                    <div class="checklist">
+                        <label><input type="checkbox"> Emulator-Plattform wählen</label>
+                        <label><input type="checkbox"> Hardware/Raspberry Pi kaufen</label>
+                        <label><input type="checkbox"> OS installieren (RetroPie)</label>
+                        <label><input type="checkbox"> Controller konfigurieren</label>
+                        <label><input type="checkbox"> ROMs hinzufügen</label>
+                        <label><input type="checkbox"> Display & Audio testen</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="diy-enhancements.js"></script>
+</body>
+</html>

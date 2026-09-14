@@ -1,0 +1,112 @@
+ABSOLUTE HREFS - DIY HERO IMAGES
+====================================================================================================
+
+  1. https://do-it-yourself.replit.app/assets/images/3d_printing_hero_banner.png
+  2. https://do-it-yourself.replit.app/assets/images/3d-hologram-display_hero.jpg
+  3. https://do-it-yourself.replit.app/assets/images/ai-chip-design_hero.jpg
+  4. https://do-it-yourself.replit.app/assets/images/ambient-computing_hero.jpg
+  5. https://do-it-yourself.replit.app/assets/images/antiglare-filter_hero.jpg
+  6. https://do-it-yourself.replit.app/assets/images/aquaponics_system_hero.png
+  7. https://do-it-yourself.replit.app/assets/images/arduino_robotics_hero_banner.png
+  8. https://do-it-yourself.replit.app/assets/images/ar_hero.png
+  9. https://do-it-yourself.replit.app/assets/images/autonomous-vehicle_hero.jpg
+ 10. https://do-it-yourself.replit.app/assets/images/bioai-integration_hero.jpg
+ 11. https://do-it-yourself.replit.app/assets/images/biohacking_health_hero_banner.png
+ 12. https://do-it-yourself.replit.app/assets/images/biometric-privacy_hero.jpg
+ 13. https://do-it-yourself.replit.app/assets/images/biometric_security_hero.png
+ 14. https://do-it-yourself.replit.app/assets/images/biomimetic-robotics_hero.jpg
+ 15. https://do-it-yourself.replit.app/assets/images/blockchain_explorer_hero.png
+ 16. https://do-it-yourself.replit.app/assets/images/blockchain_smart_contracts_hero.png
+ 17. https://do-it-yourself.replit.app/assets/images/bci_hero.png
+ 18. https://do-it-yourself.replit.app/assets/images/brain-organoids_hero.jpg
+ 19. https://do-it-yourself.replit.app/assets/images/bunker_automation_hero.png
+ 20. https://do-it-yourself.replit.app/assets/images/ai_chatbot_hero_banner_image.png
+ 21. https://do-it-yourself.replit.app/assets/images/citizen_science_hero_banner.png
+ 22. https://do-it-yourself.replit.app/assets/images/crypto_mining_hero_banner.png
+ 23. https://do-it-yourself.replit.app/assets/images/custom_os_kernel_hero.png
+ 24. https://do-it-yourself.replit.app/assets/images/cybersecurity_lab_hero.png
+ 25. https://do-it-yourself.replit.app/assets/images/crypto_security_hero_banner.png
+ 26. https://do-it-yourself.replit.app/assets/images/cable-organizer_hero.jpg
+ 27. https://do-it-yourself.replit.app/assets/images/desk-cooling_hero.jpg
+ 28. https://do-it-yourself.replit.app/assets/images/lamp-dimmer_hero.jpg
+ 29. https://do-it-yourself.replit.app/assets/images/desk-pad_hero.jpg
+ 30. https://do-it-yourself.replit.app/assets/images/desk-organizer_hero.jpg
+ 31. https://do-it-yourself.replit.app/assets/images/pen-holder_hero.jpg
+ 32. https://do-it-yourself.replit.app/assets/images/distributed-storage_hero.jpg
+ 33. https://do-it-yourself.replit.app/assets/images/espresso-hack_hero.jpg
+ 34. https://do-it-yourself.replit.app/assets/images/dna-data-storage_hero.jpg
+ 35. https://do-it-yourself.replit.app/assets/images/dna_crispr_hero.png
+ 36. https://do-it-yourself.replit.app/assets/images/drone_programming_hero_banner.png
+ 37. https://do-it-yourself.replit.app/assets/images/drone_swarm_hero.png
+ 38. https://do-it-yourself.replit.app/assets/images/drone_tracking_hero.png
+ 39. https://do-it-yourself.replit.app/assets/images/e-commerce_shop_hero.png
+ 40. https://do-it-yourself.replit.app/assets/images/edge-computing_hero.jpg
+ 41. https://do-it-yourself.replit.app/assets/images/fusion-reactor_hero.jpg
+ 42. https://do-it-yourself.replit.app/assets/images/gesture_hero.png
+ 43. https://do-it-yourself.replit.app/assets/images/gpu_cluster_hero.png
+ 44. https://do-it-yourself.replit.app/assets/images/graphql-federation_hero.jpg
+ 45. https://do-it-yourself.replit.app/assets/images/haptic_suit_hero.png
+ 46. https://do-it-yourself.replit.app/assets/images/hardware_wallet_hero.png
+ 47. https://do-it-yourself.replit.app/assets/images/headphone-cable_hero.jpg
+ 48. https://do-it-yourself.replit.app/assets/images/holographic_display_hero.png
+ 49. https://do-it-yourself.replit.app/assets/images/homelab_server_hero_banner.png
+ 50. https://do-it-yourself.replit.app/assets/images/hydroponics_farm_hero_banner.png
+ 51. https://do-it-yourself.replit.app/assets/images/smart_home_iot_hero_banner.png
+ 52. https://do-it-yourself.replit.app/assets/images/keycap-puller_hero.jpg
+ 53. https://do-it-yourself.replit.app/assets/images/wrist-rest_hero.jpg
+ 54. https://do-it-yourself.replit.app/assets/images/lab-on-chip_hero.jpg
+ 55. https://do-it-yourself.replit.app/assets/images/laptop-cooling_hero.jpg
+ 56. https://do-it-yourself.replit.app/assets/images/laptop-stand_hero.jpg
+ 57. https://do-it-yourself.replit.app/assets/images/laser_engraver_hero.png
+ 58. https://do-it-yourself.replit.app/assets/images/lidar_hero.png
+ 59. https://do-it-yourself.replit.app/assets/images/machine_vision_hero.png
+ 60. https://do-it-yourself.replit.app/assets/images/keyboard_hero.jpg
+ 61. https://do-it-yourself.replit.app/assets/images/metamaterials_hero.jpg
+ 62. https://do-it-yourself.replit.app/assets/images/modular_synth_hero.png
+ 63. https://do-it-yourself.replit.app/assets/images/monitor-arm_hero.jpg
+ 64. https://do-it-yourself.replit.app/assets/images/light-bar_hero.jpg
+ 65. https://do-it-yourself.replit.app/assets/images/monitor-stand_hero.jpg
+ 66. https://do-it-yourself.replit.app/assets/images/mqtt_automation_hero.png
+ 67. https://do-it-yourself.replit.app/assets/images/music_studio_hero.png
+ 68. https://do-it-yourself.replit.app/assets/images/neural-interface-bci_hero.jpg
+ 69. https://do-it-yourself.replit.app/assets/images/neural_networks_ai_hero_banner.png
+ 70. https://do-it-yourself.replit.app/assets/images/neuromorphic-hardware_hero.jpg
+ 71. https://do-it-yourself.replit.app/assets/images/charging-station_hero.jpg
+ 72. https://do-it-yourself.replit.app/assets/images/phone-gimbal_hero.jpg
+ 73. https://do-it-yourself.replit.app/assets/images/screen-protector_hero.jpg
+ 74. https://do-it-yourself.replit.app/assets/images/phone-stand_hero.jpg
+ 75. https://do-it-yourself.replit.app/assets/images/privacy-screen_hero.jpg
+ 76. https://do-it-yourself.replit.app/assets/images/programmable-matter_hero.jpg
+ 77. https://do-it-yourself.replit.app/assets/images/quantum_computing_hero.png
+ 78. https://do-it-yourself.replit.app/assets/images/quantum-error_hero.jpg
+ 79. https://do-it-yourself.replit.app/assets/images/quantum-gates_hero.jpg
+ 80. https://do-it-yourself.replit.app/assets/images/quantum-key-distribution_hero.jpg
+ 81. https://do-it-yourself.replit.app/assets/images/radiation_hero.png
+ 82. https://do-it-yourself.replit.app/assets/images/raspberry_pi_cluster_hero.png
+ 83. https://do-it-yourself.replit.app/assets/images/retro_gaming_hero.png
+ 84. https://do-it-yourself.replit.app/assets/images/robotic_arm_hero.png
+ 85. https://do-it-yourself.replit.app/assets/images/satellite_tracking_hero.png
+ 86. https://do-it-yourself.replit.app/assets/images/screen-cleaning_hero.jpg
+ 87. https://do-it-yourself.replit.app/assets/images/smart-home-budget_hero.jpg
+ 88. https://do-it-yourself.replit.app/assets/images/sdr_hero.png
+ 89. https://do-it-yourself.replit.app/assets/images/solar_panels_hero_banner.png
+ 90. https://do-it-yourself.replit.app/assets/images/space-debris-tracking_hero.jpg
+ 91. https://do-it-yourself.replit.app/assets/images/standing-desk_hero.jpg
+ 92. https://do-it-yourself.replit.app/assets/images/swarm-robotics-fleet_hero.jpg
+ 93. https://do-it-yourself.replit.app/assets/images/synthetic-cell-engineering_hero.jpg
+ 94. https://do-it-yourself.replit.app/assets/images/time-crystals_hero.jpg
+ 95. https://do-it-yourself.replit.app/assets/images/time-series_hero.png
+ 96. https://do-it-yourself.replit.app/assets/images/usb-hub_hero.jpg
+ 97. https://do-it-yourself.replit.app/assets/images/usb-storage_hero.jpg
+ 98. https://do-it-yourself.replit.app/assets/images/power-bank_hero.jpg
+ 99. https://do-it-yourself.replit.app/assets/images/vertical_farm_hero.png
+100. https://do-it-yourself.replit.app/assets/images/voice_assistant_hero.png
+101. https://do-it-yourself.replit.app/assets/images/web_scraping_hero.png
+102. https://do-it-yourself.replit.app/assets/images/wind_turbine_hero_banner.png
+103. https://do-it-yourself.replit.app/assets/images/wireless-charging_hero.jpg
+104. https://do-it-yourself.replit.app/assets/images/mouse-battery_hero.jpg
+105. https://do-it-yourself.replit.app/assets/images/wireless_sensor_hero.png
+
+====================================================================================================
+GESAMT: 105 Hero Images
+Base URL: https://do-it-yourself.replit.app

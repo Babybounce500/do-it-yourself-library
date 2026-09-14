@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIY: Biometric Security</title>
+    <meta name="description" content="Deutsche DIY-Anleitung zu Biometric Security mit Materialien, Aufbau, Praxis-Tipps und Troubleshooting.">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="global.css" rel="stylesheet">
+    <style>
+        .chapter-header {color: #fbbf24; border-left: 4px solid #fbbf24; padding-left: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; font-size: 1.5rem;}
+        .code-box {background: rgba(251, 191, 36, 0.1); border: 1px solid #fbbf24; padding: 1rem; border-radius: 5px; margin: 1rem 0; font-family: monospace; font-size: 0.75rem;}
+        .bio-box {background: rgba(251, 191, 36, 0.15); border-left: 4px solid #fbbf24; padding: 1rem; border-radius: 5px; margin: 1rem 0; font-size: 0.95rem;}
+    </style>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body class="orbtron-theme">
+    <nav class="navbar navbar-dark bg-dark sticky-top" style="border-bottom: 2px solid #fbbf24;">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1"><i class="fas fa-fingerprint"></i> DIY: Biometric Security</span>
+            <a href="index.html" class="btn btn-outline-warning btn-sm" aria-label="Zurück zur CODESTRAL-Projektbibliothek">← Zurück</a>
+        </div>
+    </nav>
+    <div class="container-fluid py-5" role="main">
+        <div style="position: relative; margin-bottom: 2rem; border-radius: 10px; overflow: hidden; border: 2px solid #fbbf24; max-height: 300px;">
+            <img alt="Biometric Security – Hero-Bild" src="assets/images/biometric_security_hero.png" style="width: 100%; height: 300px; object-fit: cover; display: block;" decoding="async" loading="eager" fetchpriority="high">
+            <div class="hero" style="background: rgba(0,0,0,0.7); border: none; border-radius: 0; padding: 2rem 1.5rem; margin-bottom: 0; text-align: center; position: absolute; top: 50%; left: 0; right: 0; transform: translateY(-50%); display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <h1 style="color: #fbbf24; font-size: clamp(1.5rem, 5vw, 2.5rem); text-shadow: 0 0 20px rgba(251, 191, 36, 0.5);">🔐 Biometric Security</h1>
+                <p class="lead text-white" style="font-size: clamp(0.95rem, 3vw, 1.1rem);">Fingerprint & Face Recognition System</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8">
+                <h2 class="chapter-header"><i class="fas fa-microchip"></i> Kapitel 1: Hardware Setup (€200-500)</h2>
+                <ul class="text-muted">
+                    <li><strong>Fingerprint Sensor:</strong> R307/R503 (€15-50)</li>
+                    <li><strong>Camera Module:</strong> Raspberry Pi Camera V2 (€25)</li>
+                    <li><strong>Microcontroller:</strong> Arduino/ESP32 (€5-10)</li>
+                    <li><strong>Display:</strong> 16x2 LCD (€5)</li>
+                    <li><strong>Database:</strong> SD Card für Templates</li>
+                </ul>
+
+                <h2 class="chapter-header"><i class="fas fa-fingerprint"></i> Kapitel 2: Fingerprint Recognition</h2>
+                <div class="code-box">
+# Arduino Code
+from pyfingerprint.pyfingerprint import PyFingerprint
+f = PyFingerprint('/dev/ttyUSB0', 57600, 0xFFFFFFFF)
+f.readImage()
+f.convertImage(0x01)
+                </div>
+
+                <h2 class="chapter-header"><i class="fas fa-face-smile"></i> Kapitel 3: Facial Recognition</h2>
+                <ul class="text-muted">
+                    <li>OpenCV für Face Detection</li>
+                    <li>DeepFace oder FaceRecognition Library</li>
+                    <li>Embeddings für schnelle Matching</li>
+                    <li>Liveness Detection (Anti-Spoofing)</li>
+                </ul>
+
+                <h2 class="chapter-header"><i class="fas fa-database"></i> Kapitel 4: Biometric Template Storage</h2>
+                <div class="bio-box"><strong>Sicherheit:</strong> Templates NIEMALS im Klartext speichern! Verwende Verschlüsselung + Salting</div>
+
+                <h2 class="chapter-header"><i class="fas fa-shield-alt"></i> Kapitel 5: Multi-Modal Authentication</h2>
+                <ul class="text-muted">
+                    <li>Fingerprint + Face Combined</li>
+                    <li>Iris Recognition (fortgeschritten)</li>
+                    <li>Voice Recognition</li>
+                    <li>Liveness Checks</li>
+                </ul>
+
+                <h2 class="chapter-header"><i class="fas fa-lock"></i> Kapitel 6: Security & Privacy</h2>
+                <ul class="text-muted">
+                    <li>Biometric Template Protection (Cancellable Biometrics)</li>
+                    <li>GDPR Compliance</li>
+                    <li>Offline Biometric Matching</li>
+                    <li>Secure Enclave für Templates</li>
+                </ul>
+
+                <!-- EXPANSION: PRO-TIPPS -->
+                <h2 class="chapter-header" style="margin-top: 3rem; border-left: 4px solid #10b981;"><i class="fas fa-lightbulb"></i> 💡 PRO-TIPPS</h2>
+                <div style="background: rgba(16, 185, 129, 0.1); border-left: 4px solid #10b981; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-success mb-3">🎯 Tipp: Liveness Detection ist MUST</h5>
+                    <p><strong>Problem:</strong> Foto vor Sensor = Hack | <strong>Lösung:</strong> Motion Detection + Heartbeat Pulse Check</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #f59e0b;"><i class="fas fa-piggy-bank"></i> 💰 BUDGET-HACKS (75% SPAREN!)</h2>
+                <div style="background: rgba(245, 158, 11, 0.1); border-left: 4px solid #f59e0b; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-warning mb-3">💰 Hack: R307 statt Suprema</h5>
+                    <p><strong>Original:</strong> Suprema Sensor: €200 | <strong>Hack:</strong> R307 Open-Source: €20 | <strong>Einsparnis:</strong> 90%</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #ef4444;"><i class="fas fa-exclamation-circle"></i> ⚠️ FEHLER</h2>
+                <div style="background: rgba(239, 68, 68, 0.1); border-left: 4px solid #ef4444; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-danger mb-3">❌ Fehler: Templates im Klartext speichern</h5>
+                    <p><strong>Was passiert:</strong> Datenbank gehackt = alle Biometrics kompromittiert | <strong>✅ Lösung:</strong> AES-256 Encryption immer</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #60a5fa;"><i class="fas fa-users"></i> 🌐 COMMUNITY</h2>
+                <div style="background: rgba(96, 165, 250, 0.1); border-left: 4px solid #60a5fa; padding: 1.5rem; border-radius: 8px;">
+                    <p>OpenCV Forum, Biometric Forum, Arduino Community, r/biometrics</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="sidebar-box">
+                    <h5 style="color: #fbbf24;"><i class="fas fa-list-check"></i> Biometric Path</h5>
+                    <div class="checklist">
+                        <label><input type="checkbox"> Hardware sammeln</label>
+                        <label><input type="checkbox"> Fingerprint Sensor kalibrieren</label>
+                        <label><input type="checkbox"> Face Detection setup</label>
+                        <label><input type="checkbox"> Template Database</label>
+                        <label><input type="checkbox"> Multi-modal Fusion</label>
+                        <label><input type="checkbox"> System testen & sichern</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="diy-enhancements.js"></script>
+</body>
+</html>

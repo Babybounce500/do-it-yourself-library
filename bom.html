@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIY Library - Bill of Materials (BOM) - 50 Projekte</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="global.css" rel="stylesheet">
+    <style>
+        .bom-table { background: rgba(26, 31, 58, 0.8); border: 1px solid rgba(0, 255, 255, 0.3); border-radius: 8px; overflow: hidden; margin-bottom: 2rem; }
+        .bom-table th { background: rgba(0, 255, 255, 0.1); color: #00ffff; border-bottom: 2px solid #00ffff; padding: 1rem; font-weight: 600; }
+        .bom-table td { border-bottom: 1px solid rgba(0, 255, 255, 0.2); padding: 0.75rem; }
+        .bom-table tr:hover { background: rgba(0, 255, 255, 0.05); }
+        .cost-low { color: #10b981; font-weight: 600; }
+        .cost-med { color: #f59e0b; font-weight: 600; }
+        .cost-high { color: #ef4444; font-weight: 600; }
+        .project-section { margin-bottom: 3rem; border: 2px solid rgba(0, 255, 255, 0.2); padding: 2rem; border-radius: 8px; background: rgba(0, 0, 0, 0.3); }
+        .project-title { color: #00ffff; font-size: 1.3rem; margin-bottom: 1.5rem; border-bottom: 2px solid rgba(0, 255, 255, 0.3); padding-bottom: 1rem; }
+        .bom-summary { background: rgba(0, 255, 255, 0.1); padding: 1rem; border-left: 3px solid #00ffff; margin-top: 1rem; border-radius: 4px; }
+        .toc { background: rgba(0, 255, 255, 0.05); padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem; columns: 2; }
+        .toc a { color: #00ffff; text-decoration: none; display: block; padding: 0.5rem; }
+        .toc a:hover { color: #33ffff; text-shadow: 0 0 10px rgba(0, 255, 255, 0.3); }
+    </style>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body class="orbtron-theme">
+    <nav class="navbar navbar-dark bg-dark sticky-top border-bottom border-cyan-glow">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1"><i class="fas fa-list"></i> BOM - 50 Projekte</span>
+            <a href="index.html" class="btn btn-outline-info btn-sm">← Zurück zur Library</a>
+        </div>
+    </nav>
+    <div class="container-fluid py-5">
+        <div class="hero">
+            <h1 class="text-cyan-glow mb-3">📋 Komplett Bill of Materials</h1>
+            <p class="lead text-white">Hardware-Komponentenlisten für alle 50 DIY Projekte mit Preisen & Anbietern</p>
+            <p class="text-muted">Klick auf ein Projekt unten oder nutze die Inhaltsangabe</p>
+        </div>
+
+        <div class="toc">
+            <strong style="color: #00ffff; display: block; margin-bottom: 1rem;">📑 Inhaltsverzeichnis (50 Projekte):</strong>
+            <a href="#p1">1. KI-Chatbot</a><a href="#p2">2. Biohacking</a><a href="#p3">3. Solar Panels</a><a href="#p4">4. Krypto Security</a>
+            <a href="#p5">5. Citizen Science</a><a href="#p6">6. 3D Drucker</a><a href="#p7">7. Homelab</a><a href="#p8">8. RPi Cluster</a>
+            <a href="#p9">9. FPV Drone</a><a href="#p10">10. Laser Engraver</a><a href="#p11">11. Voice Assistant</a><a href="#p12">12. Neural Networks</a>
+            <a href="#p13">13. Quantum Computing</a><a href="#p14">14. Biometric Security</a><a href="#p15">15. Brain-Computer Interface</a><a href="#p16">16. Satellite Tracking</a>
+            <a href="#p17">17. Augmented Reality</a><a href="#p18">18. Gesture Recognition</a><a href="#p19">19. Drone Swarm</a><a href="#p20">20. Robotic Arm</a>
+            <a href="#p21">21. LiDAR Scanner</a><a href="#p22">22. Wind Turbine</a><a href="#p23">23. Aquaponics</a><a href="#p24">24. Wireless Sensors</a>
+            <a href="#p25">25. MQTT Dashboard</a><a href="#p26">26. Crypto Mining</a><a href="#p27">27. Custom OS</a><a href="#p28">28. Cybersecurity Lab</a>
+            <a href="#p29">29. DeFi Platform</a><a href="#p30">30. E-Commerce</a><a href="#p31">31. DNA Sequencing</a><a href="#p32">32. Biohacking Kit</a>
+            <a href="#p33">33. Music Studio</a><a href="#p34">34. Modular Synth</a><a href="#p35">35. Holographic Display</a><a href="#p36">36. Blockchain</a>
+            <a href="#p37">37. Bunker Automation</a><a href="#p38">38. Radiation Detector</a><a href="#p39">39. Vertical Farming</a><a href="#p40">40. IoT Sensors</a>
+            <a href="#p41">41. Retro Gaming</a><a href="#p42">42. InfluxDB Server</a><a href="#p43">43. GPU Cluster</a><a href="#p44">44. AR Gaming</a>
+            <a href="#p45">45. Blockchain Explorer</a><a href="#p46">46. Machine Vision</a><a href="#p47">47. Smart Home</a><a href="#p48">48. Web Scraper</a>
+            <a href="#p49">49. Haptic Feedback</a><a href="#p50">50. SDR Setup</a>
+        </div>
+
+        <!-- PROJEKT 1: KI-CHATBOT -->
+        <div class="project-section" id="p1">
+            <h3 class="project-title"><i class="fas fa-robot"></i> Projekt 1: KI-Chatbot mit OpenAI/Claude</h3>
+            <table class="table bom-table">
+                <thead><tr><th>Komponente</th><th>Menge</th><th>Spezifikation</th><th>Kosten</th><th>Anbieter</th></tr></thead>
+                <tbody>
+                    <tr><td>Computer/Laptop</td><td>1</td><td>Min. 8GB RAM, Modern CPU</td><td class="cost-low">€0 (Eigenes)</td><td>Eigenes System</td></tr>
+                    <tr><td>OpenAI API Key</td><td>1</td><td>GPT-4 / GPT-3.5 Zugang</td><td class="cost-med">€0.002-0.015/1K tokens</td><td>openai.com</td></tr>
+                    <tr><td>Python IDE</td><td>1</td><td>VSCode + Extensions</td><td class="cost-low">€0 (Kostenlos)</td><td>code.visualstudio.com</td></tr>
+                    <tr><td>Hosting (Optional)</td><td>1</td><td>Heroku / Railway / Replit</td><td class="cost-low">€0-50/Monat</td><td>Online Services</td></tr>
+                    <tr><td>Database</td><td>1</td><td>MongoDB / PostgreSQL</td><td class="cost-low">€0-20/Monat</td><td>Cloud Provider</td></tr>
+                </tbody>
+            </table>
+            <div class="bom-summary"><strong>Gesamtbudget:</strong> €0-100 (Einmalig) + laufende API-Kosten | <strong>ROI:</strong> Direkt einsatzbereit</div>
+        </div>
+
+        <!-- PROJEKT 2: BIOHACKING -->
+        <div class="project-section" id="p2">
+            <h3 class="project-title"><i class="fas fa-heart"></i> Projekt 2: Biohacking & Health Tracking</h3>
+            <table class="table bom-table">
+                <thead><tr><th>Komponente</th><th>Menge</th><th>Spezifikation</th><th>Kosten</th><th>Anbieter</th></tr></thead>
+                <tbody>
+                    <tr><td>Fitness Tracker</td><td>1</td><td>Oura Ring / Whoop Band</td><td class="cost-high">€250-350</td><td>Oura.com, Whooplife.com</td></tr>
+                    <tr><td>Sleep Tracking Device</td><td>1</td><td>Withings Sleep Mat</td><td class="cost-med">€80-120</td><td>Amazon, Withings</td></tr>
+                    <tr><td>Smart Scale</td><td>1</td><td>WiFi Body Composition Scale</td><td class="cost-med">€80-150</td><td>Amazon, Withings</td></tr>
+                    <tr><td>Blood Pressure Monitor</td><td>1</td><td>Withings / Omron WiFi</td><td class="cost-med">€70-100</td><td>Amazon</td></tr>
+                    <tr><td>Smartwatch</td><td>1</td><td>Apple Watch / Garmin</td><td class="cost-high">€200-400</td><td>Apple, Garmin</td></tr>
+                    <tr><td>Health App Subscription</td><td>1</td><td>Apple Health, MyFitnessPal Pro</td><td class="cost-low">€0-10/Monat</td><td>Online</td></tr>
+                </tbody>
+            </table>
+            <div class="bom-summary"><strong>Gesamtbudget:</strong> €680-1130 (Einmalig) | <strong>Laufend:</strong> €0-120/Jahr</div>
+        </div>
+
+        <!-- PROJEKT 3: SOLAR PANELS -->
+        <div class="project-section" id="p3">
+            <h3 class="project-title"><i class="fas fa-sun"></i> Projekt 3: Solar Panel Installation</h3>
+            <table class="table bom-table">
+                <thead><tr><th>Komponente</th><th>Menge</th><th>Spezifikation</th><th>Kosten</th><th>Anbieter</th></tr></thead>
+                <tbody>
+                    <tr><td>Solar Panels</td><td>8-10</td><td>400W Mono Panels</td><td class="cost-high">€1600-2000</td><td>Solar-Center, Amazon</td></tr>
+                    <tr><td>Inverter</td><td>1</td><td>5kW Hybrid Inverter</td><td class="cost-high">€800-1200</td><td>SMA, Huawei</td></tr>
+                    <tr><td>Battery Storage</td><td>1</td><td>10kWh LiFePO4 Battery</td><td class="cost-high">€3000-5000</td><td>Tesla Powerwall, BYD</td></tr>
+                    <tr><td>Mounting System</td><td>1</td><td>Aluminium Racking</td><td class="cost-med">€500-1000</td><td>Specialist Retailers</td></tr>
+                    <tr><td>Cables & Fittings</td><td>1 set</td><td>6mm² Solar Cables</td><td class="cost-low">€200-300</td><td>Elektro Handel</td></tr>
+                    <tr><td>Monitoring System</td><td>1</td><td>WiFi Monitoring / App</td><td class="cost-low">€100-200</td><td>Included in Inverter</td></tr>
+                </tbody>
+            </table>
+            <div class="bom-summary"><strong>Gesamtbudget:</strong> €6200-9700 | <strong>ROI-Zeit:</strong> 5-8 Jahre | <strong>Annual Saving:</strong> €1000-1500</div>
+        </div>
+
+        <!-- PROJEKT 4: KRYPTO SECURITY -->
+        <div class="project-section" id="p4">
+            <h3 class="project-title"><i class="fas fa-shield"></i> Projekt 4: Krypto Security & Wallets</h3>
+            <table class="table bom-table">
+                <thead><tr><th>Komponente</th><th>Menge</th><th>Spezifikation</th><th>Kosten</th><th>Anbieter</th></tr></thead>
+                <tbody>
+                    <tr><td>Hardware Wallet</td><td>1</td><td>Ledger Nano S Plus / X</td><td class="cost-med">€60-120</td><td>Ledger.com, Amazon</td></tr>
+                    <tr><td>Backup Device</td><td>1</td><td>Second Hardware Wallet</td><td class="cost-med">€60-120</td><td>Ledger, Trezor</td></tr>
+                    <tr><td>Steel Seed Backup</td><td>1</td><td>Cryptosteel / Metal Backup</td><td class="cost-low">€50-100</td><td>Amazon</td></tr>
+                    <tr><td>Secure PC</td><td>1</td><td>Dedicated Old PC/RPi</td><td class="cost-low">€100-300</td><td>eBay, Local</td></tr>
+                    <tr><td>Live USB OS</td><td>1</td><td>Tails / Whonix OS</td><td class="cost-low">€0 (Kostenlos)</td><td>Online</td></tr>
+                    <tr><td>VPN Service</td><td>1</td><td>ProtonVPN / Mullvad</td><td class="cost-low">€60-120/Jahr</td><td>Online</td></tr>
+                </tbody>
+            </table>
+            <div class="bom-summary"><strong>Gesamtbudget:</strong> €330-760 (Einmalig) + €60-120/Jahr VPN</div>
+        </div>
+
+        <!-- PROJEKT 5: CITIZEN SCIENCE -->
+        <div class="project-section" id="p5">
+            <h3 class="project-title"><i class="fas fa-star"></i> Projekt 5: Citizen Science - Light Pollution</h3>
+            <table class="table bom-table">
+                <thead><tr><th>Komponente</th><th>Menge</th><th>Spezifikation</th><th>Kosten</th><th>Anbieter</th></tr></thead>
+                <tbody>
+                    <tr><td>Light Sensor (LDR)</td><td>1</td><td>GL5528 Photoresistor</td><td class="cost-low">€1-3</td><td>AliExpress, eBay</td></tr>
+                    <tr><td>Microcontroller</td><td>1</td><td>Arduino Uno / Nano</td><td class="cost-low">€10-20</td><td>Arduino.cc, AliExpress</td></tr>
+                    <tr><td>Data Logging Shield</td><td>1</td><td>SD Card Logger</td><td class="cost-low">€5-15</td><td>Amazon, SparkFun</td></tr>
+                    <tr><td>Power Bank</td><td>1</td><td>20000mAh USB Battery</td><td class="cost-low">€20-40</td><td>Amazon</td></tr>
+                    <tr><td>Case & Enclosure</td><td>1</td><td>Waterproof Plastic Box</td><td class="cost-low">€5-15</td><td>Hardware Store</td></tr>
+                    <tr><td>Cloud Storage</td><td>1</td><td>Google Drive / Azure</td><td class="cost-low">€0-100/Jahr</td><td>Online</td></tr>
+                </tbody>
+            </table>
+            <div class="bom-summary"><strong>Gesamtbudget:</strong> €41-193 | <strong>Beitrag:</strong> Globales Forschungsprojekt</div>
+        </div>
+
+        <!-- PROJEKT 6: 3D DRUCKER -->
+        <div class="project-section" id="p6">
+            <h3 class="project-title"><i class="fas fa-cube"></i> Projekt 6: 3D Drucker Setup (Ender 3)</h3>
+            <table class="table bom-table">
+                <thead><tr><th>Komponente</th><th>Menge</th><th>Spezifikation</th><th>Kosten</th><th>Anbieter</th></tr></thead>
+                <tbody>
+                    <tr><td>3D Drucker Kit</td><td>1</td><td>Ender 3 Pro / V2</td><td class="cost-med">€200-300</td><td>Amazon, eBay</td></tr>
+                    <tr><td>Filament (PLA)</td><td>5kg</td><td>1.75mm Durchmesser</td><td class="cost-low">€50-75</td><td>Amazon, Thingiverse</td></tr>
+                    <tr><td>Build Plate Adhesive</td><td>1</td><td>Glue Stick oder Hairspray</td><td class="cost-low">€5-10</td><td>Lokaler Handel</td></tr>
+                    <tr><td>Nozzles</td><td>5</td><td>0.2-0.8mm Durchmesser</td><td class="cost-low">€10-15</td><td>Amazon</td></tr>
+                    <tr><td>Power Supply</td><td>1</td><td>24V 15A (Replacement)</td><td class="cost-med">€25-40</td><td>Amazon</td></tr>
+                </tbody>
+            </table>
+            <div class="bom-summary"><strong>Gesamtbudget:</strong> €290-440 | <strong>ROI-Zeit:</strong> 2-4 Monate</div>
+        </div>
+
+        <!-- PROJEKT 7: HOMELAB -->
+        <div class="project-section" id="p7">
+            <h3 class="project-title"><i class="fas fa-server"></i> Projekt 7: Homelab Server & Self-Hosting</h3>
+            <table class="table bom-table">
+                <thead><tr><th>Komponente</th><th>Menge</th><th>Spezifikation</th><th>Kosten</th><th>Anbieter</th></tr></thead>
+                <tbody>
+                    <tr><td>Server Mini PC</td><td>1</td><td>Intel i5 / AMD Ryzen 5</td><td class="cost-med">€300-500</td><td>Amazon, eBay</td></tr>
+                    <tr><td>RAM</td><td>2</td><td>16GB DDR4 Modules</td><td class="cost-low">€60-100</td><td>Amazon</td></tr>
+                    <tr><td>Storage</td><td>2</td><td>2TB SSD NVMe</td><td class="cost-med">€100-200</td><td>Amazon</td></tr>
+                    <tr><td>Network Switch</td><td>1</td><td>Gigabit 8-Port Switch</td><td class="cost-low">€30-50</td><td>Amazon</td></tr>
+                    <tr><td>UPS</td><td>1</td><td>1000VA UPS Battery</td><td class="cost-med">€80-150</td><td>Amazon</td></tr>
+                    <tr><td>Network Cables</td><td>1 set</td><td>Cat 6 Ethernet</td><td class="cost-low">€20-30</td><td>Lokaler Handel</td></tr>
+                </tbody>
+            </table>
+            <div class="bom-summary"><strong>Gesamtbudget:</strong> €590-1030 | <strong>OS:</strong> Proxmox/TrueNAS (Kostenlos)</div>
+        </div>
+
+        <!-- PROJEKT 8: RASPBERRY PI CLUSTER -->
+        <div class="project-section" id="p8">
+            <h3 class="project-title"><i class="fas fa-microchip"></i> Projekt 8: Raspberry Pi Cluster</h3>
+            <table class="table bom-table">
+                <thead><tr><th>Komponente</th><th>Menge</th><th>Spezifikation</th><th>Kosten</th><th>Anbieter</th></tr></thead>
+                <tbody>
+                    <tr><td>Raspberry Pi 4</td><td>5</td><td>8GB RAM Model</td><td class="cost-med">€75-100 ea.</td><td>Amazon, Reichelt</td></tr>
+                    <tr><td>SD Cards</td><td>5</td><td>128GB Class A2</td><td class="cost-low">€15-25 ea.</td><td>Amazon</td></tr>
+                    <tr><td>Power Supply</td><td>5</td><td>USB-C 5V 3A</td><td class="cost-low">€8-15 ea.</td><td>Amazon</td></tr>
+                    <tr><td>Network Cables</td><td>5</td><td>Cat 6 1m</td><td class="cost-low">€2-5 ea.</td><td>Lokaler Handel</td></tr>
+                    <tr><td>Cluster Case</td><td>1</td><td>Stackable Raspberry Pi Case</td><td class="cost-low">€30-60</td><td>Amazon</td></tr>
+                    <tr><td>Cooling System</td><td>1</td><td>Fan + Heatsink Set</td><td class="cost-low">€15-25</td><td>Amazon</td></tr>
+                </tbody>
+            </table>
+            <div class="bom-summary"><strong>Gesamtbudget:</strong> €490-805 | <strong>Performance:</strong> 20 CPU Cores | <strong>Use:</strong> Kubernetes, Hadoop</div>
+        </div>
+
+        <!-- PROJEKT 9: FPV DRONE RACING -->
+        <div class="project-section" id="p9">
+            <h3 class="project-title"><i class="fas fa-drones"></i> Projekt 9: FPV Drone Racing</h3>
+            <table class="table bom-table">
+                <thead><tr><th>Komponente</th><th>Menge</th><th>Spezifikation</th><th>Kosten</th><th>Anbieter</th></tr></thead>
+                <tbody>
+                    <tr><td>Racing Drone</td><td>1</td><td>5" FPV Quadcopter</td><td class="cost-med">€150-250</td><td>iFlight, DJI, Amazon</td></tr>
+                    <tr><td>FPV Goggles</td><td>1</td><td>Digital / Analog Goggles</td><td class="cost-med">€150-400</td><td>FatShark, DJI</td></tr>
+                    <tr><td>Remote Control</td><td>1</td><td>2.4GHz Radio Transmitter</td><td class="cost-med">€80-150</td><td>Spektrum, FrSky</td></tr>
+                    <tr><td>Batteries (LiPo)</td><td>5</td><td>4S 1500mAh 75C</td><td class="cost-low">€50-75 total</td><td>HobbyKing, Amazon</td></tr>
+                    <tr><td>Charger</td><td>1</td><td>Balance Charger 10A</td><td class="cost-low">€30-50</td><td>Amazon</td></tr>
+                    <tr><td>Spare Parts Kit</td><td>1</td><td>Props, Motors, ESC</td><td class="cost-med">€100-150</td><td>Amazon, iFlight</td></tr>
+                </tbody>
+            </table>
+            <div class="bom-summary"><strong>Gesamtbudget:</strong> €560-1075 | <strong>Setup-Zeit:</strong> 1-2 Wochen</div>
+        </div>
+
+        <!-- PROJEKT 10: LASER ENGRAVER -->
+        <div class="project-section" id="p10">
+            <h3 class="project-title"><i class="fas fa-laser"></i> Projekt 10: Laser Engraver (40W CO2)</h3>
+            <table class="table bom-table">
+                <thead><tr><th>Komponente</th><th>Menge</th><th>Spezifikation</th><th>Kosten</th><th>Anbieter</th></tr></thead>
+                <tbody>
+                    <tr><td>CO2 Laser Tube</td><td>1</td><td>40W Glass Tube</td><td class="cost-high">€200-400</td><td>Amazon, Laser Retailers</td></tr>
+                    <tr><td>Laser Power Supply</td><td>1</td><td>40W HV Power Supply</td><td class="cost-med">€150-250</td><td>Amazon</td></tr>
+                    <tr><td>Laser Head</td><td>1</td><td>Lens + Mirror Assembly</td><td class="cost-med">€100-200</td><td>eBay, Amazon</td></tr>
+                    <tr><td>Motor & Drivers</td><td>2</td><td>NEMA 23 Stepper Motors</td><td class="cost-low">€50-80</td><td>Amazon</td></tr>
+                    <tr><td>Control Board</td><td>1</td><td>Arduino Mega + Laser Shield</td><td class="cost-low">€50-100</td><td>Amazon</td></tr>
+                    <tr><td>Cooling System</td><td>1</td><td>Water Cooler 60W</td><td class="cost-med">€100-200</td><td>Amazon</td></tr>
+                    <tr><td>Materials & Frame</td><td>1 set</td><td>Plywood + Metal Frame</td><td class="cost-med">€200-300</td><td>Lokaler Handel</td></tr>
+                </tbody>
+            </table>
+            <div class="bom-summary"><strong>Gesamtbudget:</strong> €850-1530 | <strong>ROI:</strong> Gravur-Geschäft aufbauen</div>
+        </div>
+
+        <!-- PROJEKT 11: VOICE ASSISTANT -->
+        <div class="project-section" id="p11">
+            <h3 class="project-title"><i class="fas fa-microphone"></i> Projekt 11: Custom Voice Assistant</h3>
+            <table class="table bom-table">
+                <thead><tr><th>Komponente</th><th>Menge</th><th>Spezifikation</th><th>Kosten</th><th>Anbieter</th></tr></thead>
+                <tbody>
+                    <tr><td>Raspberry Pi 4</td><td>1</td><td>8GB RAM</td><td class="cost-low">€75-100</td><td>Amazon</td></tr>
+                    <tr><td>Microphone</td><td>1</td><td>USB Array Microphone</td><td class="cost-low">€30-60</td><td>Amazon</td></tr>
+                    <tr><td>Speaker</td><td>1</td><td>USB Lautsprecher</td><td class="cost-low">€20-40</td><td>Amazon</td></tr>
+                    <tr><td>Audio Interface</td><td>1</td><td>USB Sound Card</td><td class="cost-low">€15-30</td><td>Amazon</td></tr>
+                    <tr><td>SSD Storage</td><td>1</td><td>256GB NVMe</td><td class="cost-low">€30-50</td><td>Amazon</td></tr>
+                    <tr><td>API Keys</td><td>1</td><td>Google / OpenAI / Azure</td><td class="cost-low">€0-50/Monat</td><td>Online</td></tr>
+                </tbody>
+            </table>
+            <div class="bom-summary"><strong>Gesamtbudget:</strong> €170-330 (Hardware) + API-Kosten</div>
+        </div>
+
+        <!-- PROJEKT 12: NEURAL NETWORKS -->
+        <div class="project-section" id="p12">
+            <h3 class="project-title"><i class="fas fa-brain"></i> Projekt 12: Deep Learning & Neural Networks</h3>
+            <table class="table bom-table">
+                <thead><tr><th>Komponente</th><th>Menge</th><th>Spezifikation</th><th>Kosten</th><th>Anbieter</th></tr></thead>
+                <tbody>
+                    <tr><td>Computer/Laptop</td><td>1</td><td>Intel i7+ / RTX 3060+</td><td class="cost-high">€1000-2000</td><td>Amazon, Local</td></tr>
+                    <tr><td>GPU Card</td><td>1</td><td>NVIDIA RTX 4070 / 4090</td><td class="cost-high">€600-1600</td><td>Amazon</td></tr>
+                    <tr><td>RAM</td><td>2</td><td>32GB DDR4+</td><td class="cost-med">€120-200</td><td>Amazon</td></tr>
+                    <tr><td>SSD Storage</td><td>1</td><td>1TB NVMe SSD</td><td class="cost-low">€80-150</td><td>Amazon</td></tr>
+                    <tr><td>Dataset Repository</td><td>1</td><td>Kaggle / ImageNet Access</td><td class="cost-low">€0-200</td><td>Online</td></tr>
+                    <tr><td>Framework Licenses</td><td>1</td><td>PyTorch / TensorFlow</td><td class="cost-low">€0 (Open Source)</td><td>GitHub</td></tr>
+                </tbody>
+            </table>
+            <div class="bom-summary"><strong>Gesamtbudget:</strong> €1800-4150 | <strong>Setup:</strong> TensorFlow + PyTorch (Kostenlos)</div>
+        </div>
+
+        <!-- PROJEKT 13: QUANTUM COMPUTING -->
+        <div class="project-section" id="p13">
+            <h3 class="project-title"><i class="fas fa-atom"></i> Projekt 13: Quantum Computing (Qiskit)</h3>
+            <table class="table bom-table">
+                <thead><tr><th>Komponente</th><th>Menge</th><th>Spezifikation</th><th>Kosten</th><th>Anbieter</th></tr></thead>
+                <tbody>
+                    <tr><td>High-End Computer</td><td>1</td><td>Intel i9 / Ryzen 9</td><td class="cost-high">€2000-3000</td><td>Amazon</td></tr>
+                    <tr><td>GPU Card</td><td>1</td><td>RTX 4090 or A100</td><td class="cost-high">€1200-8000</td><td>NVIDIA Partner</td></tr>
+                    <tr><td>RAM</td><td>2</td><td>64GB+ DDR5</td><td class="cost-high">€300-500</td><td>Amazon</td></tr>
+                    <tr><td>Quantum Simulator</td><td>1</td><td>Qiskit Simulator Access</td><td class="cost-low">€0 (Kostenlos)</td><td>IBM Quantum</td></tr>
+                    <tr><td>Cloud Access</td><td>1</td><td>IBM Quantum / AWS Braket</td><td class="cost-low">€0-500/Monat</td><td>Online</td></tr>
+                    <tr><td>Development Tools</td><td>1</td><td>Jupyter + Qiskit SDK</td><td class="cost-low">€0 (Open Source)</td><td>GitHub</td></tr>
+                </tbody>
+            </table>
+            <div class="bom-summary"><strong>Gesamtbudget:</strong> €3500-12000 | <strong>Note:</strong> Simulated Quantum für Anfänger</div>
+        </div>
+
+        <!-- PROJEKT 14-50: WEITERE KOMPRIMIERTE BOMs -->
+        <div class="project-section" id="p14">
+            <h3 class="project-title"><i class="fas fa-fingerprint"></i> Projekt 14: Biometric Security System</h3>
+            <table class="table bom-table">
+                <thead><tr><th>Komponente</th><th>Menge</th><th>Spezifikation</th><th>Kosten</th><th>Anbieter</th></tr></thead>
+                <tbody>
+                    <tr><td>Fingerprint Scanner</td><td>1</td><td>R307 / ZK-Teco</td><td class="cost-med">€50-100</td><td>Amazon</td></tr>
+                    <tr><td>Facial Recognition Camera</td><td>1</td><td>HD Webcam + OpenCV</td><td class="cost-low">€30-60</td><td>Amazon</td></tr>
+                    <tr><td>Iris Scanner</td><td>1</td><td>USB Iris Recognition Module</td><td class="cost-high">€200-500</td><td>Specialized Retailers</td></tr>
+                    <tr><td>Arduino / Microcontroller</td><td>1</td><td>Mega + Shield</td><td class="cost-low">€30-50</td><td>Amazon</td></tr>
+                    <tr><td>Database</td><td>1</td><td>SQLite / PostgreSQL</td><td class="cost-low">€0 (Open Source)</td><td>GitHub</td></tr>
+                </tbody>
+            </table>
+            <div class="bom-summary"><strong>Gesamtbudget:</strong> €310-710 | <strong>Sicherheit:</strong> Multi-Modal Biometrics</div>
+        </div>
+
+        <div class="project-section" id="p15">
+            <h3 class="project-title"><i class="fas fa-headset"></i> Projekt 15: Brain-Computer Interface (EEG)</h3>
+            <table class="table bom-table">
+                <thead><tr><th>Komponente</th><th>Menge</th><th>Spezifikation</th><th>Kosten</th><th>Anbieter</th></tr></thead>
+                <tbody>
+                    <tr><td>EEG Headset</td><td>1</td><td>Emotiv Epoc X / OpenBCI</td><td class="cost-high">€300-1000</td><td>Emotiv.com, OpenBCI</td></tr>
+                    <tr><td>Electrodes</td><td>8-32</td><td>Wet or Dry Electrodes</td><td class="cost-low">€50-150</td><td>Specialized Retailers</td></tr>
+                    <tr><td>Amplifier</td><td>1</td><td>Bioamplifier Module</td><td class="cost-med">€200-500</td><td>OpenBCI, Analog Devices</td></tr>
+                    <tr><td>Computer</td><td>1</td><td>Min. 16GB RAM</td><td class="cost-med">€600-1200</td><td>Own System</td></tr>
+                    <tr><td>Software SDK</td><td>1</td><td>Emotiv SDK / PyEEG</td><td class="cost-low">€0-500</td><td>Online</td></tr>
+                </tbody>
+            </table>
+            <div class="bom-summary"><strong>Gesamtbudget:</strong> €1150-3350 | <strong>Anwendung:</strong> Mind Control, Health Monitoring</div>
+        </div>
+
+        <div class="project-section" id="p16">
+            <h3 class="project-title"><i class="fas fa-satellite"></i> Projekt 16: Satellite Tracking (ISS/GPS)</h3>
+            <table class="table bom-table">
+                <thead><tr><th>Komponente</th><th>Menge</th><th>Spezifikation</th><th>Kosten</th><th>Anbieter</th></tr></thead>
+                <tbody>
+                    <tr><td>GPS Module</td><td>1</td><td>NEO-6M / NEO-M8N</td><td class="cost-low">€15-40</td><td>AliExpress, Amazon</td></tr>
+                    <tr><td>Antenna</td><td>1</td><td>Active GPS Antenna</td><td class="cost-low">€10-20</td><td>Amazon</td></tr>
+                    <tr><td>Microcontroller</td><td>1</td><td>Arduino / STM32</td><td class="cost-low">€10-30</td><td>Amazon</td></tr>
+                    <tr><td>Display</td><td>1</td><td>16x2 LCD + OLED</td><td class="cost-low">€10-20</td><td>Amazon</td></tr>
+                    <tr><td>Enclosure</td><td>1</td><td>Waterproof Box</td><td class="cost-low">€10-20</td><td>Hardware Store</td></tr>
+                </tbody>
+            </table>
+            <div class="bom-summary"><strong>Gesamtbudget:</strong> €55-130 | <strong>Tracking:</strong> ISS Live + Weather Satellites</div>
+        </div>
+
+        <div class="project-section" id="p17">
+            <h3 class="project-title"><i class="fas fa-cube"></i> Projekt 17: Augmented Reality (AR.js)</h3>
+            <table class="table bom-table">
+                <thead><tr><th>Komponente</th><th>Menge</th><th>Spezifikation</th><th>Kosten</th><th>Anbieter</th></tr></thead>
+                <tbody>
+                    <tr><td>Smartphone</td><td>1</td><td>Modern iOS / Android</td><td class="cost-high">€400-1200</td><td>Own Device</td></tr>
+                    <tr><td>AR Framework</td><td>1</td><td>AR.js / Unity / Unreal</td><td class="cost-low">€0 (Free)</td><td>GitHub, Asset Store</td></tr>
+                    <tr><td>Web Server</td><td>1</td><td>Node.js / Express</td><td class="cost-low">€0 (Free)</td><td>GitHub</td></tr>
+                    <tr><td>3D Models</td><td>Multiple</td><td>Sketchfab / TurboSquid</td><td class="cost-low">€0-100</td><td>Online Marketplaces</td></tr>
+                    <tr><td>Development IDE</td><td>1</td><td>VSCode</td><td class="cost-low">€0 (Free)</td><td>Microsoft</td></tr>
+                </tbody>
+            </table>
+            <div class="bom-summary"><strong>Gesamtbudget:</strong> €400-1300 | <strong>Framework:</strong> WebAR im Browser</div>
+        </div>
+
+        <div class="project-section" id="p18">
+            <h3 class="project-title"><i class="fas fa-hand-pointer"></i> Projekt 18: Gesture Recognition (MediaPipe)</h3>
+            <table class="table bom-table">
+                <thead><tr><th>Komponente</th><th>Menge</th><th>Spezifikation</th><th>Kosten</th><th>Anbieter</th></tr></thead>
+                <tbody>
+                    <tr><td>Webcam</td><td>1</td><td>1080p Minimum</td><td class="cost-low">€20-60</td><td>Amazon</td></tr>
+                    <tr><td>Computer</td><td>1</td><td>Dual Core CPU Minimum</td><td class="cost-med">€300-1000</td><td>Own System</td></tr>
+                    <tr><td>RAM</td><td>1</td><td>8GB Minimum</td><td class="cost-low">€40-60</td><td>Upgrade</td></tr>
+                    <tr><td>Framework</td><td>1</td><td>MediaPipe + Python</td><td class="cost-low">€0 (Free)</td><td>GitHub</td></tr>
+                    <tr><td>ML Model</td><td>1</td><td>Pre-trained Hand Model</td><td class="cost-low">€0 (Free)</td><td>Google MediaPipe</td></tr>
+                </tbody>
+            </table>
+            <div class="bom-summary"><strong>Gesamtbudget:</strong> €360-1180 | <strong>Use:</strong> Gesture Control, Sign Language Recognition</div>
+        </div>
+
+        <div class="project-section" id="p19">
+            <h3 class="project-title"><i class="fas fa-swarm"></i> Projekt 19: Drone Swarm (Multi-Agent)</h3>
+            <table class="table bom-table">
+                <thead><tr><th>Komponente</th><th>Menge</th><th>Spezifikation</th><th>Kosten</th><th>Anbieter</th></tr></thead>
+                <tbody>
+                    <tr><td>Drohne (DJI/Aukey)</td><td>5</td><td>Quadcopter mit GPS RTK</td><td class="cost-high">€100-150 ea.</td><td>DJI Store, Amazon</td></tr>
+                    <tr><td>Ground Station</td><td>1</td><td>Desktop/Laptop Computer</td><td class="cost-high">€800-1200</td><td>Eigenes System</td></tr>
+                    <tr><td>Communication Module</td><td>6</td><td>XBee / LoRa Transceiver</td><td class="cost-med">€50-80</td><td>Adafruit, SparkFun</td></tr>
+                    <tr><td>GPS RTK Base Station</td><td>1</td><td>Centimeter-level Accuracy</td><td class="cost-high">€300-500</td><td>Specialized Retailers</td></tr>
+                    <tr><td>Batteries (LiPo)</td><td>10</td><td>3S 2200mAh 50C</td><td class="cost-med">€100-150</td><td>Amazon, HobbyKing</td></tr>
+                </tbody>
+            </table>
+            <div class="bom-summary"><strong>Gesamtbudget:</strong> €1500-2500 | <strong>Komplexität:</strong> Expert</div>
+        </div>
+
+        <div class="project-section" id="p20">
+            <h3 class="project-title"><i class="fas fa-robot"></i> Projekt 20: 6-DOF Robotic Arm</h3>
+            <table class="table bom-table">
+                <thead><tr><th>Komponente</th><th>Menge</th><th>Spezifikation</th><th>Kosten</th><th>Anbieter</th></tr></thead>
+                <tbody>
+                    <tr><td>Servo Motors</td><td>6</td><td>Dynamixel MX-106 oder äquivalent</td><td class="cost-high">€100-150 ea.</td><td>ROBOTIS, Amazon</td></tr>
+                    <tr><td>Aluminum Frame</td><td>1 set</td><td>80/20 Profile System</td><td class="cost-med">€150-250</td><td>8020.net, eBay</td></tr>
+                    <tr><td>Control Board</td><td>1</td><td>Arduino Mega / Teensy 4.1</td><td class="cost-low">€30-50</td><td>Arduino.cc, SparkFun</td></tr>
+                    <tr><td>Gripper (Electric)</td><td>1</td><td>5-Finger oder 2-Finger Design</td><td class="cost-med">€50-100</td><td>Amazon, Specialty Shops</td></tr>
+                    <tr><td>Power Supply</td><td>1</td><td>24V 30A Industrial</td><td class="cost-med">€50-80</td><td>Amazon, Industrieausstatter</td></tr>
+                </tbody>
+            </table>
+            <div class="bom-summary"><strong>Gesamtbudget:</strong> €800-1200 | <strong>Build-Zeit:</strong> 4-6 Wochen</div>
+        </div>
+
+        <div class="project-section" id="p21">
+            <h3 class="project-title"><i class="fas fa-laser"></i> Projekt 21: LiDAR 3D Scanner</h3>
+            <table class="table bom-table">
+                <thead><tr><th>Komponente</th><th>Menge</th><th>Spezifikation</th><th>Kosten</th><th>Anbieter</th></tr></thead>
+                <tbody>
+                    <tr><td>LiDAR Module</td><td>1</td><td>Sick TIM781S / RPLiDAR</td><td class="cost-med">€300-800</td><td>Amazon, eBay</td></tr>
+                    <tr><td>Rotation Motor</td><td>1</td><td>Servo für Vertical Scan</td><td class="cost-low">€30-60</td><td>Amazon</td></tr>
+                    <tr><td>Microcontroller</td><td>1</td><td>Arduino / STM32</td><td class="cost-low">€20-50</td><td>Amazon</td></tr>
+                    <tr><td>Processing Software</td><td>1</td><td>ROS / Point Cloud Lib</td><td class="cost-low">€0 (Free)</td><td>GitHub</td></tr>
+                    <tr><td>Enclosure & Mounting</td><td>1 set</td><td>3D Printed + Aluminum</td><td class="cost-low">€50-100</td><td>3D Printing / Hardware</td></tr>
+                </tbody>
+            </table>
+            <div class="bom-summary"><strong>Gesamtbudget:</strong> €400-1060 | <strong>Resolution:</strong> Cm-level Accuracy</div>
+        </div>
+
+        <!-- WEITER 22-50 (KOMPAKT FORMAT) -->
+        <div class="project-section" id="p22">
+            <h3 class="project-title"><i class="fas fa-wind"></i> Projekt 22: Wind Turbine DIY</h3>
+            <p class="bom-summary">Komponenten: 5-Blatt-Rotor (€200-500), Generator 3kW (€300-600), Tower 10m (€400-800), Charge Controller (€200-400), Battery Bank 48V (€2000-4000) | <strong>Gesamtbudget: €3100-6300</strong></p>
+        </div>
+
+        <div class="project-section" id="p23">
+            <h3 class="project-title"><i class="fas fa-leaf"></i> Projekt 23: Aquaponics System</h3>
+            <p class="bom-summary">Komponenten: Fisch-Tank 500L (€200-400), Grow-Bed (€100-200), Biofilter (€150-300), Air Pump 80W (€50-100), Heater 5kW (€100-200), pH/EC Meter (€30-80), Fische & Pflanzen (€50-150) | <strong>Gesamtbudget: €680-1430</strong></p>
+        </div>
+
+        <div class="project-section" id="p24">
+            <h3 class="project-title"><i class="fas fa-wifi"></i> Projekt 24: Wireless Sensor Network</h3>
+            <p class="bom-summary">Komponenten: Mehrere Sensor Nodes (€50-100 ea.), LoRa Gateway (€150-300), MQTT Broker (€0 Free), Database (€0-50/mo), Cloud Server (€5-20/mo) | <strong>Gesamtbudget: €205-470 + Hosting</strong></p>
+        </div>
+
+        <div class="project-section" id="p25">
+            <h3 class="project-title"><i class="fas fa-chart-line"></i> Projekt 25: MQTT IoT Dashboard</h3>
+            <p class="bom-summary">Komponenten: MQTT Broker (€0 Mosquitto), Web Framework (€0 React/Vue), Database (€0 PostgreSQL), Hosting (€5-20/mo), IoT Devices (€50-200) | <strong>Gesamtbudget: €55-220</strong></p>
+        </div>
+
+        <div class="project-section" id="p26">
+            <h3 class="project-title"><i class="fas fa-coins"></i> Projekt 26: Crypto Mining Setup</h3>
+            <p class="bom-summary">Komponenten: GPU Cards (€600-1600 ea.), Motherboard (€200-400), Power Supply 2000W+ (€400-800), Cooling (€200-500), Stromanschluss (€500-2000 setup) | <strong>Gesamtbudget: €1900-5300</strong></p>
+        </div>
+
+        <div class="project-section" id="p27">
+            <h3 class="project-title"><i class="fas fa-microchip"></i> Projekt 27: Custom OS Kernel (Bare Metal)</h3>
+            <p class="bom-summary">Komponenten: Computer (€0 Existing), Bootloader (€0 Open Source), Kernel Source (€0 Linux), Cross-Compiler (€0 Free), Emulator QEMU (€0 Free) | <strong>Gesamtbudget: €0 (Software Only)</strong></p>
+        </div>
+
+        <div class="project-section" id="p28">
+            <h3 class="project-title"><i class="fas fa-shield-alt"></i> Projekt 28: Cybersecurity Lab & Penetration Testing</h3>
+            <table class="table bom-table">
+                <thead><tr><th>Komponente</th><th>Menge</th><th>Spezifikation</th><th>Kosten</th><th>Anbieter</th></tr></thead>
+                <tbody>
+                    <tr><td>Virtual Machine Host</td><td>1</td><td>VMware / VirtualBox</td><td class="cost-low">€0-200</td><td>Free / Commercial</td></tr>
+                    <tr><td>Linux Distros</td><td>3</td><td>Kali / Ubuntu / Debian</td><td class="cost-low">€0 (Free)</td><td>GitHub</td></tr>
+                    <tr><td>Penetration Tools</td><td>1 suite</td><td>Metasploit / Burp Suite</td><td class="cost-low">€0-4000</td><td>Community / Professional</td></tr>
+                    <tr><td>Vulnerable Apps</td><td>Multiple</td><td>DVWA / WebGoat / Juice Shop</td><td class="cost-low">€0 (Free)</td><td>GitHub</td></tr>
+                    <tr><td>Network Simulator</td><td>1</td><td>GNS3</td><td class="cost-low">€0 (Free)</td><td>GitHub</td></tr>
+                </tbody>
+            </table>
+            <div class="bom-summary"><strong>Gesamtbudget:</strong> €0-4200 | <strong>Zertifizierungen:</strong> CEH, OSCP</div>
+        </div>
+
+        <div class="project-section" id="p29">
+            <h3 class="project-title"><i class="fas fa-dollar-sign"></i> Projekt 29: DeFi Platform (Ethereum Smart Contracts)</h3>
+            <p class="bom-summary">Komponenten: ETH for Gas Fees (€50-500), Development Tools (€0 Hardhat/Truffle), Testnet Faucets (€0 Free), Wallet (€0 MetaMask), Deployment (€100-1000) | <strong>Gesamtbudget: €150-1500</strong></p>
+        </div>
+
+        <div class="project-section" id="p30">
+            <h3 class="project-title"><i class="fas fa-shopping-cart"></i> Projekt 30: Full-Stack E-Commerce Shop</h3>
+            <p class="bom-summary">Komponenten: Domain (€10-15/Jahr), Hosting (€5-30/Mo), SSL Certificate (€0-200), Payment Gateway (€0 + Fees), Database (€0-50/Mo), Framework (€0 Open Source) | <strong>Gesamtbudget: €15-295 + Laufend</strong></p>
+        </div>
+
+        <div class="project-section" id="p31">
+            <h3 class="project-title"><i class="fas fa-dna"></i> Projekt 31: DNA Sequencing & CRISPR Setup</h3>
+            <table class="table bom-table">
+                <thead><tr><th>Komponente</th><th>Menge</th><th>Spezifikation</th><th>Kosten</th><th>Anbieter</th></tr></thead>
+                <tbody>
+                    <tr><td>DNA Extraction Kit</td><td>1</td><td>Salting-Out Protocol</td><td class="cost-low">€20-50</td><td>Amazon, Specialist</td></tr>
+                    <tr><td>Sequencing Equipment</td><td>1</td><td>Nanopore MinION</td><td class="cost-high">€800-1500</td><td>Oxford Nanopore</td></tr>
+                    <tr><td>PCR Machine</td><td>1</td><td>Thermal Cycler</td><td class="cost-high">€800-2000</td><td>Bio-Rad, Thermo Fisher</td></tr>
+                    <tr><td>Microcentrifuge</td><td>1</td><td>Benchtop 12000 RPM</td><td class="cost-med">€300-600</td><td>Amazon, Specialist</td></tr>
+                    <tr><td>Safety Equipment</td><td>1 set</td><td>Bio-Safety Cabinet Type II</td><td class="cost-high">€5000-15000</td><td>Specialized Labs</td></tr>
+                </tbody>
+            </table>
+            <div class="bom-summary"><strong>Gesamtbudget:</strong> €6920-19150 | <strong>Note:</strong> Lab-Level Equipment</div>
+        </div>
+
+        <div class="project-section" id="p32">
+            <h3 class="project-title"><i class="fas fa-heartbeat"></i> Projekt 32: Advanced Biohacking Kit (Blood Biomarkers)</h3>
+            <p class="bom-summary">Komponenten: Blood Test Kit (€100-200), Lab Services (€200-500), Continuous Glucose Monitor (€100-300), Heart Rate Monitor (€50-150), Sleep Tracker (€50-200) | <strong>Gesamtbudget: €500-1350</strong></p>
+        </div>
+
+        <div class="project-section" id="p33">
+            <h3 class="project-title"><i class="fas fa-music"></i> Projekt 33: Music Production Studio (Home Studio)</h3>
+            <p class="bom-summary">Komponenten: Audio Interface (€100-300), Microphone (€100-500), Studio Monitors 2x (€200-600), Microphone Stand (€30-60), XLR Cables (€30-80), DAW Software (€0-700), Acoustic Treatment (€200-500) | <strong>Gesamtbudget: €660-2740</strong></p>
+        </div>
+
+        <div class="project-section" id="p34">
+            <h3 class="project-title"><i class="fas fa-wave-square"></i> Projekt 34: Modular Synthesizer (DIY Electronic Music)</h3>
+            <p class="bom-summary">Komponenten: Oscillator Modules (€100-200 ea.), Filter Modules (€50-150 ea.), Envelope Generator (€50-100), Mixer Module (€50-100), Case + Power (€200-400), Patch Cables (€50-100) | <strong>Gesamtbudget: €550-1150</strong></p>
+        </div>
+
+        <div class="project-section" id="p35">
+            <h3 class="project-title"><i class="fas fa-cube"></i> Projekt 35: Holographic Display (DIY Pepper's Ghost)</h3>
+            <p class="bom-summary">Komponenten: Projector 5000 Lumen (€400-1000), Beamsplitter Folie (€50-150), Smartphone / Tablet (€300-600), 3D Models Software (€0-500), Display Setup (€100-300) | <strong>Gesamtbudget: €850-2550</strong></p>
+        </div>
+
+        <div class="project-section" id="p36">
+            <h3 class="project-title"><i class="fas fa-link"></i> Projekt 36: Blockchain Smart Contracts (Solidity)</h3>
+            <p class="bom-summary">Komponenten: Ethereum Wallet (€0 MetaMask), Testnet ETH (€0 Faucet), IDE (€0 Remix), Framework (€0 Hardhat), Compiler (€0 Solc) | <strong>Gesamtbudget: €0-500 Gas Fees</strong></p>
+        </div>
+
+        <div class="project-section" id="p37">
+            <h3 class="project-title"><i class="fas fa-bunker"></i> Projekt 37: Bunker Automation System (Survival Tech)</h3>
+            <p class="bom-summary">Komponenten: PLC System (€300-600), Sensors Suite (€200-500), Power System 10kW (€5000-10000), Water System (€2000-5000), Air Filtration (€1000-3000), Server (€1000-2000) | <strong>Gesamtbudget: €9500-21100</strong></p>
+        </div>
+
+        <div class="project-section" id="p38">
+            <h3 class="project-title"><i class="fas fa-radiation-alt"></i> Projekt 38: DIY Radiation Detector</h3>
+            <table class="table bom-table">
+                <thead><tr><th>Komponente</th><th>Menge</th><th>Spezifikation</th><th>Kosten</th><th>Anbieter</th></tr></thead>
+                <tbody>
+                    <tr><td>Geiger-Müller Tube</td><td>1</td><td>SBM-20 oder SI-29BG</td><td class="cost-low">€10-20</td><td>eBay, AliExpress</td></tr>
+                    <tr><td>High-Voltage Module</td><td>1</td><td>400-600V Boost Converter</td><td class="cost-low">€15-25</td><td>Amazon, SparkFun</td></tr>
+                    <tr><td>Microcontroller</td><td>1</td><td>Arduino Nano / STM32</td><td class="cost-low">€8-15</td><td>Arduino.cc, AliExpress</td></tr>
+                    <tr><td>LCD Display</td><td>1</td><td>16x2 oder 128x64 OLED</td><td class="cost-low">€5-15</td><td>Amazon, SparkFun</td></tr>
+                    <tr><td>Electronics Components</td><td>1 kit</td><td>Resistors, Capacitors, Diodes</td><td class="cost-low">€10-20</td><td>Local Electronics Shop</td></tr>
+                </tbody>
+            </table>
+            <div class="bom-summary"><strong>Gesamtbudget:</strong> €48-95 | <strong>Build-Zeit:</strong> 1-2 Wochen</div>
+        </div>
+
+        <div class="project-section" id="p39">
+            <h3 class="project-title"><i class="fas fa-leaf"></i> Projekt 39: Vertical Farming System (Hydroponics)</h3>
+            <table class="table bom-table">
+                <thead><tr><th>Komponente</th><th>Menge</th><th>Spezifikation</th><th>Kosten</th><th>Anbieter</th></tr></thead>
+                <tbody>
+                    <tr><td>Shelving Unit</td><td>1</td><td>Metal Storage Rack (5 Tier)</td><td class="cost-med">€80-120</td><td>Amazon, Baumarkt</td></tr>
+                    <tr><td>LED Grow Lights</td><td>5</td><td>Full-Spectrum 50W (120cm)</td><td class="cost-med">€30-50 ea.</td><td>Amazon, Hydroponics Shop</td></tr>
+                    <tr><td>Hydroponic Reservoir</td><td>1</td><td>120L Food-Grade Container</td><td class="cost-low">€30-50</td><td>Amazon, Local Shop</td></tr>
+                    <tr><td>Nutrient Solution</td><td>1 kit</td><td>Complete Hydroponic NPK Blend</td><td class="cost-low">€20-30</td><td>Hydroponics Retailers</td></tr>
+                    <tr><td>IoT Sensors & Controller</td><td>1</td><td>Arduino + pH/EC/Temp Sensors</td><td class="cost-med">€50-80</td><td>Amazon, SparkFun</td></tr>
+                </tbody>
+            </table>
+            <div class="bom-summary"><strong>Gesamtbudget:</strong> €210-360 | <strong>Yield:</strong> €200+/Monat Gemüse</div>
+        </div>
+
+        <div class="project-section" id="p40">
+            <h3 class="project-title"><i class="fas fa-wifi"></i> Projekt 40: IoT Sensors & Cloud Integration</h3>
+            <p class="bom-summary">Komponenten: Sensor Modules (€30-100 ea.), Microcontroller (€20-50), Cloud Service (€0-50/Mo), MQTT Server (€0 Free), Storage (€0-100/Mo), REST API (€0 Open Source) | <strong>Gesamtbudget: €50-300 + Cloud</strong></p>
+        </div>
+
+        <div class="project-section" id="p41">
+            <h3 class="project-title"><i class="fas fa-gamepad"></i> Projekt 41: Retro Gaming Emulator (NES/SNES)</h3>
+            <p class="bom-summary">Komponenten: Raspberry Pi 4 (€75-100), Controller (€20-50), Case (€15-30), Micro SD (€10-20), Emulator Software (€0 Free), Games ROMs (€0 Open Source / Legal) | <strong>Gesamtbudget: €120-200</strong></p>
+        </div>
+
+        <div class="project-section" id="p42">
+            <h3 class="project-title"><i class="fas fa-database"></i> Projekt 42: Time-Series Database (InfluxDB Server)</h3>
+            <p class="bom-summary">Komponenten: Server Hardware (€500-1500), InfluxDB (€0 Open Source / €450/Mo Commercial), Grafana Dashboard (€0 Free), Telegraf Agent (€0 Free), Storage (€100-300) | <strong>Gesamtbudget: €600-2300</strong></p>
+        </div>
+
+        <div class="project-section" id="p43">
+            <h3 class="project-title"><i class="fas fa-microchip"></i> Projekt 43: GPU Cluster for Deep Learning</h3>
+            <table class="table bom-table">
+                <thead><tr><th>Komponente</th><th>Menge</th><th>Spezifikation</th><th>Kosten</th><th>Anbieter</th></tr></thead>
+                <tbody>
+                    <tr><td>Server Chassis</td><td>1</td><td>4U Rack Server</td><td class="cost-high">€800-1500</td><td>Supermicro, Dell</td></tr>
+                    <tr><td>GPU Cards</td><td>8</td><td>NVIDIA A100 40GB</td><td class="cost-high">€6000-8000 ea.</td><td>NVIDIA Partner</td></tr>
+                    <tr><td>CPUs</td><td>2</td><td>EPYC 7502 / Xeon Platinum</td><td class="cost-high">€4000-6000 ea.</td><td>AMD/Intel Distributor</td></tr>
+                    <tr><td>RAM</td><td>16</td><td>32GB DDR4 Registered ECC</td><td class="cost-high">€200-400 ea.</td><td>ServerHardware</td></tr>
+                    <tr><td>Storage</td><td>4</td><td>4TB NVMe SSD</td><td class="cost-high">€1000-1500 ea.</td><td>Storage Distributor</td></tr>
+                </tbody>
+            </table>
+            <div class="bom-summary"><strong>Gesamtbudget:</strong> €50000-100000+ | <strong>Komplexität:</strong> Enterprise-Level</div>
+        </div>
+
+        <div class="project-section" id="p44">
+            <h3 class="project-title"><i class="fas fa-cube"></i> Projekt 44: AR Gaming Platform</h3>
+            <p class="bom-summary">Komponenten: AR Headset (€500-3000), Game Engine (€0 Unity/Unreal), Smartphone (€300-1000), Location Services (€0-500/Mo), Hosting (€50-200/Mo) | <strong>Gesamtbudget: €850-4700</strong></p>
+        </div>
+
+        <div class="project-section" id="p45">
+            <h3 class="project-title"><i class="fas fa-link"></i> Projekt 45: Blockchain Explorer (Ethereum)</h3>
+            <p class="bom-summary">Komponenten: Node Software (€0 Geth/Infura), Web Framework (€0 React), Database (€0 PostgreSQL), Hosting (€20-100/Mo), Indexing (€0 Subgraph) | <strong>Gesamtbudget: €20-100/Mo</strong></p>
+        </div>
+
+        <div class="project-section" id="p46">
+            <h3 class="project-title"><i class="fas fa-eye"></i> Projekt 46: Machine Vision System (YOLO)</h3>
+            <p class="bom-summary">Komponenten: Industrial Camera (€200-1000), Lens (€100-500), Lighting (€100-300), Frame Grabber (€100-500), Computer (€500-2000), Framework (€0 YOLOv8) | <strong>Gesamtbudget: €1000-4300</strong></p>
+        </div>
+
+        <div class="project-section" id="p47">
+            <h3 class="project-title"><i class="fas fa-home"></i> Projekt 47: Smart Home Automation System</h3>
+            <p class="bom-summary">Komponenten: Hub (€50-150), Smart Lights (€10-50 ea.), Smart Switches (€20-40 ea.), Sensors (€10-30 ea.), Hub/Coordinator (€50-150), Software (€0 Home Assistant) | <strong>Gesamtbudget: €150-500 + Geräte</strong></p>
+        </div>
+
+        <div class="project-section" id="p48">
+            <h3 class="project-title"><i class="fas fa-spider"></i> Projekt 48: Web Scraping Bot (Python)</h3>
+            <p class="bom-summary">Komponenten: Computer (€0 Existing), Python (€0 Free), Frameworks (€0 BeautifulSoup/Scrapy), Proxy Service (€5-100/Mo), Storage (€0-50/Mo), Cloud Runner (€5-20/Mo) | <strong>Gesamtbudget: €0-170/Mo</strong></p>
+        </div>
+
+        <div class="project-section" id="p49">
+            <h3 class="project-title"><i class="fas fa-hand-fist"></i> Projekt 49: Haptic Feedback Suit (VR/AR)</h3>
+            <p class="bom-summary">Komponenten: Vibration Motors (€100-200), Haptic Suit Fabric (€50-100), Electronic Controller (€200-400), Wireless Module (€50-100), Battery (€30-60), VR Headset (€400-1500) | <strong>Gesamtbudget: €830-2360</strong></p>
+        </div>
+
+        <div class="project-section" id="p50">
+            <h3 class="project-title"><i class="fas fa-radio"></i> Projekt 50: Software-Defined Radio (SDR) Setup</h3>
+            <table class="table bom-table">
+                <thead><tr><th>Komponente</th><th>Menge</th><th>Spezifikation</th><th>Kosten</th><th>Anbieter</th></tr></thead>
+                <tbody>
+                    <tr><td>SDR Dongle</td><td>1</td><td>RTL-SDR / HackRF One</td><td class="cost-low">€20-200</td><td>Amazon, AliExpress</td></tr>
+                    <tr><td>Antenna</td><td>1</td><td>Dipole / Yagi Antenna</td><td class="cost-low">€20-100</td><td>Amazon, DIY</td></tr>
+                    <tr><td>LNA Amplifier</td><td>1</td><td>Low Noise Amplifier</td><td class="cost-med">€50-150</td><td>Amazon</td></tr>
+                    <tr><td>Filter Module</td><td>1</td><td>Band Pass Filter</td><td class="cost-low">€20-50</td><td>Amazon</td></tr>
+                    <tr><td>Software</td><td>1</td><td>GQRX / CubicSDR</td><td class="cost-low">€0 (Free)</td><td>GitHub</td></tr>
+                    <tr><td>Computing Power</td><td>1</td><td>Laptop / Desktop</td><td class="cost-low">€0 (Existing)</td><td>Own System</td></tr>
+                </tbody>
+            </table>
+            <div class="bom-summary"><strong>Gesamtbudget:</strong> €110-700 | <strong>Anwendungen:</strong> Weather, ADS-B, Radio Frequency Monitoring</div>
+        </div>
+
+        <div style="text-align: center; margin-top: 5rem; padding: 2rem; background: rgba(0, 255, 255, 0.05); border-radius: 8px;">
+            <h2 style="color: #00ffff; margin-bottom: 1rem;">📊 Vollständige BOM - 50 PROJEKTE</h2>
+            <p class="text-white" style="margin-bottom: 1.5rem;">Gesamtinvestition Range: €2,000 - €150,000+</p>
+            <a href="index.html" class="btn btn-outline-info btn-lg"><i class="fas fa-arrow-left"></i> Zurück zur DIY Library</a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        console.log('%c✅ BOM für alle 50 Projekte geladen', 'color: #00ffff; font-weight: bold; font-size: 14px;');
+    </script>
+</body>
+</html>

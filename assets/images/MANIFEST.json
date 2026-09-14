@@ -1,0 +1,79 @@
+{
+  "reports": [
+    {
+      "id": "ai-chip-design",
+      "title": "DIY: AI-Chip Design",
+      "color": "#a78bfa",
+      "hero": "ai-chip-design_hero.jpg",
+      "chapters": 6,
+      "images": {
+        "error_gallery": [
+          "ai-chip_error1.jpg",
+          "ai-chip_error2.jpg",
+          "ai-chip_error3.jpg",
+          "ai-chip_error4.jpg"
+        ]
+      }
+    },
+    {
+      "id": "quantum-error-correction",
+      "title": "DIY: Quantum Error Correction",
+      "color": "#34d399",
+      "hero": "quantum-error_hero.jpg",
+      "chapters": 6,
+      "images": {
+        "error_gallery": [
+          "quantum-error_error1.jpg",
+          "quantum-error_error2.jpg",
+          "quantum-error_error3.jpg",
+          "quantum-error_error4.jpg"
+        ]
+      }
+    },
+    {
+      "id": "distributed-storage",
+      "title": "DIY: Distributed Storage System",
+      "color": "#60a5fa",
+      "hero": "distributed-storage_hero.jpg",
+      "chapters": 6,
+      "images": {
+        "error_gallery": [
+          "distributed-storage_error1.jpg",
+          "distributed-storage_error2.jpg",
+          "distributed-storage_error3.jpg",
+          "distributed-storage_error4.jpg"
+        ]
+      }
+    },
+    {
+      "id": "bioai-integration",
+      "title": "DIY: BioAI Integration",
+      "color": "#10b981",
+      "hero": "bioai-integration_hero.jpg",
+      "chapters": 6,
+      "images": {
+        "error_gallery": [
+          "bioai_error1.jpg",
+          "bioai_error2.jpg",
+          "bioai_error3.jpg",
+          "bioai_error4.jpg"
+        ]
+      }
+    },
+    {
+      "id": "edge-computing-cluster",
+      "title": "DIY: Edge Computing Cluster",
+      "color": "#fbbf24",
+      "hero": "edge-computing_hero.jpg",
+      "chapters": 6,
+      "images": {
+        "error_gallery": [
+          "edge-computing_error1.jpg",
+          "edge-computing_error2.jpg",
+          "edge-computing_error3.jpg",
+          "edge-computing_error4.jpg"
+        ]
+      }
+    }
+  ]
+}

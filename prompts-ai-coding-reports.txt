@@ -1,0 +1,134 @@
+====================================================================
+DEEP RESEARCH PROMPTS - AI-DRIVEN CODING & SOFTWARE GENERATION
+====================================================================
+Report 100: VIBE CODING - Das intuitive Programmieren
+Prompt: "Du bist ein Programmier-Experte. Schreib einen Deep Research Report (German) über 'VIBE CODING' - das Konzept der intuitiven, visuellen, Flow-basierten Programmiermethode. Erkläre:
+1. Was ist VIBE CODING? (Definition mit Alltags-Analogie wie 'Malen statt Schreiben')
+2. Unterschied zu traditionellem Code (Text-basiert vs. Visual)
+3. Tools & Technologien (Figma, Node-RED, Scratch Extensions, Visual Studio Code - diese nutzen Vibe Coding)
+4. Praktische Beispiele: Wie erstellt man einfache Apps 'visuell' ohne Code zu schreiben
+5. Vorteile: Schneller, leichter für Anfänger, bessere Collaboration
+6. Grenzen: Performance, komplexe Logic, Production Readiness
+Format: 6 Hauptkapitel, konkrete Beispiele mit Katze/Hund oder Kuchen-Rezepte Analogien, NO technisches Jargon. HTML5 eBook mit Bootstrap+Orbitron Theme, Cyan Glow (#00ffff), Dark Mode. Output as HTML file 'deep-research-vibe-coding.html' ~380 Zeilen"
+
+Report 101: BATCH CODING - KI trainiert in Charge-Jobs
+Prompt: "Du bist ein Software-Architekt. Schreib einen Deep Research Report (German) über 'BATCH CODING' - das Konzept wo KI-Systeme Code in großen 'Batches' (Chargen) generieren, nicht einzelne Prompts:
+1. Was ist Batch Coding? (Definition: Viele ähnliche Tasks parallel in einer Chargejob)
+2. Unterschied zu einzelne Prompts (Performance, Kosten, Qualität)
+3. Wie funktioniert es? (Queue Systems, GPUs, Parallel Processing)
+4. Praktische Beispiele: Generating API Endpoints, Database Schema, Test Cases in Batch
+5. Vorteile: 10-100x schneller, günstiger, bessere Konsistenz
+6. Nachteile: Mehr Infrastruktur-Komplexität, schwerer zu debuggen
+Format: 6 Kapitel, Analogien (Backofen backt 50 Kekse statt 1), Praktische Szenen, HTML5 eBook, ~380 Zeilen, 'deep-research-batch-coding.html'"
+
+Report 102: SOFTWARE FACTORY - Automatisierte Fabrik für Apps
+Prompt: "Du bist ein DevOps Engineer. Schreib einen Deep Research Report (German) über 'SOFTWARE FACTORY' - automatisierte Systeme die GANZE Apps/Services generieren:
+1. Was ist Software Factory? (Definition: AI-gesteuerte Fabrik die vollständige Software-Produkte erzeugt)
+2. Komponenten: Requirement Parser → Architecture Generator → Code Generator → Test Generator → Deploy Automation
+3. Wie funktioniert eine Software Factory? (Step-by-step Prozess)
+4. Praktische Beispiele: 'Generiere CRUD App von DB-Schema', 'Erstelle REST API aus Requirements'
+5. Vorteile: 10-100x schneller, kostengünstiger, Konsistent, dokumentiert
+6. Herausforderungen: Quality Control, Legacy Integration, Human Oversight nötig
+Format: 6 Kapitel, Analogien (wie echte Fabrik aber für Software), Praktische Szenen (Bank braucht neue App → 1 Stunde statt 3 Monate), HTML5 eBook, ~380 Zeilen, 'deep-research-software-factory.html'"
+
+Report 103: INDUSTRIELLE SOFTWARE GENERATION - Mass Production
+Prompt: "Du bist ein Software Architect. Schreib einen Deep Research Report (German) über 'INDUSTRIELLE SOFTWARE GENERATION' - Großmaßstabs-Produktion von Software:
+1. Was ist Industrielle Generation? (Definition: Software wird wie Produktion in Fabriken gemacht - Standardisiert, Skaliert, Automatisiert)
+2. Unterschied zu Traditional Development (Handwerk vs. Fabrik Mindset)
+3. Komponenten: Templates, Code Generation, CI/CD Automation, Quality Gates, Monitoring
+4. Praktische Szenarien: Telekomunikation generiert 1000 Apps/Jahr, Banking generiert 100 Microservices/Monat
+5. Vorteile: Massive Skalierung, Konsistenz, Schnelligkeit, Kosten-Reduktion 50-90%
+6. Probleme: Loss of Craftsmanship, Technical Debt Risiko, Security Standardisierung
+Format: 6 Kapitel, Analogien (Henry Ford & Fließbandproduktion), Praktische Szenen, HTML5 eBook, ~380 Zeilen, 'deep-research-industrial-software-generation.html'"
+
+Report 104: PROMPT ENGINEERING FOR CODING - Die Kunst gute Prompts zu schreiben
+Prompt: "Du bist ein Prompt Engineer. Schreib einen Deep Research Report (German) über 'PROMPT ENGINEERING FÜR CODE' - wie man beste Prompts für KI Code Generation schreibt:
+1. Grundlagen: Was macht einen guten Prompt? (Clarity, Context, Examples, Constraints)
+2. Anti-Patterns: Was funktioniert NICHT (zu vage, zu komplex, zu kurz)
+3. Prompt Templates: Best Practice Templates für verschiedene Tasks (API, Function, Component)
+4. Praktische Beispiele: Guter vs. schlechter Prompt für gleiche Task
+5. Advanced Techniques: Chain of Thought, Few-Shot Learning, Iterativ Refinement
+6. Tools & Frameworks: Prompt Management Systeme
+Format: 6 Kapitel, Viele Code-Beispiele (Schlechter Prompt → Schlechter Code. Guter Prompt → Guter Code), HTML5 eBook, ~380 Zeilen, 'deep-research-prompt-engineering-coding.html'"
+
+Report 105: CODE GENERATION WITH LLMs - Die Magie der Auto-Programmierung
+Prompt: "Du bist ein ML Engineer. Schreib einen Deep Research Report (German) über 'CODE GENERATION MIT LLMs' - wie Large Language Models Software schreiben:
+1. Wie funktioniert LLM Code Generation? (Tokens, Sampling, Temperature, Top-P)
+2. Fähigkeiten: Was können LLMs genau? (Functions, Classes, Patterns, aber nicht komplexe Logik)
+3. Limitationen: Was können sie NICHT? (Große Systeme, Novel Algorithms, Security Best Practices)
+4. Praktische Szenarien: Boilerplate Code generieren, Unit Tests schreiben, API Dokumentation
+5. Vorteile: 10x schneller für wiederkehrende Tasks, Kostet weniger
+6. Risiken: Generated Code kann schlecht sein, Security Holes, Technical Debt
+Format: 6 Kapitel, Analogien (LLM ist wie intelligenter Copy-Paste), Praktische Szenen, HTML5 eBook, ~380 Zeilen, 'deep-research-llm-code-generation.html'"
+
+Report 106: AGENTIC CODE SYSTEMS - KI Agenten die selbstständig Code schreiben
+Prompt: "Du bist ein AI Systems Architect. Schreib einen Deep Research Report (German) über 'AGENTIC CODE SYSTEMS' - autonome KI Agenten die selbstständig programmieren:
+1. Was ist ein Agentic System? (Definition: KI Agent mit Loop → Plan → Code → Test → Iterate)
+2. Architektur: Agent Loop, Tool Use, Reflection, Error Correction
+3. Unterschied zu Simple Generation (Stateless Generation vs. Stateful Reasoning)
+4. Praktische Beispiele: 'Fix this Bug automatisch', 'Optimize dieser Code', 'Schreib einen Feature'
+5. Vorteile: Kann komplexe Tasks lösen, Error Correction, selbst-verbessernd
+6. Herausforderungen: Kosten, Latency, Hallucinations, Control
+Format: 6 Kapitel, Analogien (Agent ist wie Junior Programmer der Fehler macht aber lernt), Praktische Szenen, HTML5 eBook, ~380 Zeilen, 'deep-research-agentic-code-systems.html'"
+
+Report 107: CODE QUALITY & TESTING IN AUTO-GENERATION - Qualitätskontrolle
+Prompt: "Du bist ein QA Engineer. Schreib einen Deep Research Report (German) über 'CODE QUALITY & TESTING BEI AUTOMATISCHER GENERATION' - wie man sicherstellt dass generierter Code gut ist:
+1. Qualitäts-Probleme bei Auto-Generated Code (Schlechter Style, Bugs, Security Holes)
+2. Automatische Tests: Unit Tests, Integration Tests, Security Scans
+3. Code Review Automation: Linters, Static Analysis, Complexity Checks
+4. Praktische Szenarien: Auto-Generated Code bestehen 95% Tests, aber 20% haben Security Issues
+5. Best Practices: 3-Layer Quality Gate (Generated → Test → Human Review)
+6. Tooling: SonarQube, Bandit, pytest, GitHub Actions
+Format: 6 Kapitel, Analogien (Qualitätsprüfer in echten Fabriken), Praktische Szenen, HTML5 eBook, ~380 Zeilen, 'deep-research-code-quality-testing.html'"
+
+Report 108: ML OPS & CONTINUOUS TRAINING - Automatische Model Verbesserung
+Prompt: "Du bist ein MLOps Engineer. Schreib einen Deep Research Report (German) über 'ML OPS & CONTINUOUS TRAINING' - wie Code-Generation Models sich selbst verbessern:
+1. Was ist Continuous Training? (Definition: Models werden automatic retrainiert mit neuen Daten)
+2. Pipeline: Data Collection → Model Retraining → Validation → Deployment
+3. Feedback Loops: User Feedback → better Models → better Generated Code
+4. Praktische Szenarien: 'Model war 80% gut, nun 85% gut nach Feedback'
+5. Vorteile: Models werden besser over time, No manual Retraining
+6. Herausforderungen: Data Quality, Bias Amplification, Versioning Complexity
+Format: 6 Kapitel, Analogien (Lernen durch Erfahrung), Praktische Szenen, HTML5 eBook, ~380 Zeilen, 'deep-research-mlops-continuous-training.html'"
+
+Report 109: SECURITY & SAFETY IN AI CODE GENERATION - Sicherheit
+Prompt: "Du bist ein Security Researcher. Schreib einen Deep Research Report (German) über 'SECURITY & SAFETY IN KI CODE GENERATION' - wie man verhindert dass KI bösen Code schreibt:
+1. Security Risks: Generated Code kann Vulnerabilities haben (SQL Injection, XSS, Buffer Overflow)
+2. Praktische Angriffe: 'Schreib einen Backdoor in diesen Code' → KI macht es?
+3. Defense Mechanisms: Sandboxing, Static Analysis, Human Review, Training Filters
+4. Praktische Szenarien: Bank generiert Code → muss 99.99% sicher sein
+5. Compliance: OWASP, NIST, SOC 2 für Auto-Generated Code
+6. Trends 2025+: Trusted Code Generation, Verifiable Code
+Format: 6 Kapitel, Analogien (Wie man unsicheren Code verhindert), Praktische Szenen, HTML5 eBook, ~380 Zeilen, 'deep-research-security-ai-codegen.html'"
+
+Report 110: THE FUTURE OF SOFTWARE DEVELOPMENT - Wie sich Programmieren ändert
+Prompt: "Du bist ein Futurist Technologist. Schreib einen Deep Research Report (German) über 'DIE ZUKUNFT DER SOFTWARE ENTWICKLUNG' - wie KI Coding Programmieren transformiert:
+1. Szenarien 2030: Programmier wird nur noch 10% Manual sein
+2. Neue Jobs: Prompt Engineers, Code Quality Managers, AI Trainers
+3. Verschwundene Jobs: Junior Programmers, Template Code Writers, Boilerplate Generators
+4. Gesamtimpact: Software Kosten fallen 80%, Geschwindigkeit steigt 100x, Qualität variabel
+5. Chancen: Mehr Innovation, Schneller Prototyping, Bessere Products
+6. Risiken: Skill Erosion, Technical Debt, Security Debt
+Format: 6 Kapitel, Visionen & Prognosen für 2025-2035, Praktische Implikationen, HTML5 eBook, ~380 Zeilen, 'deep-research-future-software-development.html'"
+
+====================================================================
+INSTRUCTIONS FOR ALL 10 REPORTS:
+====================================================================
+- Language: GERMAN (Deutsch) - ALL content in German
+- Format: HTML5 eBook with Bootstrap 5.3.0 framework
+- Theme: Orbitron cyberpunk (Cyan #00ffff glow, Dark mode #1a1a1a background)
+- Content Style: CONCRETE & PRACTICAL - Use everyday analogies (Kuchen-Rezepte, Katze vs. Hund, Fabriken, etc.)
+- NO excessive technical jargon - explain everything simple
+- Structure: 6 main chapters per report, ~60-70 lines per chapter = ~380-420 total lines
+- Navigation: Sidebar with table of contents, hamburger menu toggle
+- Design: NO animations, clean grid layout, good readability
+- Each chapter: Konkrete Szenen (real-world scenarios), practical examples, analogies, benefits/challenges
+- Color scheme: Cyan (#00ffff) for headers and highlights, dark background, white/gray text
+- File naming: deep-research-[topic-name].html
+
+OUTPUT FORMAT FOR EACH:
+- Create complete, self-contained HTML5 file
+- Include all necessary CSS/JS from CDN (Bootstrap, FontAwesome)
+- Reference global.css for theme styling
+- Make each report 380-420 lines (actual content, not just HTML structure)
+====================================================================

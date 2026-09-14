@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIY: Brain-Computer Interface</title>
+    <meta name="description" content="Deutsche DIY-Anleitung zu Brain-Computer Interface mit Materialien, Aufbau, Praxis-Tipps und Troubleshooting.">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="global.css" rel="stylesheet">
+    <style>
+        .chapter-header {color: #9333ea; border-left: 4px solid #9333ea; padding-left: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; font-size: 1.5rem;}
+        .code-box {background: rgba(147, 51, 234, 0.1); border: 1px solid #9333ea; padding: 1rem; border-radius: 5px; margin: 1rem 0; font-family: monospace; font-size: 0.75rem;}
+        .bci-box {background: rgba(147, 51, 234, 0.15); border-left: 4px solid #9333ea; padding: 1rem; border-radius: 5px; margin: 1rem 0; font-size: 0.95rem;}
+    </style>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body class="orbtron-theme">
+    <nav class="navbar navbar-dark bg-dark sticky-top" style="border-bottom: 2px solid #9333ea;">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1"><i class="fas fa-brain"></i> DIY: Brain-Computer Interface</span>
+            <a href="index.html" class="btn btn-outline-secondary btn-sm" style="color: #9333ea; border-color: #9333ea;" aria-label="Zurück zur CODESTRAL-Projektbibliothek">← Zurück</a>
+        </div>
+    </nav>
+    <div class="container-fluid py-5" role="main">
+        <div style="position: relative; margin-bottom: 2rem; border-radius: 10px; overflow: hidden; border: 2px solid #9333ea; max-height: 300px;">
+            <img alt="Brain-Computer Interface – Hero-Bild" src="assets/images/bci_hero.png" style="width: 100%; height: 300px; object-fit: cover; display: block;" decoding="async" loading="eager" fetchpriority="high">
+            <div class="hero" style="background: rgba(0,0,0,0.7); border: none; border-radius: 0; padding: 2rem 1.5rem; margin-bottom: 0; text-align: center; position: absolute; top: 50%; left: 0; right: 0; transform: translateY(-50%); display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <h1 style="color: #9333ea; font-size: clamp(1.5rem, 5vw, 2.5rem); text-shadow: 0 0 20px rgba(147, 51, 234, 0.5);">🧠 Brain-Computer Interface</h1>
+                <p class="lead text-white" style="font-size: clamp(0.95rem, 3vw, 1.1rem);">EEG-basierte Mind-Control Systeme</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8">
+                <h2 class="chapter-header"><i class="fas fa-headphones"></i> Kapitel 1: EEG Hardware</h2>
+                <p class="text-white">Consumer-Level Hardware (€200-500):</p>
+                <ul class="text-muted">
+                    <li><strong>Muse Headband:</strong> 4-channel EEG (€300)</li>
+                    <li><strong>OpenBCI Cyton:</strong> 8-channel DIY (€500)</li>
+                    <li><strong>Emotiv EPOC:</strong> 14-channel consumer (€300)</li>
+                    <li><strong>Neuralink Alternative:</strong> Future tech</li>
+                </ul>
+
+                <h2 class="chapter-header"><i class="fas fa-signal"></i> Kapitel 2: Signal Processing</h2>
+                <div class="code-box">
+import numpy as np
+# EEG Signal Processing
+signal = receive_eeg()
+filtered = bandpass_filter(signal, 0.5, 50)  # Hz
+features = extract_band_power(filtered)
+                </div>
+
+                <h2 class="chapter-header"><i class="fas fa-chart-line"></i> Kapitel 3: Brain Wave Classification</h2>
+                <ul class="text-muted">
+                    <li>Delta (0.5-4 Hz): Sleep</li>
+                    <li>Theta (4-8 Hz): Meditation</li>
+                    <li>Alpha (8-12 Hz): Relaxed</li>
+                    <li>Beta (12-30 Hz): Focused</li>
+                    <li>Gamma (30+ Hz): Cognitive Load</li>
+                </ul>
+
+                <h2 class="chapter-header"><i class="fas fa-microchip"></i> Kapitel 4: Machine Learning for BCI</h2>
+                <ul class="text-muted">
+                    <li>P300 Event Detection</li>
+                    <li>Motor Imagery Recognition</li>
+                    <li>Deep Learning Models (CNN/RNN)</li>
+                    <li>Real-time Classification</li>
+                </ul>
+
+                <h2 class="chapter-header"><i class="fas fa-mouse"></i> Kapitel 5: Control Interface</h2>
+                <ul class="text-muted">
+                    <li>Cursor Control (2D)</li>
+                    <li>Robotic Arm Command</li>
+                    <li>Wheelchair Navigation</li>
+                    <li>Game Controller Emulation</li>
+                </ul>
+
+                <h2 class="chapter-header"><i class="fas fa-wheelchair"></i> Kapitel 6: Medical & Assistive Applications</h2>
+                <ul class="text-muted">
+                    <li>Rehabilitation Therapy</li>
+                    <li>Paralysis Assistance</li>
+                    <li>Neurofeedback Training</li>
+                    <li>Cognitive Enhancement</li>
+                </ul>
+
+                <!-- EXPANSION: PRO-TIPPS -->
+                <h2 class="chapter-header" style="margin-top: 3rem; border-left: 4px solid #10b981;"><i class="fas fa-lightbulb"></i> 💡 PRO-TIPPS</h2>
+                <div style="background: rgba(16, 185, 129, 0.1); border-left: 4px solid #10b981; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-success mb-3">🎯 Tipp: Baseline-Kalibrierung ist KEY</h5>
+                    <p><strong>Problem:</strong> Jedes Gehirn ist unterschiedlich | <strong>Lösung:</strong> 5 Min Baseline testen vor Training</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #f59e0b;"><i class="fas fa-piggy-bank"></i> 💰 BUDGET-HACKS (70% SPAREN!)</h2>
+                <div style="background: rgba(245, 158, 11, 0.1); border-left: 4px solid #f59e0b; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-warning mb-3">💰 Hack: Muse statt OpenBCI Cyton</h5>
+                    <p><strong>Original:</strong> OpenBCI Cyton: €500 | <strong>Hack:</strong> Muse Headband: €300 | <strong>Einsparnis:</strong> 40%</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #ef4444;"><i class="fas fa-exclamation-circle"></i> ⚠️ FEHLER</h2>
+                <div style="background: rgba(239, 68, 68, 0.1); border-left: 4px solid #ef4444; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-danger mb-3">❌ Fehler: Direkt P300 ohne Cleanup</h5>
+                    <p><strong>Was passiert:</strong> Noise/Artifacts = falsche Klassifikation | <strong>✅ Lösung:</strong> ICA Filter + Bandpass 0.5-50Hz</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #60a5fa;"><i class="fas fa-users"></i> 🌐 COMMUNITY</h2>
+                <div style="background: rgba(96, 165, 250, 0.1); border-left: 4px solid #60a5fa; padding: 1.5rem; border-radius: 8px;">
+                    <p>OpenBCI Forum, BCI Society, Neuroscience Stack Exchange, r/BCI</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="sidebar-box">
+                    <h5 style="color: #9333ea;"><i class="fas fa-list-check"></i> BCI Path</h5>
+                    <div class="checklist">
+                        <label><input type="checkbox"> EEG Hardware</label>
+                        <label><input type="checkbox"> Signal verarbeiten</label>
+                        <label><input type="checkbox"> Brain waves klassifizieren</label>
+                        <label><input type="checkbox"> ML Modell trainieren</label>
+                        <label><input type="checkbox"> Control Interface</label>
+                        <label><input type="checkbox"> Live BCI testen</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="diy-enhancements.js"></script>
+</body>
+</html>

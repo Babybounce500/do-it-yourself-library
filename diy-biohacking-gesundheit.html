@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIY: Biohacking & Personal Health Tracking</title>
+    <meta name="description" content="Deutsche DIY-Anleitung zu Biohacking & Personal Health Tracking mit Materialien, Aufbau, Praxis-Tipps und Troubleshooting.">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="global.css" rel="stylesheet">
+    <style>
+        .chapter-header {color: #00ffff; border-left: 4px solid #00ffff; padding-left: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; font-size: 1.5rem;}
+        .metric-box {background: rgba(0, 255, 255, 0.1); border: 1px solid #00ffff; padding: 1rem; border-radius: 5px; margin: 0.5rem 0; font-size: 0.95rem;}
+        .tip-box {background: rgba(157, 78, 221, 0.15); border-left: 4px solid #9d4edd; padding: 1rem; border-radius: 5px; margin: 1rem 0; font-size: 0.95rem;}
+        .warning-box {background: rgba(255, 0, 0, 0.1); border-left: 4px solid #ff0000; padding: 1rem; border-radius: 5px; margin: 1rem 0; font-size: 0.95rem;}
+        @media (max-width: 768px) {
+            .chapter-header {font-size: 1.2rem; padding-left: 1rem; margin-top: 1.5rem;}
+            .metric-box, .tip-box, .warning-box {font-size: 0.9rem; padding: 0.75rem;}
+            p {font-size: 0.95rem; line-height: 1.5;}
+        }
+    </style>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body class="orbtron-theme">
+    <nav class="navbar navbar-dark bg-dark sticky-top border-bottom border-cyan-glow">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1"><i class="fas fa-heart"></i> DIY: Biohacking & Health Tracking</span>
+            <a href="index.html" class="btn btn-outline-info btn-sm" aria-label="Zurück zur CODESTRAL-Projektbibliothek">← Zurück zur Library</a>
+        </div>
+    </nav>
+
+    <div class="container-fluid py-5" role="main">
+        <div style="position: relative; margin-bottom: 2rem; border-radius: 10px; overflow: hidden; border: 2px solid #00ffff; max-height: 300px;">
+            <img alt="Biohacking & Personal Health Tracking – Hero-Bild" src="assets/images/biohacking_health_hero_banner.png" style="width: 100%; height: 300px; object-fit: cover; display: block;" decoding="async" loading="eager" fetchpriority="high">
+            <div class="hero" style="background: rgba(0,0,0,0.7); border: none; border-radius: 0; padding: 2rem 1.5rem; margin-bottom: 0; text-align: center; position: absolute; bottom: 0; left: 0; right: 0;">
+                <h1 class="text-cyan-glow mb-3" style="font-size: clamp(1.5rem, 5vw, 2.5rem); text-shadow: 0 0 20px rgba(0,255,255,0.5);">💪 Biohacking Optimieren</h1>
+                <p class="lead text-white" style="font-size: clamp(0.95rem, 3vw, 1.1rem);">Schlaf, Fitness, Ernährung tracken</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-8">
+                <!-- KAPITEL 1 -->
+                <h2 class="chapter-header"><i class="fas fa-wearable"></i> Kapitel 1: Essentials - Was du tracken solltest</h2>
+                <p class="text-white">Starte mit diesen Kern-Metriken:</p>
+                <div class="metric-box">
+                    <strong>📊 Schlaf:</strong> Dauer, Schlaf-Qualität, REM % (Smartwatch/Oura Ring)
+                </div>
+                <div class="metric-box">
+                    <strong>❤️ Herzfrequenz & HRV:</strong> Resting Heart Rate, Heart Rate Variability (Fitness-Tracker)
+                </div>
+                <div class="metric-box">
+                    <strong>🧬 Blutdruck:</strong> Systolisch/Diastolisch, morgens & abends (digitales Blutdruck-Messgerät ~30€)
+                </div>
+                <div class="metric-box">
+                    <strong>⚖️ Körperzusammensetzung:</strong> Gewicht, Muskelmasse %, Fettanteil (smarte Waage)
+                </div>
+                <div class="metric-box">
+                    <strong>💊 Blutzucker:</strong> CGM oder regelmäßige Tests (DIY: Freestyle Libre ~60€)
+                </div>
+                <div class="tip-box">
+                    <strong>💡 Start-Budget:</strong> ~500€ für gutes Setup (Smartwatch + Waage + CGM)
+                </div>
+
+                <!-- KAPITEL 2 -->
+                <h2 class="chapter-header"><i class="fas fa-apple"></i> Kapitel 2: Optimierung - Sleep & Recovery</h2>
+                <div class="code-box">
+# DIY Biohacking Kit
+# Sleep Tracker €30
+# HR Monitor €20
+# DNA Test Kit €150
+# Meditation App €0
+# Sleep Device €50
+# Total: €250 starter pack
+                </div>
+
+                <p class="text-white">Die wichtigste Biohack ist guter Schlaf:</p>
+                <ul class="text-muted">
+                    <li><strong>10-3-2-1-0 Regel:</strong> 10h vor Bett kein Koffein, 3h vor Bett keine große Mahlzeit, 2h vor Bett kein Arbeiten, 1h vor Bett offline, 0 mal Handy-Check nachts</li>
+                    <li><strong>Licht-Therapie:</strong> 30 Min Sonnenlicht am Morgen → Melatonin-Rhythmus regulieren</li>
+                    <li><strong>Temperatur:</strong> Schlafzimmer bei 16-18°C, heiße Dusche 90 Min vor Bett</li>
+                    <li><strong>Magnesium-Supplement:</strong> 200-400mg vor Bett (Malat oder Glycinat)</li>
+                    <li><strong>Blue Light Blocking:</strong> Nach 20 Uhr Brille tragen oder Screen-Filter</li>
+                </ul>
+                <div class="tip-box">
+                    <strong>📈 Tracking-Tools:</strong> Oura Ring (beste Sleep-Metriken), Apple Watch (HRV), Withings Sleep (unter dem Bett)
+                </div>
+
+                <!-- KAPITEL 3 -->
+                <h2 class="chapter-header"><i class="fas fa-dumbbell"></i> Kapitel 3: Fitness - Daten-getriebenes Training</h2>
+                <p class="text-white">Trainiere nach Metriken, nicht nach Gefühl:</p>
+                <div class="metric-box">
+                    <strong>HRV & Training Load:</strong> Wenn HRV niedrig → Recovery Day. HRV hoch → Push Day
+                </div>
+                <div class="metric-box">
+                    <strong>VO₂ Max:</strong> Kardiovaskuläre Fitness-Baseline (Smartwatch berechnet automatisch)
+                </div>
+                <div class="metric-box">
+                    <strong>Muskelrekonstruktion:</strong> Protein 1.6-2g pro kg KG, 48h Recovery zwischen Trainingsgruppen
+                </div>
+                <div class="tip-box">
+                    <strong>💪 DIY-Protokoll (Strength):</strong><br>
+                    - Montag: Upper Body Push<br>
+                    - Mittwoch: Lower Body<br>
+                    - Freitag: Upper Body Pull<br>
+                    - Sonntag: Aktive Recovery (Yoga/Gehen)<br>
+                    - Track: Gewicht x Reps, HRV vor/nach Training
+                </div>
+
+                <!-- KAPITEL 4 -->
+                <h2 class="chapter-header"><i class="fas fa-utensils"></i> Kapitel 4: Ernährung - Personalisiert durch CGM</h2>
+                <p class="text-white">Nicht alle Makros sind gleich - teste deine eigenen Reaktionen:</p>
+                <div class="metric-box">
+                    <strong>CGM (Continuous Glucose Monitor):</strong> Zeigt wie dein Körper auf Lebensmittel reagiert (Freestyle Libre)
+                </div>
+                <ul class="text-muted">
+                    <li><strong>Test-Phase:</strong> 2 Wochen CGM tragen, verschiedene Lebensmittel essen</li>
+                    <li><strong>Dein Peak:</strong> Wenn Blutzucker >140 mg/dL → wird zu diesem Lebensmittel hinzufügen "schlecht"</li>
+                    <li><strong>Timing:</strong> Ballaststoffe & Protein VOR Kohlenhydraten → Spikes vermeiden</li>
+                    <li><strong>Personalisiert:</strong> Manche sind OK mit Pasta, andere nicht. Es ist genetisch!</li>
+                </ul>
+                <div class="warning-box">
+                    <strong>⚠️ Wichtig:</strong> Das ist kein Tracking für Zwangsstörungen! Ziel ist Verständnis, nicht Orthorexie.
+                </div>
+
+                <!-- KAPITEL 5 -->
+                <h2 class="chapter-header"><i class="fas fa-brain"></i> Kapitel 5: Mentale Gesundheit & Kognition</h2>
+                <p class="text-white">Biohacks für besseres Gehirn:</p>
+                <ul class="text-muted">
+                    <li><strong>Cold Exposure:</strong> 30 Sekunden kalte Dusche → Noradrenalin, Fokus, Immunsystem</li>
+                    <li><strong>Meditation:</strong> 10 Min tägliche Achtsamkeit → messbarer Stress-Rückgang (gemessen via HRV)</li>
+                    <li><strong>Sauna:</strong> 2-3x wöchentlich → BDNF, Zellstress-Response</li>
+                    <li><strong>Nootropics:</strong> L-Theanine (mit Kaffee), Creatine, Omega-3 (evidenz-basiert)</li>
+                    <li><strong>Zirkadische Rhythmik:</strong> Gleiche Schlaf/Wach-Zeit jeden Tag (±30 Min)</li>
+                </ul>
+                <div class="tip-box">
+                    <strong>📊 Metriken:</strong> Cortisol (Speicheltest), HRV als Stress-Indikator, App-basierte Mood Tracking
+                </div>
+
+                <!-- KAPITEL 6 -->
+                <h2 class="chapter-header"><i class="fas fa-chart-bar"></i> Kapitel 6: Daten analysieren & Feedback-Loops</h2>
+                <p class="text-white">Rohes Tracking ist wertlos ohne Analyse:</p>
+                <ul class="text-muted">
+                    <li><strong>Correlation Analysis:</strong> Welche Interventionen verbessern HRV/Schlaf tatsächlich?</li>
+                    <li><strong>N=1 Experiments:</strong> 2 Wochen Intervention (z.B. Magnesium), dann 2 Wochen ohne. Vergleich.</li>
+                    <li><strong>Google Sheets/Python:</strong> Exportiere Daten, visualisiere Trends über Monate</li>
+                    <li><strong>Konfoundierungsvariablen:</strong> Stress, Wetter, Infektionen beeinflussen auch - nicht nur deine Hack!</li>
+                </ul>
+                <div class="metric-box">
+                    <strong>🎯 3-Monats-Checkup:</strong> Vergleiche Baseline (Monat 1) mit Monat 3. Was hat funktioniert?
+                </div>
+                <div class="warning-box">
+                    <strong>⚠️ Disclaimer:</strong> Das ist Biohacking, kein Medizin. Konsultiere Ärzte bei Fragen. Sei Patient - echte Veränderungen dauern 3-6 Monate!
+                </div>
+
+                <!-- ═══════════════════════════════════════════════════════════════ -->
+                <!-- EXPANSION: PRO-TIPPS & TRICKS -->
+                <!-- ═══════════════════════════════════════════════════════════════ -->
+
+                <h2 class="chapter-header" style="margin-top: 3rem; border-left: 4px solid #10b981;"><i class="fas fa-lightbulb"></i> 💡 PRO-TIPPS & INSIDER-TRICKS</h2>
+
+                <div style="background: rgba(16, 185, 129, 0.1); border-left: 4px solid #10b981; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-success mb-3">🎯 Tipp 1: HRV ist wichtiger als Schlafstunden</h5>
+                    <p><strong>Problem:</strong> Viele tracken nur Schlaf-Dauer, nicht Qualität</p>
+                    <p><strong>Smart Lösung:</strong> Heart Rate Variability (HRV) ist besser → zeigt echte Recovery</p>
+                    <p><strong>Impact:</strong> 20-30% bessere Performance durch HRV-Monitoring</p>
+                </div>
+
+                <div style="background: rgba(16, 185, 129, 0.1); border-left: 4px solid #10b981; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-success mb-3">🎯 Tipp 2: CGM ohne Diabetes ist Game-Changer</h5>
+                    <p><strong>Problem:</strong> Nicht alle wissen wie Essen auf Blutsucker wirkt</p>
+                    <p><strong>Smart Lösung:</strong> Freestyle Libre (€60) für 14 Tage tragen → deine personalisierte Ernährung</p>
+                    <p><strong>Impact:</strong> 40-50% bessere Energiestabilität nach Meal-Optimization</p>
+                </div>
+
+                <div style="background: rgba(16, 185, 129, 0.1); border-left: 4px solid #10b981; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-success mb-3">🎯 Tipp 3: Cold Exposure ist kostenlos (Eisbad)</h5>
+                    <p><strong>Problem:</strong> Viele kaufen teure Eisbäder</p>
+                    <p><strong>Smart Lösung:</strong> Dusche auf Kalt, nur 30 Sekunden - kostenlos!</p>
+                    <p><strong>Impact:</strong> Noradrenalin ↑ 2-3x, Immunsystem stärker</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #f59e0b;"><i class="fas fa-piggy-bank"></i> 💰 BUDGET-HACKS (50-70% EINSPARUNG!)</h2>
+
+                <div style="background: rgba(245, 158, 11, 0.1); border-left: 4px solid #f59e0b; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-warning mb-3">💰 Hack 1: Gebrauchte Smartwatch (€30-50 statt €300)</h5>
+                    <p><strong>Original:</strong> Apple Watch: €300-400</p>
+                    <p><strong>Budget-Hack:</strong> eBay refurbished Garmin/Fitbit: €30-80</p>
+                    <p><strong>Trade-Off:</strong> Nicht neuestes Modell, aber HRV-Metriken identisch</p>
+                </div>
+
+                <div style="background: rgba(245, 158, 11, 0.1); border-left: 4px solid #f59e0b; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-warning mb-3">💰 Hack 2: Open-Source Apps statt Premium</h5>
+                    <p><strong>Original:</strong> Oura Ring Membership: €60/Jahr</p>
+                    <p><strong>Budget-Hack:</strong> Apple Health + Libre-App (kostenlos!)</p>
+                    <p><strong>Einsparnis:</strong> €600 über 10 Jahre</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #ef4444;"><i class="fas fa-exclamation-circle"></i> ⚠️ HÄUFIGE ANFÄNGERFEHLER</h2>
+
+                <div style="background: rgba(239, 68, 68, 0.1); border-left: 4px solid #ef4444; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-danger mb-3">❌ Fehler 1: Zu obsessiv mit Daten werden</h5>
+                    <p><strong>Das passiert:</strong> Orthorexie & Orthoexercisia (Zwangsstörung mit Tracking)</p>
+                    <p><strong>✅ Lösung:</strong> Maksimum 2-3 Metriken tracken, nicht alles</p>
+                </div>
+
+                <div style="background: rgba(239, 68, 68, 0.1); border-left: 4px solid #ef4444; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-danger mb-3">❌ Fehler 2: Keine Kontrolle-Periode</h5>
+                    <p><strong>Das passiert:</strong> Weiß nicht ob Hack funktioniert oder Placebo</p>
+                    <p><strong>✅ Lösung:</strong> N=1 Experiment: 2 Wochen mit Hack, 2 Wochen ohne → Vergleich</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #8b5cf6;"><i class="fas fa-code-branch"></i> 🔄 ALTERNATIVE LÖSUNGEN</h2>
+
+                <div style="background: rgba(139, 92, 246, 0.1); border-left: 4px solid #8b5cf6; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-info mb-3">Option A: Minimalist (€0-50/Mo)</h5>
+                    <p>✅ Nur Smartphone-Apps, freie Metriken | ❌ Weniger Genauigkeit</p>
+                </div>
+
+                <div style="background: rgba(139, 92, 246, 0.1); border-left: 4px solid #8b5cf6; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-info mb-3">Option B: Mid-Range (€50-200/Mo)</h5>
+                    <p>✅ Smartwatch + CGM für 2 Wochen | ❌ Sporadic Data</p>
+                </div>
+
+                <div style="background: rgba(139, 92, 246, 0.1); border-left: 4px solid #8b5cf6; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-info mb-3">Option C: Premium (€200+/Mo)</h5>
+                    <p>✅ Oura Ring + Whoop + CGM dauerhaft | ❌ Sehr teuer</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #06b6d4;"><i class="fas fa-tools"></i> 🔧 TROUBLESHOOTING</h2>
+
+                <div style="background: rgba(6, 182, 212, 0.1); border-left: 4px solid #06b6d4; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-info mb-3">Problem: HRV schwankt wild</h5>
+                    <p><strong>Lösung:</strong> Stress/Infekt/Alkohol beeinflussen HRV → nicht in Panik verfallen</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #14b8a6;"><i class="fas fa-shield"></i> 🔒 SICHERHEITS-CHECKLIST</h2>
+
+                <div style="background: rgba(20, 184, 166, 0.1); border-left: 4px solid #14b8a6; padding: 1.5rem; border-radius: 8px;">
+                    <ul><li>☐ Health Data verschlüsselt</li><li>☐ Keine Daten an Dritte (außer Apple/Google)</li><li>☐ Account 2FA aktiviert</li></ul>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #a78bfa;"><i class="fas fa-calendar"></i> 📅 WARTUNGS-KALENDER</h2>
+
+                <div style="background: rgba(167, 139, 250, 0.1); border-left: 4px solid #a78bfa; padding: 1.5rem; border-radius: 8px;">
+                    <p><strong>Wöchentlich:</strong> Daten analysieren | <strong>Monatlich:</strong> Ergebnisse reviewen | <strong>Quartalsweise:</strong> N=1 Experiment neu starten</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #60a5fa;"><i class="fas fa-users"></i> 🌐 COMMUNITY & RESSOURCEN</h2>
+
+                <div style="background: rgba(96, 165, 250, 0.1); border-left: 4px solid #60a5fa; padding: 1.5rem; border-radius: 8px;">
+                    <p>Biohacking Forum: biohack.org | Reddit: r/biohacking | Whoop Community, Oura Beta Program</p>
+                </div>
+            </div>
+
+            <!-- SIDEBAR -->
+            <div class="col-lg-4">
+                <div class="sidebar-box">
+                    <h5 class="text-cyan-glow"><i class="fas fa-list-check"></i> Biohacking Roadmap</h5>
+                    <div class="checklist">
+                        <label><input type="checkbox"> Baseline Metriken messen</label>
+                        <label><input type="checkbox"> Tracking-Geräte kaufen</label>
+                        <label><input type="checkbox"> Erste Optimierung (Sleep/Nutrition)</label>
+                        <label><input type="checkbox"> HRV & Cortisol monitoren</label>
+                        <label><input type="checkbox"> Daten analysieren & anpassen</label>
+                        <label><input type="checkbox"> 3-Monats-Ergebnis dokumentieren</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="diy-enhancements.js"></script>
+</body>
+</html>

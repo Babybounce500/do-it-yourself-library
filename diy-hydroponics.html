@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIY: Hydroponics & Urban Farming</title>
+    <meta name="description" content="Deutsche DIY-Anleitung zu Hydroponics & Urban Farming mit Materialien, Aufbau, Praxis-Tipps und Troubleshooting.">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="global.css" rel="stylesheet">
+    <style>
+        .chapter-header {color: #00ffff; border-left: 4px solid #00ffff; padding-left: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; font-size: 1.5rem;}
+        .farm-box {background: rgba(34, 139, 34, 0.15); border-left: 4px solid #228b22; padding: 1rem; border-radius: 5px; margin: 1rem 0; font-size: 0.95rem;}
+        .metric-box {background: rgba(0, 255, 255, 0.1); border: 1px solid #00ffff; padding: 1rem; border-radius: 5px; margin: 0.5rem 0; font-size: 0.95rem;}
+        .tip-box {background: rgba(157, 78, 221, 0.15); border-left: 4px solid #9d4edd; padding: 1rem; border-radius: 5px; margin: 1rem 0; font-size: 0.95rem;}
+        @media (max-width: 768px) {
+            .chapter-header {font-size: 1.2rem; padding-left: 1rem; margin-top: 1.5rem;}
+            .farm-box, .metric-box, .tip-box {font-size: 0.9rem; padding: 0.75rem;}
+            p {font-size: 0.95rem; line-height: 1.5;}
+        }
+    </style>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body class="orbtron-theme">
+    <nav class="navbar navbar-dark bg-dark sticky-top border-bottom border-cyan-glow">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1"><i class="fas fa-leaf"></i> DIY: Hydroponics & Urban Farming</span>
+            <a href="index.html" class="btn btn-outline-info btn-sm" aria-label="Zurück zur CODESTRAL-Projektbibliothek">← Zurück</a>
+        </div>
+    </nav>
+    <div class="container-fluid py-5" role="main">
+        <div style="position: relative; margin-bottom: 2rem; border-radius: 10px; overflow: hidden; border: 2px solid #228b22; max-height: 300px;">
+            <img alt="Hydroponics & Urban Farming – Hero-Bild" src="assets/images/hydroponics_farm_hero_banner.png" style="width: 100%; height: 300px; object-fit: cover; display: block;" decoding="async" loading="eager" fetchpriority="high">
+            <div class="hero" style="background: rgba(0,0,0,0.7); border: none; border-radius: 0; padding: 2rem 1.5rem; margin-bottom: 0; text-align: center; position: absolute; bottom: 0; left: 0; right: 0;">
+                <h1 class="text-success mb-3" style="font-size: clamp(1.5rem, 5vw, 2.5rem); text-shadow: 0 0 20px rgba(34,200,34,0.5);">🌱 Hydroponics Farm</h1>
+                <p class="lead text-white" style="font-size: clamp(0.95rem, 3vw, 1.1rem);">Indoor-Farm ohne Boden</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8">
+                <h2 class="chapter-header"><i class="fas fa-water"></i> Kapitel 1: Hydroponics Basics</h2>
+                <p class="text-white">Pflanzen wachsen im Wasser statt im Boden:</p>
+                <table class="table table-dark table-striped">
+                    <tr>
+                        <td><strong>NFT (Nutrient Film)</strong></td>
+                        <td>Wasser fließt über Wurzeln, €50-200, gut für Blattgemüse</td>
+                    </tr>
+                    <tr>
+                        <td><strong>DWC (Deep Water)</strong></td>
+                        <td>Wurzeln im Wasser, €100-300, einfach & zuverlässig</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Aeroponics</strong></td>
+                        <td>Wurzeln in Luft, Nebel, €300+, komplex</td>
+                    </tr>
+                </table>
+                <div class="farm-box">
+                    <strong>💰 Budget Setup (DWC, €150-250):</strong><br>
+                    - 20L Behälter: €20<br>
+                    - Air Pump + Airstone: €30<br>
+                    - Nährlösung: €40<br>
+                    - pH Meter + TDS Meter: €40<br>
+                    - LED Grow Light 100W: €60<br>
+                    - Samen & Substrate: €20
+                </div>
+                <h2 class="chapter-header"><i class="fas fa-flask"></i> Kapitel 2: Nährlösung & Chemie</h2>
+                <div class="code-box">
+# DIY Hydroponics System
+# Grow Tower €40
+# Nutrient Mix €20
+# LED Grow Light €60
+# Water Pump €15
+# Seeds €10
+# Total: €145 hydro garden
+                </div>
+
+                <p class="text-white">Pflanzen brauchen Nährstoffe statt Erde:</p>
+                <div class="metric-box">
+                    <strong>Wichtigste Parameter:</strong><br>
+                    - <strong>pH:</strong> 5.5-6.5 (optimal 6.0)<br>
+                    - <strong>EC/TDS:</strong> 1.2-1.6 mS (Nährstoff-Konzentration)<br>
+                    - <strong>Temperatur:</strong> 18-24°C<br>
+                    - <strong>Sauerstoff:</strong> 6-8 ppm
+                </div>
+                <div class="farm-box">
+                    <strong>Nährlösung vorbereiten:</strong><br>
+                    1. Wasser füllen (18-24°C, destilliert bevorzugt)<br>
+                    2. Nährlösung nach Anleitung dosieren<br>
+                    3. pH mit pH Up/Down justieren<br>
+                    4. Wöchentlich checken, bei Bedarf anpassen<br>
+                    5. Jeden Monat kompletten Wasserwechsel
+                </div>
+                <h2 class="chapter-header"><i class="fas fa-lightbulb"></i> Kapitel 3: Licht & Wachstum</h2>
+                <p class="text-white">Pflanzen brauchen die richtige Beleuchtung:</p>
+                <div class="farm-box">
+                    <strong>LED Grow Lights:</strong><br>
+                    - Full Spectrum (400-700nm)<br>
+                    - 50-100W pro m² (je nach Pflanze)<br>
+                    - 16h Licht / 8h Dunkelheit (Standard)<br>
+                    - 30-50cm über Pflanzen
+                </div>
+                <div class="tip-box">
+                    <strong>💡 Pro-Tipp:</strong> Billige LED-Chips verschwenden 50% Energie. Invest in Quality = besseres Wachstum
+                </div>
+                <h2 class="chapter-header"><i class="fas fa-bug"></i> Kapitel 4: Schädlinge & Krankheiten</h2>
+                <p class="text-white">Indoor = weniger Probleme, aber nicht null:</p>
+                <div class="farm-box">
+                    <strong>Häufige Probleme:</strong><br>
+                    - <strong>Wurzelfäule:</strong> Zu warmes Wasser (>25°C), zu wenig O₂ → Luftpumpe checken<br>
+                    - <strong>Powdery Mildew:</strong> Pilz, höhere Luftzirkulation<br>
+                    - <strong>Magnesium-Mangel:</strong> Gelbe Blätter → Magnesium-Sulphat hinzufügen<br>
+                    - <strong>Thripse:</strong> Gelbe Sprenkel → Quarantäne + Neem Öl
+                </div>
+                <h2 class="chapter-header"><i class="fas fa-harvest"></i> Kapitel 5: Pflanzenzyklus</h2>
+                <p class="text-white">Von Keimling zu Ernte:</p>
+                <div class="farm-box">
+                    <strong>Beispiel: Kopfsalat (~30 Tage)</strong><br>
+                    - Tag 1-7: Keimung (nur Wasser, kein Licht nötig)<br>
+                    - Tag 8-21: Wachstum (16h Licht, schwache Nährlösung)<br>
+                    - Tag 22-30: Reife (volle Nährlösung, Ernte)<br>
+                    - Dann neuer Zyklus startet!
+                </div>
+                <div class="tip-box">
+                    <strong>Was funktioniert gut:</strong><br>
+                    - Blattgemüse (Salat, Spinat, Kale): 3-4 Wochen<br>
+                    - Kräuter (Basilikum, Minze): 2-3 Wochen<br>
+                    - Tomaten/Paprika: 8-12 Wochen (schwieriger)
+                </div>
+                <h2 class="chapter-header"><i class="fas fa-chart-line"></i> Kapitel 6: Skalierung & Geschäft</h2>
+                <p class="text-white">Vom Hobby zur Produktion:</p>
+                <div class="farm-box">
+                    <strong>Nächste Stufe:</strong><br>
+                    - 4-6 DWC-Systeme (stackbar)<br>
+                    - Automatische Nährstoff-Dosierung<br>
+                    - Monitore: pH, EC, Temperatur (WiFi)<br>
+                    - Wöchentliche Ernten (30+ Pflanzen)
+                </div>
+                <div class="farm-box">
+                    <strong>Monetarisierung:</strong><br>
+                    - Lokaler Bauernmarkt: €2-5 pro Bund<br>
+                    - Restaurant-Lieferungen: €50-200/Woche<br>
+                    - Subscription Box: €20-40/Woche<br>
+                    - Workshops: Andere beibringen
+                </div>
+                <!-- EXPANSION: PRO-TIPPS -->
+                <h2 class="chapter-header" style="margin-top: 3rem; border-left: 4px solid #10b981;"><i class="fas fa-lightbulb"></i> 💡 PRO-TIPPS</h2>
+                <div style="background: rgba(16, 185, 129, 0.1); border-left: 4px solid #10b981; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-success mb-3">🎯 Tipp: Restwärmequellen nutzen</h5>
+                    <p><strong>Problem:</strong> Winter = Heizung teuer für Wasser | <strong>Lösung:</strong> Aquariumheizer + Wärmepumpen-Abluft = kostenlos!</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #f59e0b;"><i class="fas fa-piggy-bank"></i> 💰 BUDGET-HACKS (50% SPAREN!)</h2>
+                <div style="background: rgba(245, 158, 11, 0.1); border-left: 4px solid #f59e0b; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-warning mb-3">💰 Hack: Billig-Nährstoff statt Premium</h5>
+                    <p><strong>Original:</strong> Maxigro €40/L | <strong>Hack:</strong> AliExpress Basis-Mix €5/L | <strong>Einsparnis:</strong> 87% (bei gleichen Ergebnissen)</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #ef4444;"><i class="fas fa-exclamation-circle"></i> ⚠️ FEHLER</h2>
+                <div style="background: rgba(239, 68, 68, 0.1); border-left: 4px solid #ef4444; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-danger mb-3">❌ Fehler: Nährstoff-Imbalance ignorieren</h5>
+                    <p><strong>Was passiert:</strong> Gelbe Blätter = Mangelerscheinungen | <strong>✅ Lösung:</strong> EC-Meter nutzen, wöchentlich prüfen</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #60a5fa;"><i class="fas fa-users"></i> 🌐 COMMUNITY</h2>
+                <div style="background: rgba(96, 165, 250, 0.1); border-left: 4px solid #60a5fa; padding: 1.5rem; border-radius: 8px;">
+                    <p>r/hydro, Hydroponic Community Discord, Urban Farming Forums</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="sidebar-box">
+                    <h5 class="text-success"><i class="fas fa-list-check"></i> Hydroponics Roadmap</h5>
+                    <div class="checklist">
+                        <label><input type="checkbox"> DWC System aufbauen</label>
+                        <label><input type="checkbox"> Wasser & Nährstoffe vorbereiten</label>
+                        <label><input type="checkbox"> Erste Pflanze setzen</label>
+                        <label><input type="checkbox"> pH & EC monitoren</label>
+                        <label><input type="checkbox"> Erste Ernte (3-4 Wochen)</label>
+                        <label><input type="checkbox"> Skalierung planen</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="diy-enhancements.js"></script>
+</body>
+</html>

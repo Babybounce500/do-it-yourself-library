@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIY: Distributed Storage System</title>
+    <meta name="description" content="Deutsche DIY-Anleitung zu Distributed Storage System mit Materialien, Aufbau, Praxis-Tipps und Troubleshooting.">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="global.css" rel="stylesheet">
+    <style>
+        .chapter-header {color: #60a5fa; border-left: 4px solid #60a5fa; padding-left: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; font-size: 1.5rem;}
+        .code-box {background: rgba(96, 165, 250, 0.1); border: 1px solid #60a5fa; padding: 1rem; border-radius: 5px; margin: 1rem 0; font-family: monospace; font-size: 0.75rem;}
+        .report-gallery {display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 2rem 0;}
+        .gallery-image {width: 100%; height: 250px; object-fit: cover; border-radius: 8px; border: 2px solid #60a5fa;}
+    </style>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body class="orbtron-theme">
+    <nav class="navbar navbar-dark bg-dark sticky-top" style="border-bottom: 2px solid #60a5fa;">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1"><i class="fas fa-database"></i> DIY: Distributed Storage</span>
+            <a href="index.html" class="btn btn-outline-info btn-sm" style="color: #60a5fa; border-color: #60a5fa;" aria-label="Zurück zur CODESTRAL-Projektbibliothek">← Zurück</a>
+        </div>
+    </nav>
+    <div class="container-fluid py-5" role="main">
+        <div style="position: relative; margin-bottom: 2rem; border-radius: 10px; overflow: hidden; border: 2px solid #60a5fa; max-height: 300px;">
+            <img src="assets/images/distributed-storage_hero.png" loading="eager" style="width: 100%; height: 300px; object-fit: cover; display: block;" alt="Distributed Storage Hero" decoding="async" fetchpriority="high">
+            <div class="hero" style="background: rgba(0,0,0,0.7); border: none; border-radius: 0; padding: 2rem 1.5rem; margin-bottom: 0; text-align: center; position: absolute; top: 50%; left: 0; right: 0; transform: translateY(-50%); display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <h1 style="color: #60a5fa; font-size: clamp(1.5rem, 5vw, 2.5rem); text-shadow: 0 0 20px rgba(96, 165, 250, 0.5);">💾 Distributed Storage</h1>
+                <p class="lead text-white" style="font-size: clamp(0.95rem, 3vw, 1.1rem);">IPFS, Filecoin & Blockchain Storage</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8">
+                <h2 class="chapter-header"><i class="fas fa-globe"></i> Kapitel 1: IPFS Fundamentals</h2>
+                <ul class="text-muted">
+                    <li>Content Addressing (IPFS Hash)</li>
+                    <li>DHT (Distributed Hash Table)</li>
+                    <li>Peer Discovery & Connectivity</li>
+                    <li>Node Setup & Configuration</li>
+                </ul>
+
+                <h2 class="chapter-header"><i class="fas fa-code"></i> Kapitel 2: Smart Contracts Integration</h2>
+                <div class="code-box">
+// Solidity: Store IPFS Hash on Chain
+contract FileRegistry {
+    mapping(bytes32 => string) files;
+    function store(bytes32 id, string ipfsHash) public {
+        files[id] = ipfsHash;
+    }
+}
+                </div>
+
+                <h2 class="chapter-header"><i class="fas fa-lock"></i> Kapitel 3: Data Redundancy & Replication</h2>
+                <ul class="text-muted">
+                    <li>Reed-Solomon Erasure Coding</li>
+                    <li>Data Availability Sampling</li>
+                    <li>Replication Factor Optimization</li>
+                    <li>Healing & Recovery</li>
+                </ul>
+
+                <h2 class="chapter-header"><i class="fas fa-key"></i> Kapitel 4: Incentive Mechanisms</h2>
+                <ul class="text-muted">
+                    <li>Filecoin Proof-of-Replication (PoRep)</li>
+                    <li>Proof-of-Spacetime</li>
+                    <li>Storage Collateral & Slashing</li>
+                    <li>Miner Economics</li>
+                </ul>
+
+                <h2 class="chapter-header"><i class="fas fa-network-wired"></i> Kapitel 5: Scalability Solutions</h2>
+                <ul class="text-muted">
+                    <li>Sharding & Partitioning</li>
+                    <li>State Channels for Payments</li>
+                    <li>Cross-Chain Bridges</li>
+                    <li>Layer 2 Storage Solutions</li>
+                </ul>
+
+                <h2 class="chapter-header"><i class="fas fa-chart-bar"></i> Kapitel 6: Deployment & Monitoring</h2>
+                <ul class="text-muted">
+                    <li>Network Topology Optimization</li>
+                    <li>Bandwidth Utilization</li>
+                    <li>Latency & Throughput Metrics</li>
+                    <li>Cost Analysis & ROI</li>
+                </ul>
+
+                <!-- EXPANSION: PRO-TIPPS -->
+                <h2 class="chapter-header" style="margin-top: 3rem; border-left: 4px solid #10b981;"><i class="fas fa-lightbulb"></i> 💡 PRO-TIPPS</h2>
+                <div style="background: rgba(16, 185, 129, 0.1); border-left: 4px solid #10b981; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-success mb-3">🎯 Tipp: Hot/Cold Storage Strategie</h5>
+                    <p><strong>Problem:</strong> Alles auf IPFS = teuer | <strong>Lösung:</strong> IPFS für populär, S3 für Archive</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #f59e0b;"><i class="fas fa-piggy-bank"></i> 💰 BUDGET-HACKS (88% KOSTENLOS!)</h2>
+                <div style="background: rgba(245, 158, 11, 0.1); border-left: 4px solid #f59e0b; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-warning mb-3">💰 Hack: IPFS OpenSource statt Filecoin</h5>
+                    <p><strong>Original:</strong> Professional Filecoin Miner: €10K+ | <strong>Hack:</strong> IPFS Node (kostenlos) + RPi Cluster: €500 | <strong>Einsparnis:</strong> 95%</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #ef4444;"><i class="fas fa-exclamation-circle"></i> ⚠️ FEHLER</h2>
+                <div style="background: rgba(239, 68, 68, 0.1); border-left: 4px solid #ef4444; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h5 class="text-danger mb-3">❌ Fehler: Zu viel Replication Factor</h5>
+                    <p><strong>Was passiert:</strong> Speicher-Overhead explodiert | <strong>✅ Lösung:</strong> 3-5x replication optimal</p>
+                </div>
+
+                <h2 class="chapter-header" style="border-left: 4px solid #60a5fa;"><i class="fas fa-users"></i> 🌐 COMMUNITY</h2>
+                <div style="background: rgba(96, 165, 250, 0.1); border-left: 4px solid #60a5fa; padding: 1.5rem; border-radius: 8px;">
+                    <p>IPFS Community, Filecoin Miners, Protocol Labs, Distributed Storage Summit</p>
+                </div>
+
+                <!-- FEHLER-GALERIE MIT JPGs -->
+                <h2 class="chapter-header" style="margin-top: 3rem;">📸 Fehler-Galerie</h2>
+                <div class="report-gallery">
+                    <img src="assets/images/distributed-storage_error1.jpg" class="gallery-image" alt="DHT Lookup Failure" loading="lazy" decoding="async" fetchpriority="low">
+                    <img src="assets/images/distributed-storage_error2.jpg" class="gallery-image" alt="Network Partition" loading="lazy" decoding="async" fetchpriority="low">
+                    <img src="assets/images/distributed-storage_error3.jpg" class="gallery-image" alt="Data Loss Scenario" loading="lazy" decoding="async" fetchpriority="low">
+                    <img src="assets/images/distributed-storage_error4.jpg" class="gallery-image" alt="Performance Degradation" loading="lazy" decoding="async" fetchpriority="low">
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="sidebar-box">
+                    <h5 style="color: #60a5fa;"><i class="fas fa-list-check"></i> Storage Path</h5>
+                    <div class="checklist">
+                        <label><input type="checkbox"> IPFS Node starten</label>
+                        <label><input type="checkbox"> DHT connect</label>
+                        <label><input type="checkbox"> Smart Contracts</label>
+                        <label><input type="checkbox"> Replication setup</label>
+                        <label><input type="checkbox"> Incentives enable</label>
+                        <label><input type="checkbox"> Monitor & optimize</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="diy-enhancements.js"></script>
+</body>
+</html>
